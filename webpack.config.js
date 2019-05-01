@@ -1,4 +1,7 @@
+const path = require('path');
+
 module.exports = {
+    context: __dirname, 
     entry: './frontend/storybook.jsx',
     output: {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
