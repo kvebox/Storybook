@@ -2,7 +2,9 @@ import React from 'react';
 
 class Profile extends React.Component {
     render () {
-        <h1>Hey Loser!</h1>
+        return (
+        <h1>Hey!</h1>
+        )
     }
 }
 

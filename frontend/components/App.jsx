@@ -1,20 +1,19 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import SignUpContainer from './SignUpContainer';
 import Home from './Home';
-import Profile from './Home';
+import Profile from './Profile';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
+import Feed from './Feed';
+
 
 const App = () => (
     <div>
-        <Route path="/" component={Home}/>
-        <Route path="/profile" component={Profile}/>
+        <Switch>
+            <ProtectedRoute path="/profile" component={Profile}/>
+            <ProtectedRoute path="/feed" component={Feed}/>
+            <AuthRoute path="/" component={Home}/>
+        </Switch>
     </div>
-    /* <Switch>
-        <Route path="/" component={Feed}/>
-        <Route path="/signup" component={SignUp}/>
-        <Route component={NoMatch}/>
-    </Switch> */
-
 );
 
 

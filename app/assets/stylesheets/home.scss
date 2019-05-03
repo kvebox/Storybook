@@ -1,27 +1,31 @@
 .login-form {
     background: rgb(65, 103, 178);
     margin: 0px;
+    height: 20px;
     display: flex;
     justify-content: flex-end;
-    padding: 15px;
+    padding: 5px;
+    border-bottom: 1px solid darkblue;
 }
 
 .signup-container {
     background: rgb(245,246,247);
-    width: 100%;
-    position: absolute;
+    // width: 100%;
+    // position: absolute;
     height: 500px;
 }
 
 .signup-form {
-    float: right;
+    // float: right;
     padding: 10px;
     // border: 1px solid black;
     margin: 0 auto;
 }
 
-#global-home {
-    
+#home_global {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .labels {
@@ -30,7 +34,7 @@
 }
 
 .long {
-    width: 268px;
+    width: 260px;
 }
 
 .login-input {
@@ -41,7 +45,7 @@
 .input {
     border-radius: 3px;
     border:1px solid #cccccc;
-    padding: 5px;
+    padding: px;
     margin: 3px;
 }
 

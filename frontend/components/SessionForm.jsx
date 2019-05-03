@@ -1,5 +1,6 @@
 import React from 'react';
 import { logout } from '../actions/session_actions';
+import {withRouter} from 'react-router';
 
 
 class SessionForm extends React.Component {
@@ -32,7 +33,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        // debugger
+        debugger
         this.props.processForm(user)
             .then(() => this.props.history.push('/profile'));
     }
@@ -59,4 +60,4 @@ class SessionForm extends React.Component {
         
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);

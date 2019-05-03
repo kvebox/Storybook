@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router';
 
 class SignupForm extends React.Component {
     constructor(props){
@@ -41,7 +42,8 @@ class SignupForm extends React.Component {
             last_name: "d",
             password: "password"
         };
-        this.props.login(demoUser);
+        this.props.login(demoUser)
+            .then(() => this.props.history.push('/profile'));
     }
 
     renderErrors() {
@@ -92,4 +94,4 @@ class SignupForm extends React.Component {
 
 };
 
-export default SignupForm;
+export default withRouter(SignupForm);
