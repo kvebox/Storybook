@@ -48,4 +48,6 @@ class User < ApplicationRecord
         self.session_token
     end
 
+    has_one_attached :profilePic
+
 end
