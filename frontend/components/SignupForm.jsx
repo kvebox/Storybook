@@ -25,6 +25,23 @@ class SignupForm extends React.Component {
         e.preventDefault();
         this.props.processForm(this.state);
             // .then(() => this.props.history.push('/profile')); // redirect if successful signup
+        this.state = {
+            email: "",
+            first_name: "",
+            last_name: "",
+            password: ""
+        };
+    }
+
+    demoLogin(e) {
+        e.preventDefault();
+        let demoUser = {
+            email: "nd@gmail.com",
+            first_name: "n",
+            last_name: "d",
+            password: "password"
+        };
+        this.props.login(demoUser);
     }
 
     renderErrors() {
@@ -42,26 +59,31 @@ class SignupForm extends React.Component {
     render () {
         return (
             <>
-            <h3>Create a new account</h3>
-            <div className="signup-form">
-                <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <label>First Name:
-                        <input type='text' onChange={this.update('first_name')} value={this.state.first_name}/>
-                    </label>
+            <div className="signup-container">
+                <form className="signup-form" onSubmit={(e) => this.handleSubmit(e)}>
+                   <h1>Create a new account</h1>
+                        <input className='input' type='text' 
+                               onChange={this.update('first_name')} 
+                               value={this.state.first_name}
+                               placeholder="First name"/>
+                        <input className='input' type='text' 
+                               onChange={this.update('last_name')} 
+                               value={this.state.last_name}
+                               placeholder="Last name"/>
+
                     <br />
-                    <label>Last Name:
-                        <input type='text' onChange={this.update('last_name')} value={this.state.last_name}/>
-                    </label>
+                        <input className='input long' type='text' 
+                               onChange={this.update('email')} 
+                               value={this.state.email}
+                            placeholder="Email"/>
                     <br />
-                    <label>Email:
-                        <input type='text' onChange={this.update('email')} value={this.state.email}/>
-                    </label>
-                    <br />
-                    <label>Password:
-                        <input type='password' onChange={this.update('password')} value={this.state.password}/>
-                    </label>
+                        <input className='input long' type='password' 
+                               onChange={this.update('password')} 
+                               value={this.state.password}
+                               placeholder="Password"/>
                     <br />
                     <button type="submit" value="submit">Create Account</button>
+                    <button onClick={(e) => this.demoLogin(e)} value="submit">Demo Login</button>
                 </form>
             </div>
             </>

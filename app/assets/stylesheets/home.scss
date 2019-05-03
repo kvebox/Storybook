@@ -1,0 +1,50 @@
+.login-form {
+    background: rgb(65, 103, 178);
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+
+.signup-container {
+    background: rgb(245,246,247);
+    width: 100%;
+    position: absolute;
+    height: 500px;
+}
+
+.signup-form {
+    float: right;
+    padding: 10px;
+    // border: 1px solid black;
+    margin: 0 auto;
+}
+
+#global-home {
+    
+}
+
+.labels {
+    color: white;
+    font-size: 12px;
+}
+
+.long {
+    width: 268px;
+}
+
+.login-input {
+    border-radius: 1px;
+    border:1px solid black; 
+}
+
+.input {
+    border-radius: 3px;
+    border:1px solid #cccccc;
+    padding: 5px;
+    margin: 3px;
+}
+
+// body {
+//     background: rgb(196,204,224);
+// }

@@ -5,10 +5,10 @@ import SignupContainer from './SignUpContainer';
 class Home extends React.Component {
     render () { 
         return (
-        <>
+        <div id="home_global">
             <LoginContainer /> 
             <SignupContainer />
-        </>
+        </div>
         )
     };
 };
