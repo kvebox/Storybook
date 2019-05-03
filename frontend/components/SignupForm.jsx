@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-class SignUp extends React.Component {
+class SignupForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -23,8 +23,8 @@ class SignUp extends React.Component {
     
     handleSubmit(e){
         e.preventDefault();
-        this.props.signup(this.state);
-            // .then(() => this.props.history.push('/feed')); // redirect if successful signup
+        this.props.processForm(this.state);
+            // .then(() => this.props.history.push('/profile')); // redirect if successful signup
     }
 
     renderErrors() {
@@ -46,19 +46,19 @@ class SignUp extends React.Component {
             <div className="signup-form">
                 <form onSubmit={(e) => this.handleSubmit(e)}>
                     <label>First Name:
-                        <input type='text' onChange={() => this.update('first_name')} value={this.state.first_name}/>
+                        <input type='text' onChange={this.update('first_name')} value={this.state.first_name}/>
                     </label>
                     <br />
                     <label>Last Name:
-                        <input type='text' onChange={() => this.update('last_name')} value={this.state.last_name}/>
+                        <input type='text' onChange={this.update('last_name')} value={this.state.last_name}/>
                     </label>
                     <br />
                     <label>Email:
-                        <input type='text' onChange={() => this.update('email')} value={this.state.email}/>
+                        <input type='text' onChange={this.update('email')} value={this.state.email}/>
                     </label>
                     <br />
                     <label>Password:
-                        <input type='password' onChange={() => this.update('password')} value={this.state.password}/>
+                        <input type='password' onChange={this.update('password')} value={this.state.password}/>
                     </label>
                     <br />
                     <button type="submit" value="submit">Create Account</button>
@@ -70,4 +70,4 @@ class SignUp extends React.Component {
 
 };
 
-export default SignUp;
+export default SignupForm;

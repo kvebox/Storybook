@@ -1,7 +1,6 @@
 import {connect} from 'react-redux';
 import {signup, login, logout} from '../actions/session_actions';
-import SignUp from './SignUp';
-import SessionForm from './SessionForm';
+import SignupForm from './SignupForm';
 
 const mapStateToProps = state => {
     let users = state.entities.users;
@@ -16,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
     processForm: user => dispatch(signup(user))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);
