@@ -1,9 +1,10 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+import SignUpContainer from './SignUpContainer';
 
 const App = () => (
     <div>
-        <h1>StalkerFeed</h1>
+        <Route path="/" component={SignUpContainer}/>
     </div>
     /* <Switch>
         <Route path="/" component={Feed}/>
