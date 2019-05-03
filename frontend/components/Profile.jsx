@@ -1,9 +1,12 @@
 import React from 'react';
+import NavContainer from './NavContainer';
 
 class Profile extends React.Component {
     render () {
         return (
-        <h1>Hey!</h1>
+            <div>
+            <NavContainer />
+            </div>
         )
     }
 }

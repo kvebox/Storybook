@@ -1,10 +1,11 @@
 import React from 'react';
+import NavContainer from './NavContainer';
 
 class Feed extends React.Component {
     render() {
         return (
             <div >
-                <h1>FEED ME</h1>
+                <NavContainer />
             </div>
         )
     };
