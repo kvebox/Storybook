@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field){
@@ -48,7 +49,7 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul className="errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -58,12 +59,15 @@ class SignupForm extends React.Component {
         );
     }
 
+
     render () {
+        // debugger
         return (
             <>
             <div className="signup-container">
                 <form className="signup-form" onSubmit={(e) => this.handleSubmit(e)}>
                    <h1>Create a new account</h1>
+                        {this.renderErrors()}
                         <input className='input' type='text' 
                                onChange={this.update('first_name')} 
                                value={this.state.first_name}
@@ -72,14 +76,14 @@ class SignupForm extends React.Component {
                                onChange={this.update('last_name')} 
                                value={this.state.last_name}
                                placeholder="Last name"/>
-
+                        
                     <br />
-                        <input className='input long' type='text' 
+                        <input className='input_long' type='text' 
                                onChange={this.update('email')} 
                                value={this.state.email}
                             placeholder="Email"/>
                     <br />
-                        <input className='input long' type='password' 
+                        <input className='input_long' type='password' 
                                onChange={this.update('password')} 
                                value={this.state.password}
                                placeholder="Password"/>

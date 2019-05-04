@@ -17,6 +17,10 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="login-form">
+                <div className="search-bar">
+                    <input type='text'
+                        placeholder="Search"/>
+                </div>
                 <button type="logout" onClick={(e) => this.logout(e)}>Logout</button>
             </div>
 

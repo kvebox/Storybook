@@ -11,11 +11,10 @@ class SessionForm extends React.Component {
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.update = this.update.bind(this);
+
     }
 
     update(field) {
-        // debugger
         return (e) => (
             this.setState({ [field]: e.target.value })
         );
@@ -26,9 +25,7 @@ class SessionForm extends React.Component {
         this.props.logout();
     }
 
-    // updateEmail(e){
-    //     this.state.email = e.target.value;
-    // }
+
 
     handleSubmit(e) {
         e.preventDefault();
@@ -36,6 +33,9 @@ class SessionForm extends React.Component {
         this.props.processForm(user)
             .then(() => this.props.history.push('/profile'));
     }
+
+
+
     render () {
         return (
 
