@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
@@ -11,7 +11,8 @@ const App = () => (
         <Switch>
             <ProtectedRoute path="/profile" component={Profile}/>
             <ProtectedRoute path="/feed" component={Feed}/>
-            <AuthRoute path="/" component={Home}/>
+            <AuthRoute exact path="/" component={Home}/>
+            <Redirect to="/" />
         </Switch>
     </div>
 );
