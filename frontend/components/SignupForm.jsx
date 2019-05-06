@@ -13,6 +13,7 @@ class SignupForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     }
 
     update(field){
@@ -44,7 +45,7 @@ class SignupForm extends React.Component {
             password: "password"
         };
         this.props.login(demoUser)
-            .then(() => this.props.history.push('/profile'));
+            .then(() => this.props.history.push('/feed'));
     }
 
     renderErrors() {
@@ -57,6 +58,31 @@ class SignupForm extends React.Component {
                 ))}
             </ul>
         );
+    }
+
+    handleDemoSubmit(e) {
+        e.preventDefault();
+
+        let demoEmail = 'nd@gmail.com'.split("");
+        let demoPassword = 'password'.split("");
+
+        this.setState({
+            email: this.state.email,
+            password: this.state.password,
+        }, () => this.demoLogin(demoEmail, demoPassword));
+    }
+
+
+    demoLogin(email, password) {
+        if (email.length > 0) {
+            this.setState({ email: this.state.email += email.shift() },
+                () => window.setTimeout(() => this.demoLogin(email, password), 60));
+        } else if (password.length > 0) {
+            this.setState({ password: this.state.password += password.shift() },
+                () => window.setTimeout(() => this.demoLogin(email, password), 70));
+        } else if (email.length === 0 && password.length === 0) {
+            this.props.demoLogin(this.state);
+        }
     }
 
 
@@ -89,7 +115,7 @@ class SignupForm extends React.Component {
                                placeholder="Password"/>
                     <br />
                     <button type="submit" value="submit">Create Account</button>
-                    <button onClick={(e) => this.demoLogin(e)} value="submit">Demo Login</button>
+                    <button onClick={(e) => this.handleDemoSubmit(e)} value="submit">Demo Login</button>
                 </form>
             </div>
             </>

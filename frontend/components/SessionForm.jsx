@@ -1,5 +1,4 @@
 import React from 'react';
-import { logout } from '../actions/session_actions';
 import {withRouter} from 'react-router';
 
 
@@ -27,11 +26,12 @@ class SessionForm extends React.Component {
 
 
 
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-            .then(() => this.props.history.push('/profile'));
+            .then(() => this.props.history.push(`/users/feed`));
     }
 
 

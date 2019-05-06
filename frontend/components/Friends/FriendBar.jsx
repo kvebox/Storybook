@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 
-class PostCreateWidget extends React.Component {
+class FriendBar extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -10,9 +10,8 @@ class PostCreateWidget extends React.Component {
 
     render() {
         return (
-            <div className="post-widget">
-                <h1> Make a post! </h1>
-
+            <div className="friend-bar">
+                <h4> Friends </h4>
             </div>
 
         )
@@ -20,4 +19,4 @@ class PostCreateWidget extends React.Component {
 
 }
 
-export default withRouter(PostCreateWidget);
+export default withRouter(FriendBar);

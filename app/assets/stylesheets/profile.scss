@@ -1,0 +1,38 @@
+.placeholder {
+    width: 100%;
+    height: 250px;
+}
+
+.profile-content {
+    min-height: 1047px;
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.profile-body {
+    background: #E9EBEE;
+}
+
+.profile-header {
+    background: white;
+}
+
+.profile-nav {
+    list-style-type: none;
+    display: flex;
+    align-items: vertical;
+    padding: 5px;
+
+}
+
+.profile-nav li {
+    border-left: 1px solid lightgray;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.profile-nav a {
+    text-decoration: none;
+}
