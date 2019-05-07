@@ -12,6 +12,9 @@ class PostCreateWidget extends React.Component {
         return (
             <div className="post-widget">
                 <h1> Make a post! </h1>
+                <form>
+                    <textarea />
+                </form>
 
             </div>
 

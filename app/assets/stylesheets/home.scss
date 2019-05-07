@@ -8,7 +8,10 @@
 }
 
 .signup-form {
-    // float: right;
+    float: right;
+    position: relative;
+    top: 100px;
+    width: 400px;
     padding: 10px;
     // border: 1px solid black;
     margin: 0 auto;

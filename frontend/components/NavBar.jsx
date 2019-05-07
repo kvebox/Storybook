@@ -17,13 +17,15 @@ class NavBar extends React.Component {
     render() {
         // debugger
         return (
-            <div className="login-form">
+            <div className="loggedin-nav">
                 <div className="search-bar_container">
                     <input className="search-bar" type='text'
                         placeholder="Search"/>
                 </div>
-                <div>
-                    <Link to={`/users/${this.props.currentUser.id}`}>User</Link>
+                <div className="login-link-container">
+                    <div className="login-link"><Link to={`/users/${this.props.currentUser.id}`}>{this.props.currentUser.first_name}</Link></div>
+                    <div className="login-link"><Link to="/feed">Home</Link></div>
+                    <div className="login-link"><a href="#">Create</a></div>
                 </div>
                 <button type="logout" onClick={(e) => this.logout(e)}>Logout</button>
             </div>

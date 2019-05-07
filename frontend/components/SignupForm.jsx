@@ -40,8 +40,8 @@ class SignupForm extends React.Component {
         e.preventDefault();
         let demoUser = {
             email: "nd@gmail.com",
-            first_name: "n",
-            last_name: "d",
+            first_name: "Nhat",
+            last_name: "Do",
             password: "password"
         };
         this.props.login(demoUser)

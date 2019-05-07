@@ -10,7 +10,7 @@ class Api::PostsController < ApplicationController
 
     def create 
         @post = Post.new(post_params)
-        
+        @post.author_id = current_user.id
         if @post.save
             render :index
         else  

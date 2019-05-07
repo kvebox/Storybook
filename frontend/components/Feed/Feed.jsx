@@ -5,7 +5,7 @@ import FeedContainer from './FeedContainer';
 class Feed extends React.Component {
     render() {
         return (
-            <div >
+            <div className="feed-body">
                 <NavContainer />
                 <FeedContainer />
             </div>
