@@ -4,7 +4,7 @@ import ProfileHeader from './ProfileHeader';
 
 
 const mapStateToProps = state => {
-    
+    return {};
 };
 
 const mapDispatchToProps = dispatch => ({
