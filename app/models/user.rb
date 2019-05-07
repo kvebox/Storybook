@@ -50,6 +50,8 @@ class User < ApplicationRecord
 
     has_one_attached :profilePic
 
+    has_many :posts
+
 
 # a.profilePic.attach(io: File.open("/Users/vjoh/Desktop/vj_propic.jpg"), filename: "vj_propic.jpg")
 end
