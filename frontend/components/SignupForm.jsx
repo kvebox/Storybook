@@ -63,13 +63,17 @@ class SignupForm extends React.Component {
     handleDemoSubmit(e) {
         e.preventDefault();
 
+        let demoFirstName = "Nhat".split("")
+        let demoLastName = "Do".split("");
         let demoEmail = 'nhatchat@gmail.com'.split("");
         let demoPassword = 'password'.split("");
 
         this.setState({
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
             email: this.state.email,
             password: this.state.password,
-        }, () => this.demoLogin(demoEmail, demoPassword));
+        }, () => this.demoLogin(demoEmail, demoPassword, demoFirstName, demoLastName));
     }
 
 
@@ -87,12 +91,14 @@ class SignupForm extends React.Component {
 
 
     render () {
-        // debugger
         return (
             <>
             <div className="signup-container">
+                <div className="signup-main">
+                <div className="filler">Other news</div>
                 <form className="signup-form" onSubmit={(e) => this.handleSubmit(e)}>
-                   <h1>Create a new account</h1>
+                   <h1 className="signup-header">Create a New Account</h1>
+                   <p>It's free and always will be.</p>
                         {this.renderErrors()}
                         <input className='input' type='text' 
                                onChange={this.update('first_name')} 
@@ -114,9 +120,12 @@ class SignupForm extends React.Component {
                                value={this.state.password}
                                placeholder="Password"/>
                     <br />
-                    <button type="submit" value="submit">Create Account</button>
-                    <button onClick={(e) => this.handleDemoSubmit(e)} value="submit">Demo Login</button>
+                    <p className="signup-policy"> By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
+                    <button className="signup-button" type="submit" value="submit">Sign Up</button>
+                    <br />
+                    <button className="signup-button demo" onClick={(e) => this.handleDemoSubmit(e)} value="submit">Demo Login</button>
                 </form>
+                </div>
             </div>
             </>
         )

@@ -5,7 +5,7 @@
     position: relative;
     float: left;
     box-sizing: border-box;
-    border: 1px solid #3b5998;
+    border: 1px solid #3C5A99;
     max-width: 448px;
     overflow: hidden;
     position: relative;
@@ -15,7 +15,7 @@
 }
 
 .login-form {
-    background: rgb(65, 103, 178);
+    background: #3C5A99;
     margin: 0px;
     height: 58px;
     display: flex;
@@ -27,6 +27,11 @@
     width: 100%;
     z-index: 1;
 }
+
+// .login-form-container {
+//     float: right;
+// }
+
 
 .loggedin-nav {
     background: rgb(65, 103, 178);

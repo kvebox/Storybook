@@ -40,18 +40,56 @@ class SessionForm extends React.Component {
         return (
 
             <div className="login-form">
-            <form onSubmit={(e) => this.handleSubmit(e)}>
-                <label className="labels"> Email </label>
+            <div className="login-container">
+
+{/* ----------------------------- */}
+            <div className="logo">
+                <h1>facebook</h1>
+            </div>
+{/* ----------------------------- */}
+
+            <form className="login-form-container" onSubmit={(e) => this.handleSubmit(e)}>
+            <table className="login-table">
+                <tbody>
+                    <tr>
+                        <td className="login-label">Email or Phone</td>
+                        <td className="login-label">Password</td>
+                    </tr>    
+                    <tr>
+                        <td>
+                        <input className='login-input' type='text' 
+                           value={this.state.email} 
+                           onChange={this.update('email')}/>
+                        </td>
+                        <td>
+                             <input className='login-input' type='password' 
+                           onChange={this.update('password')} 
+                           value={this.state.password} />
+                        </td>
+                            <td>
+                            <button className='login-button' type="submit" value="submit">Log In</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a className="login-forgot" href="#">Forgot account?</a></td>
+                        </tr>
+                </tbody>
+
+            </table>
+
+                {/* <label className="labels"> Email </label>
                     <input className='login-input' type='text' 
                            value={this.state.email} 
                            onChange={this.update('email')}/>
                 <label className="labels"> Password </label>
                     <input className='login-input' type='password' 
                            onChange={this.update('password')} 
-                           value={this.state.password} />
-                <button type="submit" value="submit">Login</button>
-                <button type="logout" onClick={(e)=> this.logout(e)}>Logout</button>
+                           value={this.state.password} /> */}
+                {/* <button type="submit" value="submit">Login</button> */}
+                {/* <button type="logout" onClick={(e)=> this.logout(e)}>Logout</button> */}
             </form>
+            </div>
             </div>
 
         )

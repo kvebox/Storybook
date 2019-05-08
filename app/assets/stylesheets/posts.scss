@@ -2,22 +2,122 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.comment {
+    border-top: 1px solid lightgray;
+    padding: 10px 5px 0px 5px;
+}
 
-.post-widget {
+.comment-input {
+    width: 89%;
+    float: right;
+    padding: 5px;
+    border-radius: 25px;
+    border:1px solid #cccccc;
+    background: #F4F4F4;
+}
 
+
+.comment-placeholder {
+    height: 25px;
+    width: 25px;
+}
+
+.date {
+    font-weight: normal;
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    padding-top: 18px;
+}
+
+
+::placeholder {
+    padding-left: 5px;
+    color: #aaa;
 }
 
 .posts {
     background: white;
     list-style-type: none;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
     border-radius: 3px;
     border: 1px solid lightgray;
+    // display: flex;
+
 
 }
 
 .feed-posts {
     display: flex;
     flex-direction: column-reverse;
+}
+
+.linebreak {
+    border-top: 1px solid lightgray;
+    width: 44px;
+}
+
+.post-author a {
+    text-decoration: none;
+    color: #3C5A99;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 2px;
+    // position: relative;
+    // display: block;
+    // border: 1px solid red;
+}
+
+.post-author h5{
+    padding: none;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    // align-items: 
+}
+
+.post-author {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    // border: 1px solid black;
+    margin: 0;
+    // align-items: center;
+}
+
+.post-content {
+    font-size: 16px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.post-options {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 11px;
+    color: #4F4F4F;
+    padding: 10px 12px 10px 12px;
+    border-top: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.profile-pic{
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
+
+
+.options {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 19px;
+    cursor: pointer;
+}
+
+.options a {
+    vertical-align: super;
+    text-decoration: none;
 }

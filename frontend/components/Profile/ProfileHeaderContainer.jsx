@@ -4,7 +4,9 @@ import ProfileHeader from './ProfileHeader';
 
 
 const mapStateToProps = state => {
-    return {};
+    return {
+        currentUser: state.entities.users[state.session.id]
+    };
 };
 
 const mapDispatchToProps = dispatch => ({

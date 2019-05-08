@@ -11,6 +11,7 @@ class ProfileHeader extends React.Component {
     render() {
         return (
             <div className='profile-header'>
+            {/* <img src={props.currentUser.profilePic} /> */}
                 <img className="placeholder" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
                 <ul className="profile-nav">
                     <li><a href="#">Timeline</a></li>

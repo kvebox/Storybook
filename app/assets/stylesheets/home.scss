@@ -4,17 +4,40 @@
     background: rgb(245,246,247);
     // width: 100%;
     // position: absolute;
+    height: 540px;
+    padding: 20px;
+}
+
+.signup-header {
+    line-height: 1.5px;
+}
+
+.logo {
+    line-height: 1.34;
+    position: relative;
+    float: left;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.signup-main {
+    width: 800px;
+    // border: 1px solid red;
     height: 500px;
+    margin: 0 auto;
 }
 
 .signup-form {
     float: right;
-    position: relative;
-    top: 100px;
+    // position: relative;
+    // top: 100px;
     width: 400px;
-    padding: 10px;
+    padding-top: 50px;
     // border: 1px solid black;
-    margin: 0 auto;
+    // margin: 0 auto;
 }
 
 #home_global {
@@ -28,31 +51,103 @@
     font-size: 12px;
 }
 
-.input_long {
-    border-radius: 5px;
-    border:1px solid #cccccc;
-    padding: 5px;
-    margin: 5px;
-    font-size: 15px;
-    width: 292px;
-    color: lightgray;
-}
 
 .login-input {
     border-radius: 1px;
     border:1px solid black; 
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.login-label {
+    color: white;
+    font-size: 10px;
+    padding-bottom: 4px;
+    padding-left: 5px;
 }
 
 .input {
     border-radius: 5px;
     border:1px solid #cccccc;
     padding: 5px;
-    margin: 5px;
+    // margin: 5px;
     font-size: 15px;
     width: 135px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
     
 }
 
-// body {
-//     background: rgb(196,204,224);
+
+.input_long {
+    border-radius: 5px;
+    border:1px solid #cccccc;
+    padding: 5px;
+    // margin: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: 292px;
+}
+
+.login-forgot {
+    color: lightsteelblue;
+    font-size: 10px;
+    text-decoration: none;
+    padding-left: 5px;
+    position: absolute;
+}
+
+.login-button {
+    font-size: 10px;
+    color: white;
+    background: #4167B2;
+    border: 1px solid darkblue;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+// .login-table {
+//     padding-top: 5px;
 // }
+
+.login-container {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.login-table {
+    position: relative;
+    float: right;
+}
+
+
+.signup-button {
+    background: green;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 175px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px 25px 7px 25px;
+    border: 1px solid #5C723F;
+    text-shadow: 0px 1px 2px rgba(0,0,0, .5);
+    font-weight: bold;
+    background-image: linear-gradient(#A1D663, green);
+}
+
+.signup-button:hover {
+    cursor: pointer;
+}
+
+.signup-policy {
+    font-size: 9px;
+    color: gray;
+    width: 250px;
+}
+
+.demo {
+    background-image: linear-gradient(#A141B2, purple)
+}

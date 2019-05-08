@@ -9,7 +9,7 @@ class Profile extends React.Component {
         return (
         <div className="profile-body">
             <NavContainer />
-            <FriendBarContainer />
+            {/* <FriendBarContainer /> */}
                 <div className="profile-content">
                     <ProfileHeaderContainer /> 
                     <FeedContainer /> 
