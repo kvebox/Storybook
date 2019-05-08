@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 bundle.js*
+bundle.js
+bundle.js.map
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -19,6 +22,7 @@ bundle.js*
 !/storage/.keep
 
 /node_modules
+node_modules/
 /yarn-error.log
 
 /public/assets

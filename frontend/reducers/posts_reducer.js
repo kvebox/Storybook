@@ -5,7 +5,6 @@ const postsReducer = (state = {}, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case RECEIVE_ALL_POSTS:
-        debugger
             newState = action.posts;
             return newState;
         case RECEIVE_POST:

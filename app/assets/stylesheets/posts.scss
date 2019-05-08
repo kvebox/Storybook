@@ -4,5 +4,20 @@
 
 
 .post-widget {
-    
+
+}
+
+.posts {
+    background: white;
+    list-style-type: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+
+}
+
+.feed-posts {
+    display: flex;
+    flex-direction: column-reverse;
 }

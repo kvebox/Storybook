@@ -8,5 +8,22 @@
 
 .post-widget {
     background: white;
-    
+    width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.feed-index {
+    position: relative;
+    padding-top: 24px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.create-post-header {
+    background: #E9EBEE;
+    padding: 5px;
+    position: relative;
+    border-bottom: 1px solid lightgray;
 }
