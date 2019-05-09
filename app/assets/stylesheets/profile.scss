@@ -9,30 +9,87 @@
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
+    background: #E9EBEE;
+}
+
+.profile-main-body {
+    margin: 0 auto;
+    // border: 1px solid red;
+    display: flex;
+    width: 725px;
+    justify-content: flex-end;
 }
 
 .profile-body {
     background: #E9EBEE;
+    width: 100%;
 }
 
 .profile-header {
     background: white;
+    margin: 0 auto;
+    width: 725px;
 }
 
 .profile-nav {
     list-style-type: none;
     display: flex;
     align-items: vertical;
-    padding: 5px;
-
+    justify-content: center;
+    padding: 0px 5px;
+    margin: 0px;
+    margin-bottom: 10px;
+    // border: 1px solid gray;
 }
 
 .profile-nav li {
     border-left: 1px solid lightgray;
-    padding: 5px 10px;
+    padding: 10px 15px;
     font-size: 12px;
+}
+
+.last {
+    border-right: 1px solid lightgray;
+}
+
+.profile-nav a {
+    color: #4167B2;
+    font-weight: bold;
+}
+
+.profile-nav-target a {
+    color: #666;
 }
 
 .profile-nav a {
     text-decoration: none;
+}
+
+
+// Widgets ------------------------------------
+
+.widget-main-body {
+    // border: 1px solid blue;
+    width: 300px;
+    margin-right: 10px;
+    // background: white;
+}
+.widget-language {
+    background: white;
+    border-radius: 3px;
+}
+
+.widget-language ul {
+    border: 1px solid lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+}
+
+.widget-language li {
+    list-style-type: none;
+    color: gray;
+    font-size: 10px;
+    padding-right: 5px;
 }

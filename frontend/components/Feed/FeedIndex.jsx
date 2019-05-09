@@ -28,15 +28,15 @@ class FeedIndex extends React.Component {
         });
         return (
             <div className="feed-main-body">
-            <div className="create-post"><PostCreateWidgetContainer/></div>
+                <PostCreateWidgetContainer/>
                 {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
-            <div className="feed-index">
-                <ul className="feed-posts">
-                    {allposts}
-                </ul>
+                <div className="feed-index">
+                    <ul className="feed-posts">
+                        {allposts}
+                    </ul>
 
+                </div>
             </div>
-        </div>
         )
     }
 

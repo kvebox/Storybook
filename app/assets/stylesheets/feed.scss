@@ -1,11 +1,4 @@
-.create-post {
 
-    margin: 0 auto;
-    padding-left: 40px;
-    box-sizing: border-box;
-    width: 98%;
-    margin-bottom: 5px;
-}
 
 .feed-body {
     background: #E9EBEE;
@@ -17,11 +10,12 @@
 
 .post-create-input {
     width: 99%;
-
+    outline-width: 0;
     overflow: hidden;
     border: none;
     resize: none;
     padding-top: 15px;
+    font-size: 12px;
     // padding: 10px 0px 10px 0px;
 }
 
@@ -46,7 +40,6 @@
 .post-widget {
     position: relative;
     background: white;
-
     border: 1px solid lightgray;
     border-radius: 5px;
     margin: 0 auto;
@@ -59,22 +52,20 @@
 }
 
 .feed-main-body {
+    min-width: 425px;
     max-width: 475px;
-    min-width: 450px;
+    // border: 1px solid blue;
 }
-
 
 .main-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-// .feed-index {
-//     position: relative;
-//     padding-top: 24px;
-//     // width: 500px;
-//     margin: 0 auto;
-// }
+.feed-index {
+    margin-top: 10px;
+
+}
 
 .spacer {
     padding: 23px;
@@ -145,17 +136,40 @@
     // max-width: 150px;
     // min-width: 150px;
     // border: 1px solid red;
-    margin-left: 50px;
+    // margin-left: 50px;
 }
 // 
 .navigation-container li, .navigation-profile {
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
-    margin: 10px;
     align-content: center;
     font-size: 11px;
+    margin: 5px;
+    margin-top: 0px;
+    padding: 3px;
+    // border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px;
 }
+
+.navigation-container li:hover, .navigation-profile:hover {
+    background: #F8F8F8;
+    // border: 1px solid #D5D5D5;
+    cursor: pointer;
+}
+
+.navigation-profile a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation-container li {
+
+    // margin-bottom: 3px;
+}
+
 
 .navigation-title {
     display: flex;
@@ -165,12 +179,13 @@
     // align-items: center;
 }
 
-.navigation-title span {
+.nav-expand {
     position: relative;
     top: -7.5px;
     font-size: 17.5px;
     font-weight: bold;
     color: lightslategray;
+    height: 15px;
 }
 
 
@@ -186,4 +201,11 @@
 
 .navigation-container {
     padding: 0px;
+}
+
+
+.nav-target {
+    background: #F8F8F8;
+    border: 1px solid #D5D5D5;
+    font-weight: bold;
 }

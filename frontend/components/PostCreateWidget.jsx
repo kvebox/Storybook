@@ -15,6 +15,7 @@ class PostCreateWidget extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         this.props.createPost(this.props.currentUser, this.state);
+        this.setState({body: ''});
     }
 
     update(e){

@@ -3,6 +3,7 @@ import NavContainer from '../NavContainer';
 import ProfileHeaderContainer from './ProfileHeaderContainer';
 import FeedContainer from '../Feed/FeedContainer';
 import FriendBarContainer from '../Friends/FriendBarContainer';
+import WidgetSideBar from './WidgetSideBar';
 
 class Profile extends React.Component {
     render () {
@@ -12,8 +13,11 @@ class Profile extends React.Component {
             {/* <FriendBarContainer /> */}
                 <div className="profile-content">
                     <ProfileHeaderContainer /> 
-                    <FeedContainer /> 
-            </div>
+                    <div className="profile-main-body">
+                        <WidgetSideBar />
+                        <FeedContainer /> 
+                    </div>
+                </div>
         </div>
         )
     }

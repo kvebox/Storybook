@@ -14,6 +14,7 @@
     border-radius: 25px;
     border:1px solid #cccccc;
     background: #F4F4F4;
+    outline-width: 0;
 }
 
 
@@ -40,7 +41,7 @@
     background: white;
     list-style-type: none;
     padding: 5px;
-    margin: 5px;
+    margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid lightgray;
     // display: flex;
@@ -52,6 +53,7 @@
     display: flex;
     flex-direction: column-reverse;
     margin-top: 0px;
+    padding: 0px;
 }
 
 .linebreak {
@@ -65,9 +67,7 @@
     font-weight: bold;
     font-size: 12px;
     padding-top: 2px;
-    // position: relative;
-    // display: block;
-    // border: 1px solid red;
+
 }
 
 .post-author h5{
@@ -75,16 +75,15 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    // align-items: 
+
 }
 
 .post-author {
     padding: 5px;
     display: flex;
     justify-content: flex-start;
-    // border: 1px solid black;
     margin: 0;
-    // align-items: center;
+
 }
 
 .post-content {
