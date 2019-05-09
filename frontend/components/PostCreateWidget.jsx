@@ -7,7 +7,7 @@ class PostCreateWidget extends React.Component {
         super(props);
         this.state = {
             body: '',
-            author_id: 0
+            author_id: this.props.currentUser.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,12 +24,36 @@ class PostCreateWidget extends React.Component {
     render() {
         return (
             <div className="post-widget">
-                <h6 className="create-post-header"> Create Post </h6>
-                <form onSubmit={this.handleSubmit}>
-                    <textarea onChange={e=>this.update(e)} value={this.state.body}/>
-                    <input type="hidden" value={this.props.currentUser.id}/>
-                <button onClick={this.handleSubmit}>Add post!</button>
+                <form className="post-form" onSubmit={this.handleSubmit}>
+                <ul className="create-post-header">
+                    <li > Create Post </li>
+                    <li ><a href="#"> Photo/Video </a></li>
+                    <li ><a href="#"> Live Video </a></li>
+                    <li ><a href="#"> Life Event</a> </li>
+                </ul>
+                <div className="post-input-container">
+                    <img className="post-profile" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
+                    <textarea className="post-create-input" 
+                              onChange={e=>this.update(e)} 
+                              value={this.state.body}
+                              placeholder="What's on your mind?"/>
+
+                <button type="submit" >Submit</button>
+                </div>
                 </form>
+                    {/* <input type="hidden" value={this.props.currentUser.id}/> */}
+                    {/* <br /> */}
+
+                    {/* onClick={this.handleSubmit} */}
+                <ul className="create-post-options">
+                    <li className="create-post-option" >
+                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Photo/Video</li>
+                    <li className="create-post-option" >
+                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Tag Friends</li>
+                    <li className="create-post-option" >
+                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Feeling/Acti...</li>
+                    <li className="create-post-option" >...</li>
+                </ul>
             </div>
 
         )

@@ -8,7 +8,7 @@ class Feed extends React.Component {
         return (
             <div className="feed-body">
                 <NavContainer />
-                <PostCreateWidgetContainer />
+                <div className="spacer"></div>
                 <FeedContainer />
             </div>
         )

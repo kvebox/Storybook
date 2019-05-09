@@ -27,15 +27,16 @@ class FeedIndex extends React.Component {
             return <FeedIndexItem key={id} user={this.props.currentUser} post={post}/>
         });
         return (
-            <>
-                {/* <PostCreateWidgetContainer /> */}
+            <div className="feed-main-body">
+            <div className="create-post"><PostCreateWidgetContainer/></div>
+                {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
             <div className="feed-index">
                 <ul className="feed-posts">
                     {allposts}
                 </ul>
 
             </div>
-        </>
+        </div>
         )
     }
 

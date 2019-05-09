@@ -51,6 +51,7 @@
 .feed-posts {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 0px;
 }
 
 .linebreak {
@@ -121,3 +122,6 @@
     vertical-align: super;
     text-decoration: none;
 }
+
+// PostCreateWidget ---------------------
+

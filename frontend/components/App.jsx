@@ -5,7 +5,6 @@ import Profile from './Profile/Profile';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import Feed from './Feed/Feed';
 
-
 const App = () => (
     <div>
         <Switch>
