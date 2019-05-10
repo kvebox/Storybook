@@ -40,8 +40,6 @@ class SignupForm extends React.Component {
         e.preventDefault();
         let demoUser = {
             email: "nhatchat@gmail.com",
-            first_name: "Nhat",
-            last_name: "Do",
             password: "password"
         };
         this.props.login(demoUser)
@@ -63,17 +61,13 @@ class SignupForm extends React.Component {
     handleDemoSubmit(e) {
         e.preventDefault();
 
-        let demoFirstName = "Nhat".split("")
-        let demoLastName = "Do".split("");
         let demoEmail = 'nhatchat@gmail.com'.split("");
         let demoPassword = 'password'.split("");
 
         this.setState({
-            first_name: this.state.first_name,
-            last_name: this.state.last_name,
             email: this.state.email,
             password: this.state.password,
-        }, () => this.demoLogin(demoEmail, demoPassword, demoFirstName, demoLastName));
+        }, () => this.demoLogin(demoEmail, demoPassword));
     }
 
 

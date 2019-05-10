@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 
 class FeedIndexItem extends React.Component {
@@ -22,9 +24,7 @@ class FeedIndexItem extends React.Component {
     }
 
     render() {
-        
     return (
-        
         <li className="posts">
             <div className="options"><a href="#">...</a></div>
             <div className="post-author">
@@ -33,7 +33,7 @@ class FeedIndexItem extends React.Component {
                     {!(this.props.post.author == undefined) ? <a href={`#/users/${this.props.post.author.id}`}>{`${this.props.post.author.first_name} ${this.props.post.author.last_name}`}</a>
                     : <a href={`#/users/${this.props.user.id}`}>{`${this.props.user.first_name} ${this.props.user.last_name}`}</a>} 
                     
-                    <span className="date">May 7, 2018</span>
+                    <span className="date"><Moment format="MMM DD, YYYY">{this.props.post.created_at}</Moment></span>
                 </h5>
             </div>
             
