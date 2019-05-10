@@ -35,7 +35,7 @@ class NavBar extends React.Component {
                     <div className="nav-icon-options">
                     <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
                     <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" className="logout-button" onClick={(e) => this.logout(e)}/>
+                    <img src="https://3.bp.blogspot.com/-21TnSZFSnuY/XNXe9X_losI/AAAAAAAABUw/2lBJZp_f5ZcQJ2bOM8P0eJgb3ANGhXwsACKgBGAs/s1600/1.png" className="logout-button" onClick={(e) => this.logout(e)}/>
                     </div>
 
                     <div className="nav-icon-option-extras">
