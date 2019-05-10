@@ -1,0 +1,42 @@
+.widget-main-body {
+    margin-right: 10px;
+}
+
+// Footer ------------------------------------
+.widget-footer li {
+    list-style-type: none;
+    color: gray;
+    font-size: 10px;
+    padding-right: 5px;
+}
+
+.widget-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+}
+
+// Language ------------------------------------
+
+.widget-language {
+    background: white;
+    border-radius: 3px;
+}
+
+.widget-language ul {
+    border: 1px solid lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 10px;
+}
+
+.widget-language li {
+    list-style-type: none;
+    color: gray;
+    font-size: 10px;
+    padding-right: 5px;
+}
+
+

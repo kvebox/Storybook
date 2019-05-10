@@ -66,30 +66,3 @@
 }
 
 
-// Widgets ------------------------------------
-
-.widget-main-body {
-    // border: 1px solid blue;
-    // width: 300px;
-    margin-right: 10px;
-    // background: white;
-}
-.widget-language {
-    background: white;
-    border-radius: 3px;
-}
-
-.widget-language ul {
-    border: 1px solid lightgray;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px;
-    padding: 10px;
-}
-
-.widget-language li {
-    list-style-type: none;
-    color: gray;
-    font-size: 10px;
-    padding-right: 5px;
-}

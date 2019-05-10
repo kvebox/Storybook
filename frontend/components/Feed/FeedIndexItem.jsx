@@ -6,7 +6,8 @@ class FeedIndexItem extends React.Component {
     constructor({props}) {
         super(props);
         this.state = {
-            author_id: 0
+            author_id: 0,
+            created_at: ""
         };
 
     }
