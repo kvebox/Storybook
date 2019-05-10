@@ -1,24 +1,21 @@
-# README
+# Storybook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live Demo][heroku]
+[heroku]: https://fsp-storybook.herokuapp.com/
 
-Things you may want to cover:
+Storybook is an intended social media and networking clone of Facebook, where users can create posts and view those made by others on a currently joint post feed.
 
-* Ruby version
+## Features
+    * Secure frontend to backend user authentication using BCrypt.
 
-* System dependencies
+## Technologies
+    * Storybook is written primarily in rails and react, hosted on Heroku.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Future features
+    * Reskin + redesign
+    * Expanded post creation that allows uploading of photos
+    * Comments + likes
+    * Friending
+    * Search
+    * Image upload + avatar editing
+    * Widgets of all kinds~
