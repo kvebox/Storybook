@@ -33,7 +33,9 @@ class PostCreateWidget extends React.Component {
                     <li ><a href="#"> Life Event</a> </li>
                 </ul>
                 <div className="post-input-container">
+                    <div className="post-profile-crop">
                     <img className="post-profile" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
+                    </div>
                     <textarea className="post-create-input" 
                               onChange={e=>this.update(e)} 
                               value={this.state.body}

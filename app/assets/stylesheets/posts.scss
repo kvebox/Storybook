@@ -5,6 +5,7 @@
 .comment {
     border-top: 1px solid lightgray;
     padding: 10px 5px 0px 5px;
+    display: flex;
 }
 
 .comment-input {
@@ -18,9 +19,18 @@
 }
 
 
-.comment-placeholder {
-    height: 25px;
+.comment-crop {
+    border-radius: 50%;
+    overflow: hidden;
+        height: 25px;
     width: 25px;
+    margin-right: 8px;
+}
+
+.comment-placeholder {
+    display: inline;
+    margin: 0 auto;
+
 }
 
 .date {
@@ -102,10 +112,19 @@
     font-weight: bold;
 }
 
-.profile-pic{
+.profile-crop, .post-profile-crop {
     height: 30px;
     width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
     margin-right: 8px;
+}
+
+.profile-pic, .post-profile {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    // margin-right: 8px;
 }
 
 

@@ -4,7 +4,9 @@ export default ({currentUser}) => {
     return (
         <div className="feed-navigation-body">
             <div className="navigation-profile"> 
+                <div className="nav-profile-crop">
                 <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                </div>
                 <div><a href={`#/users/${currentUser.id}`} >{currentUser.first_name} {currentUser.last_name} </a></div>
             </div>
 
