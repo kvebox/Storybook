@@ -5,7 +5,7 @@
 
 .profile-content {
     min-height: 1047px;
-    width: 980px;
+    width: 850px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -13,11 +13,11 @@
 }
 
 .profile-main-body {
-    margin: 0 auto;
     // border: 1px solid red;
     display: flex;
-    width: 725px;
+    // width: 925px;
     justify-content: flex-end;
+    margin: 0 auto;
 }
 
 .profile-body {
@@ -28,7 +28,7 @@
 .profile-header {
     background: white;
     margin: 0 auto;
-    width: 725px;
+    // width: 925px;
 }
 
 .profile-nav {
@@ -70,7 +70,7 @@
 
 .widget-main-body {
     // border: 1px solid blue;
-    width: 300px;
+    // width: 300px;
     margin-right: 10px;
     // background: white;
 }

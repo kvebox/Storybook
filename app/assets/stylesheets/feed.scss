@@ -52,23 +52,25 @@
 }
 
 .feed-main-body {
-    min-width: 425px;
-    max-width: 475px;
+    width: 85%;
+    // flex-shrink: 0;
     // border: 1px solid blue;
 }
 
 .main-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    // border: 1px solid red;
 }
 
 .feed-index {
     margin-top: 10px;
-
 }
 
 .spacer {
-    padding: 23px;
+    padding: 25px;
 }
 
 .create-post-header {
@@ -133,10 +135,8 @@
 // Feed Navigation Bar --------------------------------------
 
 .feed-navigation-body {
-    // max-width: 150px;
-    // min-width: 150px;
-    // border: 1px solid red;
-    // margin-left: 50px;
+// border: 1px solid red;
+margin-right: 5px;
 }
 // 
 .navigation-container li, .navigation-profile {
@@ -175,7 +175,7 @@
     display: flex;
     justify-content: space-between;
     // border: 1px solid blue;
-    width: 130px;
+    width: 170px;
     // align-items: center;
 }
 
@@ -208,4 +208,12 @@
     background: #F8F8F8;
     border: 1px solid #D5D5D5;
     font-weight: bold;
+}
+
+
+// Feed Widget Bar --------------------------------------
+.feed-widget-container {
+    width: 500px;
+    // border: 1px solid black;
+    margin-left: 10px;
 }
