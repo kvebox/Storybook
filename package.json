@@ -46,5 +46,9 @@
   "bugs": {
     "url": "https://github.com/kvebox/storybook/issues"
   },
-  "homepage": "https://github.com/kvebox/storybook#readme"
+  "homepage": "https://github.com/kvebox/storybook#readme",
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "url-loader": "^1.1.2"
+  }
 }

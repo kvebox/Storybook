@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
+// import menuFriends from '../../app/assets/images/menu_friends.png';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -32,15 +33,17 @@ class NavBar extends React.Component {
                         <div className="login-link"><a href="#">Create</a></div>
                     </div>
 
+
+                        {/* <img src={require('/images/image-name.png')} /> */}
                     <div className="nav-icon-options">
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
-                    <img src="https://3.bp.blogspot.com/-21TnSZFSnuY/XNXe9X_losI/AAAAAAAABUw/2lBJZp_f5ZcQJ2bOM8P0eJgb3ANGhXwsACKgBGAs/s1600/1.png" className="logout-button" onClick={(e) => this.logout(e)}/>
+                    <img src='/images/menu_friends.png' alt='nav_icon_friends' />
+                    <img src='/images/menu_messenger.png' alt='nav_icon_messenger' />
+                    <img src='/images/menu_notification.png' alt='nav_icon_notifications' className="logout-button" onClick={(e) => this.logout(e)}/>
                     </div>
 
                     <div className="nav-icon-option-extras">
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                    <img src='/images/menu_help.png' alt='nav_icon_help' />
+                    <img src='/images/menu_dropdown.png' alt='nav_options' />
                     </div>
 
                 </div>

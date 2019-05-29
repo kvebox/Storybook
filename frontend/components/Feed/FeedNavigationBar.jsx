@@ -12,28 +12,61 @@ export default ({currentUser}) => {
 
             <ul className="navigation-container">
                 <li className="nav-target">
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                    <img src='/images/icons_newsFeed.png' alt='icon newsfeed' />
                     <div className="navigation-title">
                     <div>News Feed</div>
                     <div className="nav-expand">...</div>
                     </div>
                 </li>
                 <li>
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                    <img src='/images/icons_messenger.png' alt='icon messenger' />
                     <div className="navigation-title">
                     <div>Messenger</div>
                     </div>
                 </li>
                 <li>
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                    <img src='/images/icons_watch.png' alt='icon watch' />
                     <div className="navigation-title">
                     <div>Watch</div>
                     </div>
                 </li>
                 <li>
-                    <img src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />
+                    <img src='/images/icons_marketplace.png' alt='icon marketplace' />
                     <div className="navigation-title">
                     <div>Marketplace</div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul className="navigation-container">
+                <li>
+                    <img src='/images/icons_pages.png' alt='icon pages' />
+                    <div className="navigation-title">
+                        <div>Pages</div>
+                    </div>
+                </li>
+                <li>
+                    <img src='/images/icons_groups.png' alt='icon groups' />
+                    <div className="navigation-title">
+                        <div>Groups</div>
+                    </div>
+                </li>
+                <li>
+                    <img src='/images/icons_oculus.png' alt='icon oculus' />
+                    <div className="navigation-title">
+                        <div>Oculus</div>
+                    </div>
+                </li>
+                <li>
+                    <img src='/images/icons_events.png' alt='icon events' />
+                    <div className="navigation-title">
+                    <div>Events</div>
+                    </div>
+                </li>
+                <li>
+                    <img src='/images/icons_fundraiser.png' alt='icon fundraisers' />
+                    <div className="navigation-title">
+                    <div>Fundraisers</div>
                     </div>
                 </li>
             </ul>
