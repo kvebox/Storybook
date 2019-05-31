@@ -34,7 +34,7 @@ class PostCreateWidget extends React.Component {
                 </ul>
                 <div className="post-input-container">
                     <div className="post-profile-crop">
-                    <img className="post-profile" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
+                            <img className="post-profile" src="/images/profile_2.png"/>
                     </div>
                     <textarea className="post-create-input" 
                               onChange={e=>this.update(e)} 
@@ -50,11 +50,11 @@ class PostCreateWidget extends React.Component {
                     {/* onClick={this.handleSubmit} */}
                 <ul className="create-post-options">
                     <li className="create-post-option" >
-                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Photo/Video</li>
+                    <img className="create-post-icon" src="/images/add_photo.png" />Photo/Video</li>
                     <li className="create-post-option" >
-                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Tag Friends</li>
+                    <img className="create-post-icon" src="/images/add_tag.png" />Tag Friends</li>
                     <li className="create-post-option" >
-                    <img className="create-post-icon" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png" />Feeling/Acti...</li>
+                    <img className="create-post-icon" src="/images/add_reaction.png" />Feeling/Acti...</li>
                     <li className="create-post-option" >...</li>
                 </ul>
             </div>

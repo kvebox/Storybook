@@ -112,7 +112,7 @@
     font-weight: bold;
 }
 
-.profile-crop, .post-profile-crop {
+.profile-crop, .post-profile-crop, .comment-crop {
     height: 30px;
     width: 30px;
     overflow: hidden;
@@ -120,7 +120,7 @@
     margin-right: 8px;
 }
 
-.profile-pic, .post-profile {
+.profile-pic, .post-profile, .comment-placeholder, .nav-profile {
     height: 100%;
     margin: 0 auto;
     width: 100%;

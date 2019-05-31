@@ -29,7 +29,7 @@ class FeedIndexItem extends React.Component {
             <div className="options"><a href="#">...</a></div>
             <div className="post-author">
                 <div className="profile-crop">
-                <img className="profile-pic" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
+                    <img className="profile-pic" src='/images/profile_1.png'/>
                 </div>
                 <h5>
                     {!(this.props.post.author == undefined) ? <a href={`#/users/${this.props.post.author.id}`}>{`${this.props.post.author.first_name} ${this.props.post.author.last_name}`}</a>
@@ -52,7 +52,7 @@ class FeedIndexItem extends React.Component {
 
             <form className="comment">
                 <div className="comment-crop">
-                <img className="comment-placeholder" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
+                        <img className="comment-placeholder" src="/images/profile_2.png"/>
                 </div>
                 <input className="comment-input" type="text" 
                        placeholder="Write a comment..."/>
