@@ -135,28 +135,27 @@
 // Feed Navigation Bar --------------------------------------
 
 .feed-navigation-body {
-// border: 1px solid red;
-margin-right: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
-// 
 .navigation-container li, .navigation-profile {
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
     align-content: center;
+    align-items: center;
     font-size: 11px;
-    margin: 5px;
+    // margin: 3px;
     margin-top: 0px;
     padding: 3px;
-    // border: 1px solid red;
     box-sizing: border-box;
     border-radius: 3px;
-    border: 1px;
+    border: 1px solid inherit;
+    box-sizing: border-box;
 }
 
 .navigation-container li:hover, .navigation-profile:hover {
     background: #F8F8F8;
-    // border: 1px solid #D5D5D5;
     cursor: pointer;
 }
 
@@ -165,16 +164,12 @@ margin-right: 5px;
     color: black;
 }
 
-.navigation-container li {
-
-    // margin-bottom: 3px;
-}
 
 .nav-profile-crop{
     border-radius: 50%;
-        height: 15px;
+    height: 15px;
     width: 15px;
-        overflow: hidden;
+    overflow: hidden;
     margin-right: 5px;
 }
 
@@ -182,9 +177,7 @@ margin-right: 5px;
 .navigation-title {
     display: flex;
     justify-content: space-between;
-    // border: 1px solid blue;
     width: 170px;
-    // align-items: center;
 }
 
 .nav-expand {
@@ -197,13 +190,9 @@ margin-right: 5px;
 }
 
 
-// .navigation-container p {
-//     position: relative;
-// }
-
 .navigation-container img{
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     padding-right: 5px;
 }
 

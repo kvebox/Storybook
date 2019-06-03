@@ -2,6 +2,7 @@ import React from 'react';
 import PostCreateWidgetContainer from '../PostCreateWidgetContainer';
 import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
+import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
 
 class FeedIndex extends React.Component {
     constructor(props) {
@@ -28,6 +29,7 @@ class FeedIndex extends React.Component {
         });
         return (
             <div className="feed-main-body">
+                <CreatePostModalContainer />
                 <PostCreateWidgetContainer/>
                 {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
                 <div className="feed-index">

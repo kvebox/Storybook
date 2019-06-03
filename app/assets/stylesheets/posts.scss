@@ -112,6 +112,21 @@
     font-weight: bold;
 }
 
+.post-options span {
+    display: flex;
+    // align-content: center;
+    align-items: center;
+}
+
+.post-options img {
+    margin-right: 5px;
+}
+
+.post_icon{
+    width: 20px;
+    height: 20px;
+}
+
 .profile-crop, .post-profile-crop, .comment-crop {
     height: 30px;
     width: 30px;

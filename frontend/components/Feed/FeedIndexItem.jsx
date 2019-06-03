@@ -45,9 +45,9 @@ class FeedIndexItem extends React.Component {
 
 
             <div className="post-options">
-                <span>Like</span>
-                <span>Comment</span>
-                <span>Share</span>
+                    <span><img className='post_icon' src='/images/like.png'></img>Like</span>
+                <span><img className='post_icon' src='/images/comment.png'></img>Comment</span>
+                <span><img className='post_icon' src='/images/share.png'></img>Share</span>
             </div>
 
             <form className="comment">

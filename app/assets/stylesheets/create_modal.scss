@@ -1,0 +1,143 @@
+.modalContainer {
+    background: white;
+    // height: 300px;
+    // width: 500px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+.modalFormContainer {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    overflow: contain;
+}
+
+.modalFormContainer form {
+    width: 75%;
+}
+
+.modalHeader {
+    padding:7.5px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.modalCancel {
+    padding:7.5px;
+    font-size: 11px;
+}
+
+.modalHeadContainer {
+    display: flex;
+    justify-content: space-between;
+    background: #F4F4F4;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.modalTextInput {
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.modalShare {
+    background: #F4F4F4;
+    border-top: 1px solid lightgray;
+}
+
+.modalShare ul {
+    padding: 0px;
+}
+
+.modalShare {
+    padding: 0 15px;
+}
+
+.modalShare li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modalShareDropdown {
+    border: 1px solid lightgray;
+    padding: 3px 3px;
+    display: flex;
+    align-items: center;
+}
+
+.modalShareDropdown img {
+    height: 15px;
+    width: 15px;
+}
+
+.modalShareButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.shareButton {
+    width: 100%;
+    background: #4167B2;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.shareDropdown {
+    border: 1px solid lightgray;
+    font-size: 11px;
+    font-weight: 500;
+    margin-right: 7.5px;
+    display: flex;
+    border-radius: 3px;
+    padding: 0 5px;
+    padding-right: 7.5px;
+    align-items: center;
+}
+
+.dropdownIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.optionsLeft {
+    display: flex;
+    align-items: center;
+    // justify-content: left;
+}
+
+.select {
+    height: 20px;
+    width: 20px;
+}
+
+.modalShareOptions {
+    height: 25px;
+    width: 25px;
+}
+
+.modalBackground {
+    background: rgba(0,0,0,.6);
+    // width: 100%;
+    // height: 100%;
+    // position: absolute;
+}
+
+.modal {
+    // position: absolute;
+    // width: 100%;
+    // height: 100%;
+}
