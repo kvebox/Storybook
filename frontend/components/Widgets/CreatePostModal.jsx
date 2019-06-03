@@ -23,7 +23,9 @@ class FeedIndex extends React.Component {
 
     render() {
         return (
+            
             <div className='modal'>
+                <div className='modalBackground'></div>
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
                         <div className='modalHeader'>Create Post</div>
@@ -31,7 +33,7 @@ class FeedIndex extends React.Component {
                     </div>
 
                 <div className='modalFormContainer'>
-                    <div className='modalCover'><img src='/images/profile_2.png' /></div>
+                    <div className='modalCover'><img className='modalImage' src='/images/profile_2.png' /></div>
                     <form>
                         <textarea
                             onChange={e=>this.update(e)}
@@ -54,8 +56,8 @@ class FeedIndex extends React.Component {
                     <ul>
                         <li>
                             <div className='optionsLeft'>
-                                <img className='select' src='/images/profile_1.png'/>
-                                <img className='modalShareOptions' src='/images/icons_newsFeed.png'/>
+                                <img className='select' src='/images/create_selected.png'/>
+                                <img className='modalShareOptions' src='/images/create_newsfeed.png'/>
                                 News Feed 
                             </div>
                             <div className='modalShareDropdown'>

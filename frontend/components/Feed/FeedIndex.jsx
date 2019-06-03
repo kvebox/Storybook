@@ -8,7 +8,8 @@ class FeedIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            posts: null
+            posts: null,
+            modal: true
         };
     }
 
@@ -22,6 +23,13 @@ class FeedIndex extends React.Component {
         } 
     }
 
+    returnCreate() {
+        if (this.state.modal){
+            return <CreatePostModalContainer/>
+        }
+        return <CreatePostWidgetContainer />
+    }
+
 
     render() {
         let allposts = this.props.posts.map((post, id) => {
@@ -29,8 +37,9 @@ class FeedIndex extends React.Component {
         });
         return (
             <div className="feed-main-body">
-                <CreatePostModalContainer />
-                <PostCreateWidgetContainer/>
+                {this.returnCreate()}
+                {/* <CreatePostModalContainer /> */}
+                {/* <PostCreateWidgetContainer/> */}
                 {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
                 <div className="feed-index">
                     <ul className="feed-posts">
