@@ -173,12 +173,19 @@
 
 .nav-profile-crop{
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     overflow: hidden;
     margin-right: 5px;
 }
 
+.navigation-headers {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    line-height: 0;
+    margin-bottom: 10px;
+}
 
 .navigation-title {
     display: flex;

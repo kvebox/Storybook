@@ -23,6 +23,8 @@ class FeedIndex extends React.Component {
 
     render() {
         return (
+            <div className='modal'>
+                
             
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
@@ -39,6 +41,8 @@ class FeedIndex extends React.Component {
                             placeholder={`What's on your mind, ${this.props.currentUser.first_name}?`} />
                     </form>
                 </div>
+
+                <div className='modalSpacer'></div>
         
                 <ul className="create-post-options">
                     <li className="create-post-option" >
@@ -74,8 +78,9 @@ class FeedIndex extends React.Component {
                     </div>
                 </div>
             </div>
+                <div className='modalBackground'></div>
 
-        
+            </div>
         )
     }
 

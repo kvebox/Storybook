@@ -89,6 +89,13 @@
     justify-content: center;
 }
 
+.modalSpacer {
+    width: 92.5%;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+    margin: 0 auto;
+}
+
 .shareButton {
     width: 90%;
     background: #4167B2;
@@ -100,6 +107,7 @@
 
 .shareButton:hover {
     background: #305591;
+    cursor: pointer;
 }
 
 .shareDropdown {
@@ -161,11 +169,12 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 0;
+    left: 0;
+    top: 0;
 }
 
-.modalContainer {
+.postModal, .modalContainer, .main-container{
     z-index: 99;
 }
-
 

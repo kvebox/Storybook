@@ -28,9 +28,10 @@ class FeedIndex extends React.Component {
 
     returnCreate() {
         if (this.state.modal){
-            return <CreatePostModalContainer/>
+            return <div className='postModal'><CreatePostModalContainer/>
+            </div>
         }
-        return <PostCreateWidgetContainer />
+        return <div className='postNormal'><PostCreateWidgetContainer /></div>
     }
 
     showModal(){
@@ -44,26 +45,20 @@ class FeedIndex extends React.Component {
         });
         return (<>
             
-            <NavContainer />
+            {/* <NavContainer /> */}
             <div className="spacer"></div>
             <div className="main-container">
                 <FeedNavigationBarContainer />
-            <div className="feed-main-body">
-                <div className='modal'>
-                {this.returnCreate()}
-                </div>
-                {/* <CreatePostModalContainer /> */}
-                {/* <PostCreateWidgetContainer/> */}
-                {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
-                <div className="feed-index">
-                    <ul className="feed-posts">
-                        {allposts}
-                    </ul>
-
-                </div>
+                <div className="feed-main-body">
+                    {this.returnCreate()}
+                    {/* <div className='modalBackground'></div> */}
+                    <div className="feed-index">
+                        <ul className="feed-posts">
+                            {allposts}
+                        </ul>
+                    </div>
                 </div>
                 <FeedWidgetBarContainer />
-                {/* <div className='modalBackground'></div> */}
             </div>
             </>
         )

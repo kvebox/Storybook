@@ -9,6 +9,7 @@ class Feed extends React.Component {
     render() {
         return (
             <div className="feed-body">
+                <NavContainer />
                 {/* <CreatePostModalContainer /> */}
 
                 {/* <NavContainer />

@@ -38,17 +38,18 @@ export default ({currentUser}) => {
                 </li>
             </ul>
 
-            <ul className="navigation-container">
+            <ul className='navigation-container'>
+            <div className='navigation-headers'>Explore</div>
+                <li>
+                    <img src='/images/icons_events.png' alt='icon events' />
+                    <div className="navigation-title">
+                    <div>Events</div>
+                    </div>
+                </li>
                 <li>
                     <img src='/images/icons_pages.png' alt='icon pages' />
                     <div className="navigation-title">
                         <div>Pages</div>
-                    </div>
-                </li>
-                <li>
-                    <img src='/images/icons_groups.png' alt='icon groups' />
-                    <div className="navigation-title">
-                        <div>Groups</div>
                     </div>
                 </li>
                 <li>
@@ -58,9 +59,9 @@ export default ({currentUser}) => {
                     </div>
                 </li>
                 <li>
-                    <img src='/images/icons_events.png' alt='icon events' />
+                    <img src='/images/icons_groups.png' alt='icon groups' />
                     <div className="navigation-title">
-                    <div>Events</div>
+                        <div>Groups</div>
                     </div>
                 </li>
                 <li>
