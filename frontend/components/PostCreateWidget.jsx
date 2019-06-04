@@ -41,7 +41,7 @@ class PostCreateWidget extends React.Component {
                               value={this.state.body}
                               placeholder="What's on your mind?"/>
 
-                <button type="submit" >Submit</button>
+                {/* <button type="submit" >Submit</button> */}
                 </div>
                 </form>
                     {/* <input type="hidden" value={this.props.currentUser.id}/> */}

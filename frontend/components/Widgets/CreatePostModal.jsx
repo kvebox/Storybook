@@ -6,7 +6,8 @@ class FeedIndex extends React.Component {
         super(props);
         this.state = {
             body: '',
-            author_id: this.props.currentUser.id
+            author_id: this.props.currentUser.id,
+            modal: true
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -19,6 +20,10 @@ class FeedIndex extends React.Component {
 
     update(e) {
         this.setState({ body: e.target.value });
+    }
+
+    showModal() {
+        (this.state.modal == true) ? this.setState({ modal: false }) : this.setState({ modal: true });
     }
 
     render() {
@@ -78,7 +83,7 @@ class FeedIndex extends React.Component {
                     </div>
                 </div>
             </div>
-                <div className='modalBackground'></div>
+
 
             </div>
         )

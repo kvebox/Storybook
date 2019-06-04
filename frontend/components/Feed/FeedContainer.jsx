@@ -4,7 +4,8 @@ import {fetchUserPosts, fetchPost, deletePost, editPost} from '../../actions/pos
 
 const mapStateToProps = state => ({
     posts: Object.keys(state.entities.posts).map(key => state.entities.posts[key]),
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    modal: false
 });
 
 const mapDispatchToProps = dispatch => ({
