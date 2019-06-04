@@ -67,7 +67,7 @@ class PostCreateWidget extends React.Component {
                         <textarea
                             onChange={e => this.update(e)}
                             className='post-create-input'
-                            placeholder={`What's on your mind?`} />
+                            placeholder={`What's on your mind ${this.props.currentUser.first_name}?`} />
                     </form>
                 </div>
 

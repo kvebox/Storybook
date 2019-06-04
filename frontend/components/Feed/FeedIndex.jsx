@@ -13,7 +13,7 @@ class FeedIndex extends React.Component {
         this.state = {
             posts: null,
         };
-        this.showModal = this.showModal.bind(this);
+        // this.showModal = this.showModal.bind(this);
     }
 
     componentDidMount() {
@@ -41,17 +41,19 @@ class FeedIndex extends React.Component {
         } else {
         
         return <div className='postNormal'
-                    onClick={this.showModal}><PostCreateWidgetContainer /></div>
+                    onClick={() => this.showModal()}><PostCreateWidgetContainer /></div>
         }
     }
 
     showModal(){
-         this.setState({modal:true});
-         let bg = document.getElementById('modalBackground');
-         bg.style.display = 'none';
-    }
-
+        let bg = document.getElementsByClassName('modalBackground');
+        bg[0].style.display = 'block';
+        this.setState({modal:true});
+        }
+        
     hideModal(){
+        let bg = document.getElementsByClassName('modalBackground');
+        bg[0].style.display = 'none';
         this.setState({modal:false});
     }
 
@@ -61,27 +63,17 @@ class FeedIndex extends React.Component {
             return <FeedIndexItem key={id} user={this.props.currentUser} post={post}/>
         });
         return (<>
-            
-            {/* <NavContainer /> */}
-            {/* <div className="spacer"></div> */}
-            {/* <div className="main-container"> */}
-                {/* <FeedNavigationBarContainer /> */}
-                <div className="feed-main-body">
-                {/* <div onClick={() => this.showModal()}> Test
-                </div> */}
-                    {this.returnCreate()}
-                    <div className='modalBackground'
-                    onClick={()=>this.hideModal()}></div>
-                    {/* <div className='modalBackground'></div> */}
-                    <div className="feed-index">
-                        <ul className="feed-posts">
-                            {allposts}
-                        </ul>
-                    </div>
-                {/* </div> */}
-                {/* <FeedWidgetBarContainer /> */}
+            <div className="feed-main-body">
+                {this.returnCreate()}
+                <div className='modalBackground'
+                onClick={()=>this.hideModal()}></div>
+                <div className="feed-index">
+                    <ul className="feed-posts">
+                        {allposts}
+                    </ul>
+                </div>
             </div>
-            </>
+        </>
         )
     }
 
