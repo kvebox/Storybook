@@ -3,9 +3,6 @@ import PostCreateWidgetContainer from '../PostCreateWidgetContainer';
 import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
 import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
-import FeedWidgetBarContainer from '../Feed/FeedWidgetBarContainer';
-import NavContainer from '../NavContainer';
-import FeedNavigationBarContainer from '../Feed/FeedNavigationBarContainer';
 
 class FeedIndex extends React.Component {
     constructor(props) {
@@ -13,7 +10,6 @@ class FeedIndex extends React.Component {
         this.state = {
             posts: null,
         };
-        // this.showModal = this.showModal.bind(this);
     }
 
     componentDidMount() {
@@ -30,10 +26,6 @@ class FeedIndex extends React.Component {
     }
 
     returnCreate() {
-        // console.log('updated!')
-
-        // this.setState({modal: false})
-        // return <div className='postModal'><CreatePostModalContainer/></div>
 
         if (this.state.modal){
             return <div className='postModal'><CreatePostModalContainer/>

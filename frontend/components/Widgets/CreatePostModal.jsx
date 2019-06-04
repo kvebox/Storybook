@@ -6,31 +6,26 @@ class FeedIndex extends React.Component {
         super(props);
         this.state = {
             body: '',
-            author_id: this.props.currentUser.id,
-            modal: true
+            author_id: this.props.currentUser.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createPost(this.props.currentUser, this.state);
+        this.props.createPost(this.props.currentUser, this.state).then(() => this.props.history.push('/'));
         this.setState({ body: '' });
+        this.setState({modal: false});
     }
 
     update(e) {
         this.setState({ body: e.target.value });
     }
 
-    showModal() {
-        (this.state.modal == true) ? this.setState({ modal: false }) : this.setState({ modal: true });
-    }
 
     render() {
         return (
             <div className='modal'>
-                
-            
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
                         <div className='modalHeader'>Create Post</div>

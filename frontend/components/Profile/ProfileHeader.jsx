@@ -21,6 +21,7 @@ class ProfileHeader extends React.Component {
                     <li><a href="#">About</a></li>
                     <li><a href="#">Friends</a></li>
                     <li><a href="#">Photos</a></li>
+                    <li><a href="#">Archive</a></li>
                     <li className="last"><a href="#">More</a></li>
                 </ul>
             </div>

@@ -3,7 +3,9 @@ import CreatePostModal from './CreatePostModal';
 import { createPost } from '../../actions/post_actions.js';
 
 const mapStateToProps = state => ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    modal: true
+
 });
 
 const mapDispatchToProps = dispatch => ({

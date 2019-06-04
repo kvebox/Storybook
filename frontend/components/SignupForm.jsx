@@ -19,7 +19,6 @@ class SignupForm extends React.Component {
     update(field){
         
         return(e) =>{
-            // console.log('hello');
             this.setState({[field]: e.target.value});
         };
     }

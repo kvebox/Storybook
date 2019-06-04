@@ -5,7 +5,7 @@
 
 .profile-content {
     min-height: 1047px;
-    width: 850px;
+    width: 765px;
     margin: 0 auto;
     position: relative;
     box-sizing: border-box;
@@ -13,10 +13,8 @@
 }
 
 .profile-main-body {
-    // border: 1px solid red;
     display: flex;
-    // width: 925px;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin: 0 auto;
 }
 
