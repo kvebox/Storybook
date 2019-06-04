@@ -55,15 +55,15 @@
 
 .feed-main-body {
     // width: 85%;
-    width: 700px;
+    width: 450px;
     // flex-shrink: 0;
     // border: 1px solid blue;
 }
 
 .main-container {
     display: flex;
-    justify-content: left;
-    width: 1000px;
+    justify-content: space-around;
+    // width: 1000px;
     margin: 0 auto;
     margin-top: 50px;
     // border: 1px solid red;
@@ -141,6 +141,7 @@
 .feed-navigation-body {
     margin-right: 5px;
     margin-left: 5px;
+    // width: 150px;
     // position: fixed;
 }
 .navigation-container li, .navigation-profile {
@@ -182,7 +183,7 @@
 .navigation-title {
     display: flex;
     justify-content: space-between;
-    width: 170px;
+    width: 140px;
 }
 
 .nav-expand {
@@ -215,7 +216,7 @@
 
 // Feed Widget Bar --------------------------------------
 .feed-widget-container {
-    width: 400px;
+    width: 275px;
     // border: 1px solid black;
     margin-left: 10px;
 }

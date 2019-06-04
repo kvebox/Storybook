@@ -14,8 +14,8 @@ export default ({currentUser}) => {
                 <li className="nav-target">
                     <img src='/images/icons_newsFeed.png' alt='icon newsfeed' />
                     <div className="navigation-title">
-                    <div>News Feed</div>
-                    <div className="nav-expand">...</div>
+                        <div>News Feed</div>
+                        <div className="nav-expand">...</div>
                     </div>
                 </li>
                 <li>

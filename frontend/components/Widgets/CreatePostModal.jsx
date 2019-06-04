@@ -24,8 +24,6 @@ class FeedIndex extends React.Component {
     render() {
         return (
             
-            <div className='modal'>
-                <div className='modalBackground'></div>
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
                         <div className='modalHeader'>Create Post</div>
@@ -77,7 +75,7 @@ class FeedIndex extends React.Component {
                 </div>
             </div>
 
-            </div>
+        
         )
     }
 

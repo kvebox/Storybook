@@ -3,6 +3,9 @@ import PostCreateWidgetContainer from '../PostCreateWidgetContainer';
 import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
 import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
+import FeedWidgetBarContainer from '../Feed/FeedWidgetBarContainer';
+import NavContainer from '../NavContainer';
+import FeedNavigationBarContainer from '../Feed/FeedNavigationBarContainer';
 
 class FeedIndex extends React.Component {
     constructor(props) {
@@ -27,7 +30,11 @@ class FeedIndex extends React.Component {
         if (this.state.modal){
             return <CreatePostModalContainer/>
         }
-        return <CreatePostWidgetContainer />
+        return <PostCreateWidgetContainer />
+    }
+
+    showModal(){
+        (this.state.modal == true) ? this.setState({modal:false}) : this.setState({modal:true});
     }
 
 
@@ -35,9 +42,16 @@ class FeedIndex extends React.Component {
         let allposts = this.props.posts.map((post, id) => {
             return <FeedIndexItem key={id} user={this.props.currentUser} post={post}/>
         });
-        return (
+        return (<>
+            
+            <NavContainer />
+            <div className="spacer"></div>
+            <div className="main-container">
+                <FeedNavigationBarContainer />
             <div className="feed-main-body">
+                <div className='modal'>
                 {this.returnCreate()}
+                </div>
                 {/* <CreatePostModalContainer /> */}
                 {/* <PostCreateWidgetContainer/> */}
                 {/* <ul className="create-post"><li ><PostCreateWidgetContainer/></li></ul> */}
@@ -47,7 +61,11 @@ class FeedIndex extends React.Component {
                     </ul>
 
                 </div>
+                </div>
+                <FeedWidgetBarContainer />
+                {/* <div className='modalBackground'></div> */}
             </div>
+            </>
         )
     }
 

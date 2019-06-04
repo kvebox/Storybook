@@ -11,13 +11,13 @@ class Feed extends React.Component {
             <div className="feed-body">
                 {/* <CreatePostModalContainer /> */}
 
-                <NavContainer />
+                {/* <NavContainer />
                     <div className="spacer"></div>
                 <div className="main-container">
-                    <FeedNavigationBarContainer  />
+                    <FeedNavigationBarContainer  /> */}
                     <FeedContainer />
-                    <FeedWidgetBarContainer />
-                </div>
+                    {/* <FeedWidgetBarContainer /> */}
+                {/* </div> */}
             </div>
         )
     };
