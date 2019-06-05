@@ -29,7 +29,7 @@ class FeedIndex extends React.Component {
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
                         <div className='modalHeader'>Create Post</div>
-                        <div className='modalCancel'>X</div>
+                        <div className='modalCancel'></div>
                     </div>
 
                 <div className='modalFormContainer'>

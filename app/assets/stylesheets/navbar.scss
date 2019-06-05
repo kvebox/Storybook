@@ -97,6 +97,11 @@
     height: 15px;
 }
 
+.login-link:hover {
+    background: rgba(29,33,47,.25);
+    padding: 5px 14px ;
+}
+
 .login-link a{
     text-decoration: none;
     font-size: 12px;

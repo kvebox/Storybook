@@ -38,7 +38,7 @@
     font-size: 10px;
     color: gray;
     position: absolute;
-    padding-top: 18px;
+    margin-top: 18px;
 }
 
 
@@ -83,7 +83,6 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-
 }
 
 .post-author {
@@ -105,15 +104,31 @@
     justify-content: space-evenly;
     font-size: 11px;
     color: #4F4F4F;
-    padding: 10px 12px 10px 12px;
+    padding: 5px 0;
+    // padding: 10px 12px 10px 12px;
     border-top: 1px solid lightgray;
     font-weight: bold;
+    height: 100%;
 }
 
 .post-options span {
     display: flex;
-    // align-content: center;
+    align-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 8px 8px 8px 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.post-author a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.post-options span:hover {
+    background: #F4F4F4;
+    border-radius: 5px;
 }
 
 .post-options img {
@@ -143,16 +158,22 @@
 
 .options {
     float: right;
-    font-size: 15px;
     font-weight: bold;
     line-height: 19px;
     cursor: pointer;
+    letter-spacing: -.5px;
+    margin-right: 5px;
 }
 
 .options a {
     vertical-align: super;
     text-decoration: none;
+    color: #666;
+    font-size: 22.5px;
 }
 
+.options a:hover {
+    color: black;
+}
 // PostCreateWidget ---------------------
 
