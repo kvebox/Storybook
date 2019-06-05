@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import { Link } from 'react-router-dom';
+import FeedDropdownContainer from './FeedDropdownContainer';
 
 
 class FeedIndexItem extends React.Component {
@@ -21,10 +22,24 @@ class FeedIndexItem extends React.Component {
 
     }
 
+    getDropdown(){
+        return (
+            <FeedDropdownContainer />
+            // <ul className='dropdownContainer'>
+            //     <li className='dropdownListItem'>Edit Post</li>
+            //     <div className='dropdownSpacer'></div>
+            //     <li className='dropdownListItem'>Delete</li>
+            // </ul>
+        )
+    }
+
     render() {
     return (
         <li className="posts">
-            <div className="options"><a href="#">...</a></div>
+            <div className="options"><div className='options-dropdown-trigger'>...</div>
+                {/* {this.getDropdown()} */}
+                </div>
+            
             <div className="post-author">
                 <div className="profile-crop">
                     <img className="profile-pic" src='/images/profile_1.png'/>

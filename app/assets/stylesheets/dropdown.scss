@@ -1,0 +1,39 @@
+.dropdownContainer {
+    border: 1px solid lightgray;
+    width: 200px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: white;
+    border-radius: 3px 0 3px 3px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    padding: 0;
+    overflow: hidden;
+}
+
+.dropdownList {
+    padding: 10px;
+}
+
+.dropdownListItem {
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 200;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.dropdownSpacer {
+    border-top: 1px solid #ddd;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dropdownListItem:hover {
+    color: white;
+    background: #3C5A99;
+}
+
+.options {
+    position: relative;
+}

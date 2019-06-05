@@ -5,14 +5,15 @@ class FeedDropdown extends React.Component {
     constructor(props) {
         super(props);
         }
-    }
-
 
     render() {
-        return (<>
-        </>
-        )
-    }
+        return (
+        <ul className='dropdownContainer'>
+            <li className='dropdownListItem'>Edit Post</li>
+            <div className='dropdownSpacer'></div>
+            <li className='dropdownListItem'>Delete</li>
+        </ul>
+    )}
 
 }
 

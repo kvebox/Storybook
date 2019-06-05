@@ -15,6 +15,12 @@ class NavBar extends React.Component {
         this.props.logout();
     }
 
+    getNavDropdown(){
+        return (
+            <div></div>
+        )
+    }
+
     render() {
         // debugger
         return (
@@ -47,7 +53,24 @@ class NavBar extends React.Component {
 
                         <div className="nav-icon-option-extras">
                         <img src='/images/menu_help.png' alt='nav_icon_help' />
-                        <img src='/images/menu_dropdown.png' alt='nav_options' />
+                                <div className='menuDropdownTrigger'><img src='/images/menu_dropdown.png' alt='nav_options' />
+                             <div className='navDropdown'>
+                                 <ul className='navDropdownContainer'>
+                                    {/* <li className='navDropdownListItem'>Advertising on Facebook</li> */}
+                                    </ul>
+                                    {/* <div className='dropdownSpacer'></div> */}
+                                <ul className='navDropdownContainer'>
+                                    {/* <li className='navDropdownListItem'>Activity Log</li>
+                                    <li className='navDropdownListItem'>News Feed Preferences</li>
+                                    <li className='navDropdownListItem'>Settings</li> */}
+                                    <li className='navDropdownListItem'>Logout</li>
+                                    {/* <div className='dropdownSpacer'></div>
+                                    <li className='dropdownListItem'>Delete</li> */}
+                                </ul>
+                             </div>
+                        </div>
+
+
                         </div>
                     </div>
 
