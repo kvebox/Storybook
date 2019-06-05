@@ -18,9 +18,28 @@
     justify-content: space-between;
 
 }
+
+.login-name {
+    display: flex;
+    align-items: center;
+}
+
+.navCrop {
+    border-radius: 50px;
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    margin-right: 5px;
+    border: .3px solid black;
+}
+
+.navProfile {
+    height: 100%;
+    width: 100%;
+
+}
+
 .nav-logo img{
-    // background: white;
-    // color: blue;
     height: 25px;
     width: 25px;
     padding-right: 7.5px;
@@ -40,11 +59,6 @@
     z-index: 1;
 }
 
-// .login-form-container {
-//     float: right;
-// }
-
-
 .loggedin-nav {
     background: rgb(65, 103, 178);
     margin: 0px;
@@ -54,7 +68,7 @@
     align-content: center;
     border-bottom: 1px solid darkblue;
     position: fixed;
-    // top: 0;
+    align-items: center;
     width: 100%;
     z-index: 1;
 
@@ -62,47 +76,64 @@
 
 .loggedin-nav-content-container {
     display: flex;
-    width: 980px;
-    // border: 1px solid red;
-    // margin: 0 auto;
+    width: 900px;
     justify-content: space-between;
     margin: 0 auto;
+    align-items: center;
 }
 
 .login-link-container {
     display: flex;
-    padding-right: 10px;
+    padding-right: 15px;
+    align-items: center;
+    height: 22.5px;
 }
 
 .login-link {
-    border-right: 1px solid darkslateblue;
-    padding: 0px 15px;
-    
+    border-right: 1px solid rgba(29,33,47,.25);
+    padding: 0px 14px;
+    font-size: 9px;
+    font-weight: 500;
+    height: 15px;
 }
 
 .login-link a{
     text-decoration: none;
-    
     font-size: 12px;
     color: white;
 }
 
 .nav-icon-options img {
-    height: 25px;
-    width: 25px;
-    padding-right: 20px;
+    height: 22px;
+    width: 22.5px;
+    padding-right: 14px;
 }
 
 .nav-icon-option-extras img {
-    height: 25px;
-    width: 25px;
-    padding-right: 20px;
+    height: 22px;
+    width: 22.5px;
+    padding-right: 15px;
 }
 
-.nav-icon-options {
-    // border: 1px solid red;
+.navLast {
+    padding-right: 0px;
+}
+
+
+.navIconsAll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
 }
 
 .nav-right-container {
     display: flex;
+    align-items: center;
+}
+
+.space {
+    height: 15px;
+    border-left: 1px solid rgba(29,33,47,.25);
+    margin-right: 14px;
 }

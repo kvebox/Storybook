@@ -56,17 +56,14 @@
 }
 
 .feed-main-body {
-    // width: 75%;
-    // max-width: 600px;
-    // width: 450px;
-    // flex-shrink: 0;
-    // border: 1px solid blue;
+    width: 525px;
 }
+
 
 .main-container {
     display: flex;
     justify-content: space-around;
-    width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 50px;
     // border: 1px solid red;
@@ -226,7 +223,7 @@
 // Feed Widget Bar --------------------------------------
 .feed-widget-container {
     // width: 275px;
-    // width: 350px;
+    width: 325px;
     // border: 1px solid black;
     margin-left: 10px;
 }
