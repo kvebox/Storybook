@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
+import NavDropdown from './NavDropdown';
 
 // import menuFriends from '../../app/assets/images/menu_friends.png';
 
@@ -22,34 +23,15 @@ class NavBar extends React.Component {
     }
 
     getNavDropdown(){
-        const dropdown = document.getElementsByClassName('navDropdown');
-        dropdown[0].style.display = 'block';
         this.setState({dropdown: !this.state.dropdown});
     }
 
-    componentDidMount(){
-        document.addEventListener('click', this.hideDropdown);
-    }
 
-    componentWillUnmount(){
-        document.removeEventListener('click', this.hideDropdown);
-    }
-
-    hideDropdown(e){
-        // console.log(this.componentDidUpdate)
-        if (!this.node.current.contains(e.target) && this.state.dropdown){
-            const dropdown = document.getElementsByClassName('navDropdown');
-            dropdown[0].style.display = 'none';
-            // this.setState({dropdown: false})
-            // console.log('hi')
-        }
-        // console.log(e.target)
-        // if (!this.componentDidUpdate.current.contains(e.target)){
-        // }
+    hideDropdown(cb){
+        this.setState({dropdown: !this.state.dropdown}, cb);
     }
 
     render() {
-        // debugger
         return (
             <div className="loggedin-nav">
             <div className="loggedin-nav-content-container">
@@ -73,7 +55,6 @@ class NavBar extends React.Component {
                         <img src='/images/menu_friends.png' alt='nav_icon_friends' />
                         <img src='/images/menu_messenger.png' alt='nav_icon_messenger' />
                         <img className='navLast' src='/images/menu_notification.png' alt='nav_icon_notifications' className="logout-button"/>
-                        {/* <div className='navSpacer'></div> */}
                         </div>
 
                         <div className='space'></div>
@@ -84,20 +65,9 @@ class NavBar extends React.Component {
                                     <img src='/images/menu_dropdown.png' 
                                          alt='nav_options'
                                          onClick = {() => this.getNavDropdown()} />
-                                    <div className='navDropdown'
-                                         ref={this.node}>
-                                        <ul className='navDropdownContainer'>
-                                            <li className='navDropdownListItem'>Advertising on Facebook</li>
-                                        </ul>
-                                        <div className='dropdownSpacer'></div>
-                                        <ul className='navDropdownContainer'>
-                                            <li className='navDropdownListItem'>Activity Log</li>
-                                            <li className='navDropdownListItem'>News Feed Preferences</li>
-                                            <li className='navDropdownListItem'>Settings</li>
-                                            <li className='navDropdownListItem'
-                                                onClick={(e) => this.logout(e)}>Logout</li>
-                                        </ul>
-                                    </div>
+                                {this.state.dropdown ? 
+                                <NavDropdown hideDropdown={this.hideDropdown}
+                                             logout={() => {this.hideDropdown(this.props.logout)}}/> : ""}  
                         </div>
 
 
