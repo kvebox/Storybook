@@ -11,15 +11,10 @@ class NavBar extends React.Component {
         this.node = React.createRef();
         this.state = {
             dropdown: false
-        }
+        };
+
         this.getNavDropdown = this.getNavDropdown.bind(this);
         this.hideDropdown = this.hideDropdown.bind(this);
-    }
-
-
-    logout(e) {
-        e.preventDefault();
-        this.props.logout();
     }
 
     getNavDropdown(){
@@ -68,16 +63,14 @@ class NavBar extends React.Component {
                                 {this.state.dropdown ? 
                                 <NavDropdown hideDropdown={this.hideDropdown}
                                              logout={() => {this.hideDropdown(this.props.logout)}}/> : ""}  
-                        </div>
-
-
+                                </div>
                         </div>
                     </div>
 
                 </div>
 
 
-                </div>
+            </div>
             </div>
 
         )

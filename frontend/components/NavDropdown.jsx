@@ -21,6 +21,11 @@ class NavDropdown extends React.Component {
         document.removeEventListener("click", this.hideDropdown);
     }
 
+    logout(e) {
+        e.preventDefault();
+        this.props.logout();
+    }
+
     userDropdown() {
         return (<>
             <li className="no-hover bold">{this.props.currentUser.username}</li>
