@@ -11,8 +11,10 @@ class FeedIndexItem extends React.Component {
         super(props);
         this.state = {
             author_id: 0,
-            created_at: ""
+            created_at: "",
+            dropdown: false
         };
+        this.hideDropdown = this.hideDropdown.bind(this);
 
     }
 
@@ -22,22 +24,24 @@ class FeedIndexItem extends React.Component {
 
     }
 
+    hideDropdown(){
+        this.setState({dropdown: false});
+    }
+
     getDropdown(){
-        return (
-            <FeedDropdownContainer />
-            // <ul className='dropdownContainer'>
-            //     <li className='dropdownListItem'>Edit Post</li>
-            //     <div className='dropdownSpacer'></div>
-            //     <li className='dropdownListItem'>Delete</li>
-            // </ul>
-        )
+        this.setState({dropdown: !this.state.dropdown});
     }
 
     render() {
     return (
         <li className="posts">
-            <div className="options"><div className='options-dropdown-trigger'>...</div>
-                {/* {this.getDropdown()} */}
+            <div className="options"><div onClick={() => this.getDropdown()}className='options-dropdown-trigger'>...</div>
+                {(this.state.dropdown) ? <FeedDropdownContainer 
+                        hideDropdown = {this.hideDropdown}
+                        deletePost = {this.props.deletePost}
+                        post = {this.props.post}
+                        key = {this.props.key}
+                                         /> : ''}
                 </div>
             
             <div className="post-author">

@@ -52,7 +52,11 @@ class FeedIndex extends React.Component {
 
     render() {
         let allposts = this.props.posts.map((post, id) => {
-            return <FeedIndexItem key={id} user={this.props.currentUser} post={post}/>
+            return <FeedIndexItem 
+                key={id} 
+                deletePost={this.props.deletePost}
+                user={this.props.currentUser} 
+                post={post}/>
         });
         return (<>
             <div className="feed-main-body">

@@ -16,6 +16,14 @@ class ProfileHeader extends React.Component {
                     <img className="placeholder" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
                 </div>
 
+                <div className='profileInfoContainer'>
+                    <div className='profilePictureCrop'>
+                        <img className='profilePicture' src='/images/profile_2.png'/>
+                    </div>
+                    <div className='profileName'>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</div>
+                </div>
+
+
                 <ul className="profile-nav">
                     <li className="profile-nav-target"><a href="#">Timeline</a></li>
                     <li><a href="#">About</a></li>
