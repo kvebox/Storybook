@@ -13,7 +13,7 @@ class FeedIndex extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createPost(this.props.currentUser, this.state).then(() => this.props.history.push('/'));
+        this.props.createPost(this.props.currentUser, this.state).then(() => window.location.reload());
         this.setState({ body: '' });
         this.setState({modal: false});
     }

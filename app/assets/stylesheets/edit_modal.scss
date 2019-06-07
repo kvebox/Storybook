@@ -1,0 +1,27 @@
+.editContainer {
+
+}
+.editModal {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+    z-index: 99;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 400px;
+}
+.editHeader {
+    background: lightgray;
+}
+
+.editBackground {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 5;
+}

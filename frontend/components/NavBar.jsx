@@ -40,8 +40,8 @@ class NavBar extends React.Component {
                     <div className="login-link-container">
                         <div className="login-link login-name">
                             <div className='navCrop'><img className='navProfile' src='/images/profile_2.png' /></div>
-                            <Link to={`/users/${this.props.currentUser.id}`}>{this.props.currentUser.first_name}</Link></div>
-                        <div className="login-link"><Link to="/feed">Home</Link></div>
+                            <Link onClick={() => window.scrollTo(0, 0)} to={`/users/${this.props.currentUser.id}`}>{this.props.currentUser.first_name}</Link></div>
+                            <div className="login-link"><Link onClick={() => window.scrollTo(0, 0)} to="/feed">Home</Link></div>
                         <div className="login-link"><a href="#">Create</a></div>
                     </div>
 

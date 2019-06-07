@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
 import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
 
+
 class FeedIndex extends React.Component {
     constructor(props) {
         super(props);

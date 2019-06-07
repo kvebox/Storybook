@@ -48,7 +48,7 @@ class FeedIndexItem extends React.Component {
                     <img className="profile-pic" src='/images/profile_1.png'/>
                 </div>
                 <h5>
-                    {!(this.props.post.author == undefined) ? <Link to={`/users/${this.props.post.author.id}`}>{`${this.props.post.author.first_name} ${this.props.post.author.last_name}`}</Link>
+                    {!(this.props.post.author == undefined) ? <Link onClick={() => window.scrollTo(0, 0)} to={`/users/${this.props.post.author.id}`}>{`${this.props.post.author.first_name} ${this.props.post.author.last_name}`}</Link>
                         : <Link to='#'>{`${this.props.user.first_name} ${this.props.user.last_name}`}</Link>}
                     <span className="date"><Moment format="MMM DD, YYYY">{this.props.post.created_at}</Moment></span>
                 </h5>
