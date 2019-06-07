@@ -38,10 +38,9 @@ class FeedIndexItem extends React.Component {
             <div className="options"><div onClick={() => this.getDropdown()}className='options-dropdown-trigger'>...</div>
                 {(this.state.dropdown) ? <FeedDropdownContainer 
                         hideDropdown = {this.hideDropdown}
+                        // postId = {this.props.postId}
                         deletePost = {this.props.deletePost}
-                        post = {this.props.post}
-                        key = {this.props.key}
-                                         /> : ''}
+                        post = {this.props.post} /> : ''}
                 </div>
             
             <div className="post-author">

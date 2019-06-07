@@ -22,11 +22,10 @@ class FeedDropdown extends React.Component {
         }
     }
 
-    deletePost(postId){
-        // this.props.deletePost(postId);
-        // console.log(this.props.post.id);
-        // this.props.deletePost(this.props.post.author, this.props.post);
-        console.log(this.props.key);
+    deletePost(){
+        // console.log(this.props.post)
+        this.props.deletePost(this.props.post.author, this.props.post.id)
+            .then(() => this.props.history.push('/'));
     }
 
     render() {

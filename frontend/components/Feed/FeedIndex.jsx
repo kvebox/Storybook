@@ -49,17 +49,24 @@ class FeedIndex extends React.Component {
         this.setState({modal:false});
     }
 
+    getPosts(){
+        console.log(this.props.postsAll);
+    }
+
 
     render() {
-        let allposts = this.props.posts.map((post, id) => {
+        let allposts = this.props.postsAll.map((post, id) => {
             return <FeedIndexItem 
-                key={id} 
+                key={id}
+                postId={post[1]}
                 deletePost={this.props.deletePost}
                 user={this.props.currentUser} 
-                post={post}/>
+                post={post[0]}/>
         });
         return (<>
             <div className="feed-main-body">
+                {/* {this.getPosts()} */}
+                {/* {console.log(this.props.postsAll)} */}
                 {this.returnCreate()}
                 <div className='modalBackground'
                 onClick={()=>this.hideModal()}></div>

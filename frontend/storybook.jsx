@@ -6,7 +6,7 @@ import configureStore from "./store/store";
 
 
 import {signup, login, logout} from './util/session_api_util';
-
+import {deletePost} from './util/post_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.signup = signup;
     window.login = login;
     window.logout = logout;
+    window.deletePost = deletePost;
 
     ReactDOM.render(<Root store={store}/>, root);
 });
