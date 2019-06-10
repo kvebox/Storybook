@@ -1,6 +1,6 @@
 import FeedIndex from './FeedIndex';
 import {connect} from 'react-redux';
-import {fetchUserPosts, fetchPost, deletePost, editPost} from '../../actions/post_actions.js';
+import {fetchUserPosts, fetchPost, deletePost, editPost, createPost} from '../../actions/post_actions.js';
 
 const mapStateToProps = state => ({
     postsAll: Object.keys(state.entities.posts).map(key => [state.entities.posts[key], key]),
@@ -12,7 +12,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     fetchUserPosts: user => dispatch(fetchUserPosts(user)),
     deletePost: (user, postId) => dispatch(deletePost(user,postId)),
-    editPost: (user, post) => dispatch(editPost(user, post))
+    editPost: (user, post) => dispatch(editPost(user, post)),
+    createPost: (user,post) => dispatch(createPost(user, post))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(FeedIndex);

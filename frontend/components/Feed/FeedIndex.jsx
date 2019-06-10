@@ -2,8 +2,7 @@ import React from 'react';
 import PostCreateWidgetContainer from '../PostCreateWidgetContainer';
 import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
-import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
-
+import CreatePostModal from '../Widgets/CreatePostModal';
 
 class FeedIndex extends React.Component {
     constructor(props) {
@@ -11,6 +10,7 @@ class FeedIndex extends React.Component {
         this.state = {
             posts: null,
         };
+        this.hideModal = this.hideModal.bind(this);
     }
 
     componentDidMount() {
@@ -26,10 +26,25 @@ class FeedIndex extends React.Component {
         }
     }
 
+    showModal() {
+        let bg = document.getElementsByClassName('modalBackground');
+        bg[0].style.display = 'block';
+        this.setState({ modal: true });
+    }
+
+    hideModal() {
+        let bg = document.getElementsByClassName('modalBackground');
+        bg[0].style.display = 'none';
+        this.setState({ modal: false });
+    }
+
     returnCreate() {
 
         if (this.state.modal){
-            return <div className='postModal'><CreatePostModalContainer/>
+            return <div className='postModal'>
+                <CreatePostModal currentUser = {this.props.currentUser} 
+                                 hideModal = {this.hideModal}
+                                 createPost = {this.props.createPost}/>
             </div> 
         } else {
         
@@ -38,17 +53,7 @@ class FeedIndex extends React.Component {
         }
     }
 
-    showModal(){
-        let bg = document.getElementsByClassName('modalBackground');
-        bg[0].style.display = 'block';
-        this.setState({modal:true});
-        }
-        
-    hideModal(){
-        let bg = document.getElementsByClassName('modalBackground');
-        bg[0].style.display = 'none';
-        this.setState({modal:false});
-    }
+
 
     getPosts(){
         console.log(this.props.postsAll);

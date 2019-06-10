@@ -28,8 +28,9 @@ class EditModal extends React.Component {
             <div ref={this.node} className='editContainer'>
                 <div className='editModal'>
                     <div className='modalHeadContainer'>
-                        <div className='modalHeader'>Edit Post</div>
-                        <div className='modalCancel'></div>
+                        <div className='editModalHeader'>Edit Post</div>
+                        {/* <div className='modalCancel'> */}
+                        <img className='editModalCancel' src='/images/close.png'/>
                     </div>
 
                     <div className='modalFormContainer'>
@@ -38,17 +39,36 @@ class EditModal extends React.Component {
                             <textarea
                                 // onChange={e => this.update(e)}
                                 className='modalTextInput'
-                                value={this.props.post.body} 
+                                defaultValue={this.props.post.body} 
                                 />
                         </form>
                     </div>
 
                     <div className='modalSpacer'></div>
 
+                    <table className='editTable'>
+                        <tbody className="edit-post-options">
+                        <tr>
+                        <td className="edit-post-option" >
+                            <img className="create-post-icon" src="/images/add_photo.png" />Photo/Video</td>
+                        <td className="edit-post-option" >
+                            <img className="create-post-icon" src="/images/add_reaction.png" />Feeling/Activity</td>
+                            <td className="edit-post-option" >
+                                <img className="create-post-icon" src="/images/add_gif.png" />GIF</td>
+                        </tr>
+                        <tr>
+                        <td className="edit-post-option" >
+                            <img className="create-post-icon" src="/images/add_tag.png" />Tag Friends</td>
+                        <td className="edit-post-option" >
+                            <img className="create-post-icon" src="/images/add_checkin.png" />Check in</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                     <div className='editModalFooter'>
-                        <div className='shareDropdown'>
-                            <img className='dropdownIcon' src='/images/menu_dropdown.png' />
-                            Friends</div>
+                        <div className='editDropdown'>
+                            <img className='editDropdownIcon editVisibility' src='/images/create_visibility.png' />
+                            Friends <img className='editDropdownIcon' src='/images/create_dropdown.png' /></div>
                         <button className='editModalButton'>Save</button>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class FeedIndex extends React.Component {
+class CreatePostModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -9,6 +9,7 @@ class FeedIndex extends React.Component {
             author_id: this.props.currentUser.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     handleSubmit(e) {
@@ -22,6 +23,9 @@ class FeedIndex extends React.Component {
         this.setState({ body: e.target.value });
     }
 
+    hideModal() {
+        this.props.hideModal();
+    }
 
     render() {
         return (
@@ -29,7 +33,7 @@ class FeedIndex extends React.Component {
                 <div className='modalContainer'>
                     <div className='modalHeadContainer'>
                         <div className='modalHeader'>Create Post</div>
-                        <div className='modalCancel'></div>
+                        <img onClick={() => this.hideModal()} className='modalCancel' src='/images/cancel.png'/>
                     </div>
 
                 <div className='modalFormContainer'>
@@ -86,4 +90,4 @@ class FeedIndex extends React.Component {
 
 }
 
-export default withRouter(FeedIndex);
+export default withRouter(CreatePostModal);

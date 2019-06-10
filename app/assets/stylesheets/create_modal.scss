@@ -19,13 +19,14 @@
 
 .modalHeader {
     padding:7.5px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .modalCancel {
-    padding:7.5px;
-    font-size: 11px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
 }
 
 .modalHeadContainer {
@@ -34,6 +35,7 @@
     background: #F4F4F4;
     align-items: center;
     border-bottom: 1px solid lightgray;
+    padding: 3px;
 }
 
 .modalTextInput {
@@ -112,20 +114,27 @@
 
 .shareDropdown {
     border: 1px solid lightgray;
-    font-size: 11px;
-    width: 20%;
+    font-size: 12px;
+    width: 22%;
     font-weight: 500;
     margin-right: 7.5px;
     display: flex;
     border-radius: 3px;
-    padding: 0 3.5px;
-    padding-right: 5px;
+    padding: 2px 3.5px;
+    // padding: 0 3.5px;
+    // padding-left: 5px;
     align-items: center;
 }
 
+.shareDropdown:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
 .dropdownIcon {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    margin: 0 1px;
 }
 
 .optionsLeft {

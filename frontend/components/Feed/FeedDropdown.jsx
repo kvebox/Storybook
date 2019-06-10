@@ -58,6 +58,7 @@ class FeedDropdown extends React.Component {
         <ul ref={this.node} className='dropdownContainer'>
             <li onClick={() => this.triggerEditModal()}
                 className='dropdownListItem'>Edit Post</li>
+            {/* <li><a target="_blank" href="https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies">Policies</a></li> */}
             <div className='dropdownSpacer'></div>
             <li className='dropdownListItem'
                 onClick={() => this.deletePost()}

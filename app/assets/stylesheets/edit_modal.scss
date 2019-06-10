@@ -1,6 +1,17 @@
 .editContainer {
 
 }
+
+.modalHeadContainer {
+    display: flex;
+    align-items: center;
+}
+
+.editModalCancel {
+    height: 17.5px;
+    width: 17.5px;
+}
+
 .editModal {
     background: white;
     border-radius: 5px;
@@ -10,10 +21,19 @@
     position: fixed;
     top: 25%;
     left: 25%;
-    width: 400px;
+    width: 500px;
 }
-.editHeader {
-    background: lightgray;
+
+.editModalHeader {
+    padding:10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.editModalFooter {
+    background: #F4F4F4;
+    border-top: 1px solid lightgray;
+    padding: 7.5px;
 }
 
 .editBackground {
@@ -24,4 +44,88 @@
     left: 0;
     background: rgba(0,0,0,0.6);
     z-index: 5;
+}
+
+.editModalButton {
+    border-radius: 3px;
+    background: #4167B2;
+    color: white;
+    padding: 5px 20px;
+    font-weight: 500;
+    font-size: 12px;
+    border: none;
+    margin-left: 5px;
+}
+
+.editModalFooter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editModalButton:hover {
+    background: #305591;
+    cursor: pointer;
+}
+
+.edit-post-option {
+    background: #F4F4F4;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    margin-right: 7.5px;
+    list-style-type: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 7.5px;
+}
+
+.edit-post-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.editTable {
+    width: 100%;
+}
+
+.edit-post-options tr {
+    width: 50%;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.editDropdown {
+    border: 1px solid lightgray;
+    font-size: 12px;
+    // width: 20%;
+    font-weight: 500;
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.editDropdownIcon {
+    height: 20px;
+    width: 20px;
+    padding: 0 1px;
+}
+
+.editVisibility {
+    padding-left:7.5px;
+    padding-right: 3px;
+    height: 17.5px;
+    width: 17.5px;
+
+}
+
+.editDropdown:hover {
+    background-color: #eee;
 }
