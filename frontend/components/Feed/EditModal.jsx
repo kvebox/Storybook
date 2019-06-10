@@ -5,8 +5,15 @@ class EditModal extends React.Component {
     constructor(props) {
         super(props);
 
-        this.node = React.createRef();
+        this.state = {
+            body: `${this.props.post.body}`,
+            author_id: this.props.currentUser.id,
+            id: `${this.props.post.id}`
+        };
+
+        this.update = this.update.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() { //add event listener to the entire document, to see where they click
@@ -17,16 +24,26 @@ class EditModal extends React.Component {
     }
 
     hideModal(e) {
-        if (!this.node.current.contains(e.target)) {
+        if (this.props.forwardRef.current != null && !this.props.forwardRef.current.contains(e.target)) {
             this.props.hideModal();
         }
+    }
+    handleSubmit(e) {
+        // e.preventDefault();
+        this.props.editPost(this.props.currentUser, this.state);
+        this.props.hideModal();
+        // this.setState({ modal: false });
+    }
+
+    update(e) {
+        this.setState({ body: e.target.value });
     }
 
 
     render() {
         return (
-            <div ref={this.node} className='editContainer'>
-                <div className='editModal'>
+            <div  className='editContainer'>
+                <div ref={this.props.forwardRef} className='editModal'>
                     <div className='modalHeadContainer'>
                         <div className='editModalHeader'>Edit Post</div>
                         {/* <div className='modalCancel'> */}
@@ -39,7 +56,8 @@ class EditModal extends React.Component {
                             <textarea
                                 // onChange={e => this.update(e)}
                                 className='modalTextInput'
-                                defaultValue={this.props.post.body} 
+                                onChange={e => this.update(e)}
+                                defaultValue={this.state.body} 
                                 />
                         </form>
                     </div>
@@ -69,7 +87,7 @@ class EditModal extends React.Component {
                         <div className='editDropdown'>
                             <img className='editDropdownIcon editVisibility' src='/images/create_visibility.png' />
                             Friends <img className='editDropdownIcon' src='/images/create_dropdown.png' /></div>
-                        <button className='editModalButton'>Save</button>
+                        <button onClick={() => this.handleSubmit()} className='editModalButton'>Save</button>
                     </div>
                 </div>
 

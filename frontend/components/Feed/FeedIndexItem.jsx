@@ -4,6 +4,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import { Link } from 'react-router-dom';
 import FeedDropdownContainer from './FeedDropdownContainer';
+import EditModal from './EditModal';
 
 
 class FeedIndexItem extends React.Component {
@@ -12,9 +13,13 @@ class FeedIndexItem extends React.Component {
         this.state = {
             author_id: 0,
             created_at: "",
-            dropdown: false
+            dropdown: false,
+            modal: false
         };
+        this.modal = React.createRef();
         this.hideDropdown = this.hideDropdown.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+        this.triggerEditModal = this.triggerEditModal.bind(this);
 
     }
 
@@ -22,6 +27,13 @@ class FeedIndexItem extends React.Component {
         e.preventDefault();
         // this.props.deletePost(this.props.currentUser)
 
+    }
+    triggerEditModal(){
+        this.setState({ modal: !this.state.modal });
+    }
+
+    hideModal(){
+        this.setState({modal: false});
     }
 
     hideDropdown(){
@@ -34,11 +46,24 @@ class FeedIndexItem extends React.Component {
 
     render() {
     return (
+        <>
+            {(this.state.modal) ?
+
+                <EditModal
+                    forwardRef={this.modal}
+                    editPost={this.props.editPost}
+                    currentUser={this.props.user}
+                    post={this.props.post}
+                    hideModal={this.hideModal}
+                     />
+
+                : ''}
         <li className="posts">
             <div className="options"><div onClick={() => this.getDropdown()}className='options-dropdown-trigger'>...</div>
                 {(this.state.dropdown) ? <FeedDropdownContainer 
                         hideDropdown = {this.hideDropdown}
-                        // postId = {this.props.postId}
+                        triggerEditModal={this.triggerEditModal}
+                        currentUser = {this.currentUser}
                         deletePost = {this.props.deletePost}
                         post = {this.props.post} /> : ''}
                 </div>
@@ -74,6 +99,7 @@ class FeedIndexItem extends React.Component {
             </form>
             </div>
         </li>
+        </>
         );
     }
 };

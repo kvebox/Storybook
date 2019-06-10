@@ -6,20 +6,24 @@ class FeedDropdown extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false
+            modal: false,
+            dropdown: true
         };
 
         this.node = React.createRef();
-        this.modal = React.createRef();
+        // this.modal = React.createRef();
         this.hideDropdown = this.hideDropdown.bind(this);
-        this.dropdownVisibility = this.dropdownVisibility.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+        this.triggerEditModal = this.triggerEditModal.bind(this);
         }
     
     componentDidMount() { //add event listener to the entire document, to see where they click
         document.addEventListener("click", this.hideDropdown);
+        
     }
     componentWillUnmount() { //clean up event listener when component is removed
         document.removeEventListener("click", this.hideDropdown);
+
     }
     
     hideDropdown(e){
@@ -35,36 +39,46 @@ class FeedDropdown extends React.Component {
     }
 
     triggerEditModal(){
-        this.setState({modal: !this.state.modal});
+        // document.removeEventListener("click", this.hideDropdown);
+        // this.setState({dropdown: !this.state.dropdown});
+        // this.setState({modal: !this.state.modal});
+        this.props.triggerEditModal();
     }
 
     hideModal(){
-        this.setState({modal: false});
-    }
+        // if (!this.modal.current.contains(e.target)) {
+        // this.setState({modal: false});
+        this.props.hideModal();
 
-    dropdownVisibility(){
-        console.log('hi')
-        const dropdown = document.getElementsByClassName('dropdownContainer');
-        dropdown[0].style.display = 'none';
     }
 
 
     render() {
         return (
             <>
-        {(this.state.modal) ? <div ref={this.modal}><EditModal
-            post={this.props.post}
-            hideModal={this.hideModal} /></div> : ''}
-        <ul ref={this.node} className='dropdownContainer'>
-            <li onClick={() => this.triggerEditModal()}
-                className='dropdownListItem'>Edit Post</li>
-            {/* <li><a target="_blank" href="https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies">Policies</a></li> */}
-            <div className='dropdownSpacer'></div>
-            <li className='dropdownListItem'
-                onClick={() => this.deletePost()}
-                // onClick={this.deletePost(this.props.post.postId)}
-                >Delete</li>
-        </ul>
+            {/* {(this.state.modal) ? 
+            
+            <EditModal
+                forwardRef={this.modal}
+                editPost={this.props.editPost}
+                currentUser = {this.props.currentUser}
+                post={this.props.post}
+                hideModal={this.hideModal} />
+                
+            : ''} */}
+            {(this.state.dropdown) ?
+            <ul ref={this.node} className='dropdownContainer'>
+                <li onClick={() => this.triggerEditModal()}
+                    className='dropdownListItem'>Edit Post</li>
+                
+                <div className='dropdownSpacer'></div>
+                <li className='dropdownListItem'
+                    onClick={() => this.deletePost()}
+                    >Delete</li>
+            </ul>
+            : ''}
+
+            
 
         </>
     )}

@@ -55,19 +55,14 @@ class FeedIndex extends React.Component {
 
 
 
-    getPosts(){
-        console.log(this.props.postsAll);
-    }
-
-
     render() {
-        let allposts = this.props.postsAll.map((post, id) => {
+        let posts = this.props.posts.map((post, id) => {
             return <FeedIndexItem 
                 key={id}
-                postId={post[1]}
                 deletePost={this.props.deletePost}
+                editPost={this.props.editPost}
                 user={this.props.currentUser} 
-                post={post[0]}/>
+                post={post}/>
         });
         return (<>
             <div className="feed-main-body">
@@ -78,7 +73,7 @@ class FeedIndex extends React.Component {
                 onClick={()=>this.hideModal()}></div>
                 <div className="feed-index">
                     <ul className="feed-posts">
-                        {allposts}
+                        {posts}
                     </ul>
                 </div>
             </div>
