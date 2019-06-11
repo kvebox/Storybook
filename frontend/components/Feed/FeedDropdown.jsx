@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import EditModal from './EditModal';
 
 class FeedDropdown extends React.Component {
     constructor(props) {

@@ -55,6 +55,7 @@ class FeedIndexItem extends React.Component {
                     currentUser={this.props.user}
                     post={this.props.post}
                     hideModal={this.hideModal}
+                    triggerEdit={this.props.triggerEdit}
                      />
 
                 : ''}

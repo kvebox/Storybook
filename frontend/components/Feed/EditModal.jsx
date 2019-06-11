@@ -32,11 +32,16 @@ class EditModal extends React.Component {
         // e.preventDefault();
         this.props.editPost(this.props.currentUser, this.state);
         this.props.hideModal();
+        this.triggerEdit();
         // this.setState({ modal: false });
     }
 
     update(e) {
         this.setState({ body: e.target.value });
+    }
+
+    triggerEdit(){
+        this.props.triggerEdit();
     }
 
 

@@ -5,13 +5,26 @@ import { withRouter } from 'react-router';
 class ProfileHeader extends React.Component {
     constructor(props) {
         super(props);
+
     }
 
+    componentDidMount(){
+        // this.props.fetchUser(this.props.userId);
+       this.props.fetchUser(this.props.userId);
+    }
+
+    gettest(){
+        // console.log(this.props.userId);
+        console.log(this.props.user);
+
+    }
 
     render() {
+        if (!this.props.user) return null;
         return (
             <div className='profile-header'>
             {/* <img src={props.currentUser.profilePic} /> */}
+            {this.gettest()}
                 <div>
                     <img className="placeholder" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
                 </div>
@@ -20,7 +33,7 @@ class ProfileHeader extends React.Component {
                     <div className='profilePictureCrop'>
                         <img className='profilePicture' src='/images/profile_2.png'/>
                     </div>
-                    <div className='profileName'>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</div>
+                    <div className='profileName'>{this.props.user.first_name} {this.props.user.last_name}</div>
                 </div>
 
 

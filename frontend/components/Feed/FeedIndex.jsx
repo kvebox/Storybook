@@ -9,8 +9,10 @@ class FeedIndex extends React.Component {
         super(props);
         this.state = {
             posts: null,
+            edited: false
         };
         this.hideModal = this.hideModal.bind(this);
+        this.triggerEdit = this.triggerEdit.bind(this);
     }
 
     componentDidMount() {
@@ -24,6 +26,15 @@ class FeedIndex extends React.Component {
         if (prevProps.modal){
             this.returnCreate();
         }
+
+        if (this.state.edited){
+            this.props.fetchUserPosts(this.props.currentUser);
+            this.setState({edited: false});
+        }
+    }
+
+    triggerEdit(){
+        this.setState({edited: true});
     }
 
     showModal() {
@@ -53,8 +64,6 @@ class FeedIndex extends React.Component {
         }
     }
 
-
-
     render() {
         let posts = this.props.posts.map((post, id) => {
             return <FeedIndexItem 
@@ -62,12 +71,11 @@ class FeedIndex extends React.Component {
                 deletePost={this.props.deletePost}
                 editPost={this.props.editPost}
                 user={this.props.currentUser} 
+                triggerEdit ={this.triggerEdit}
                 post={post}/>
         });
         return (<>
             <div className="feed-main-body">
-                {/* {this.getPosts()} */}
-                {/* {console.log(this.props.postsAll)} */}
                 {this.returnCreate()}
                 <div className='modalBackground'
                 onClick={()=>this.hideModal()}></div>
