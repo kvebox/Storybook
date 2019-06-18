@@ -5,29 +5,46 @@ import 'moment-timezone';
 import { Link } from 'react-router-dom';
 import FeedDropdownContainer from './FeedDropdownContainer';
 import EditModal from './EditModal';
+import PostComment from './PostComment';
 
 
 class FeedIndexItem extends React.Component {
     constructor({props}) {
         super(props);
         this.state = {
+            comments: null,
             author_id: 0,
             created_at: "",
             dropdown: false,
-            modal: false
+            modal: false,
+            commentBody: ""
         };
+
+        
         this.modal = React.createRef();
         this.hideDropdown = this.hideDropdown.bind(this);
         this.hideModal = this.hideModal.bind(this);
         this.triggerEditModal = this.triggerEditModal.bind(this);
-
+        this.handleUpdate = this.handleUpdate.bind(this);
     }
 
     handleSubmit(e){
         e.preventDefault();
-        // this.props.deletePost(this.props.currentUser)
-
+        let comment = {
+            post: this.props.post.id,
+            body: this.state.commentBody,
+            author: this.props.user.id
+        };
+        this.props.createPostComment(this.props.post, comment);
+  
+        this.setState({commentBody: ''});    
     }
+
+    handleUpdate(e){
+        this.setState({commentBody: e.target.value});
+    }
+    
+
     triggerEditModal(){
         this.setState({ modal: !this.state.modal });
     }
@@ -48,7 +65,16 @@ class FeedIndexItem extends React.Component {
         this.props.fetchPostComments(this.props.post);
     }
 
+    componentDidUpdate(prevProps){
+        // if (prevProps.comments.length !== this.props.comments.length){
+        //     this.setState({comments: this.props.comments});
+        // }
+    }
+
     render() {
+        // let comments = this.props.comments.map((comment, id) => {
+        //     return <PostComment />
+        // });
     return (
         <>
             {(this.state.modal) ?
@@ -95,13 +121,14 @@ class FeedIndexItem extends React.Component {
                 {/* <span><img className='post_icon' src='/images/share.png'></img>Share</span> */}
             </div>
 
-            <form className="comment">
+            <form className="comment" onSubmit={e => this.handleSubmit(e)}>
                 <div className="comment-crop">
                         <img className="comment-placeholder" src="/images/profile_2.png"/>
                 </div>
                 <div className="comment-input-container">
                     <input className="comment-input" type="text" 
-                        placeholder="Write a comment..."/>
+                           placeholder="Write a comment..."
+                           onChange={e => this.handleUpdate(e)}/>
                     <div className="comment-icon-container">
                         <img className="comment-option-icon" src="/images/comment_reaction.png" />
                         <img className="comment-option-icon" src="/images/comment_photo.png" />

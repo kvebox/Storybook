@@ -5,15 +5,15 @@ class Api::CommentsController < ApplicationController
 
     def index 
         @comments = Comment.all 
+        render :index
     end
 
     def create 
         @comments = Comment.all
         @comment = Comment.new(comment_params)
-        @comment.author_id = current_user.id
         if @comment.save
-            # render :index
             render :show
+            # render :show
         else  
             render json: @comment.errors.full_messages, status: 422
         end
@@ -42,7 +42,7 @@ class Api::CommentsController < ApplicationController
 
     private
     def comment_params
-        params.require(:comment).permit(:author, :body)
+        params.require(:comment).permit(:author, :body, :post)
     end
     
 end

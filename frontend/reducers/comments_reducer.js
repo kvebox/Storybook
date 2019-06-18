@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_POST_COMMENTS, RECEIVE_POST_COMMENT } from '../actions/post_actions';
 
-const postsReducer = (state = {}, action) => {
+const commentsReducer = (state = {}, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
     switch (action.type) {
@@ -15,4 +15,4 @@ const postsReducer = (state = {}, action) => {
     }
 };
 
-export default postsReducer;
+export default commentsReducer;
