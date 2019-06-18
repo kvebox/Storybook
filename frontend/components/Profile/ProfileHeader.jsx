@@ -24,7 +24,6 @@ class ProfileHeader extends React.Component {
         return (
             <div className='profile-header'>
             {/* <img src={props.currentUser.profilePic} /> */}
-            {this.gettest()}
                 <div>
                     <img className="placeholder" src="https://2.bp.blogspot.com/-VkDNVsRGYXU/XNB-EKNKlSI/AAAAAAAABUA/A3SKtQ-hyUUcAsuOrfISYksxvPEcmO8JQCKgBGAs/s1600/2.png"/>
                 </div>

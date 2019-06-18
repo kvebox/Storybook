@@ -71,7 +71,7 @@ class FeedIndexItem extends React.Component {
             
             <div className="post-author">
                 <div className="profile-crop">
-                    <img className="profile-pic" src='/images/profile_1.png'/>
+                    <img className="profile-pic" src='/images/profile_2.png'/>
                 </div>
                 <h5>
                     {!(this.props.post.author == undefined) ? <Link onClick={() => window.scrollTo(0, 0)} to={`/users/${this.props.post.author.id}`}>{`${this.props.post.author.first_name} ${this.props.post.author.last_name}`}</Link>

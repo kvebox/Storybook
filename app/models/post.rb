@@ -16,4 +16,9 @@ class Post < ApplicationRecord
     primary_key: :id,
     foreign_key: :author_id,
     class_name: :User
+
+    has_many :comments,
+    primary_key: :id,
+    foreign_key: :post,
+    class_name: :Comment
 end
