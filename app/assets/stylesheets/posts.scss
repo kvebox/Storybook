@@ -2,36 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.comment {
-    border-top: 1px solid lightgray;
-    padding: 10px 5px 0px 5px;
-    display: flex;
-}
 
-.comment-input {
-    width: 89%;
-    float: right;
-    padding: 5px;
-    border-radius: 25px;
-    border:1px solid #cccccc;
-    background: #F4F4F4;
-    outline-width: 0;
-}
-
-
-.comment-crop {
-    border-radius: 50%;
-    overflow: hidden;
-    height: 25px;
-    width: 25px;
-    margin-right: 8px;
-}
-
-.comment-placeholder {
-    display: inline;
-    margin: 0 auto;
-
-}
 
 .date {
     font-weight: normal;
@@ -42,10 +13,7 @@
 }
 
 
-::placeholder {
-    padding-left: 5px;
-    color: #aaa;
-}
+
 
 .posts {
     background: white;
@@ -94,7 +62,7 @@
 }
 
 .post-content {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px;
     padding-bottom: 10px;
 }

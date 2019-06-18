@@ -72,7 +72,9 @@ class FeedIndex extends React.Component {
                 editPost={this.props.editPost}
                 user={this.props.currentUser} 
                 triggerEdit ={this.triggerEdit}
-                post={post}/>
+                post={post}
+                fetchPostComments={this.props.fetchPostComments}
+                createPostComment={this.props.createPostComment}/>
         });
         return (<>
             <div className="feed-main-body">

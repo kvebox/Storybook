@@ -44,6 +44,10 @@ class FeedIndexItem extends React.Component {
         this.setState({dropdown: !this.state.dropdown});
     }
 
+    componentDidMount(){
+        this.props.fetchPostComments(this.props.post);
+    }
+
     render() {
     return (
         <>
@@ -95,8 +99,16 @@ class FeedIndexItem extends React.Component {
                 <div className="comment-crop">
                         <img className="comment-placeholder" src="/images/profile_2.png"/>
                 </div>
-                <input className="comment-input" type="text" 
-                       placeholder="Write a comment..."/>
+                <div className="comment-input-container">
+                    <input className="comment-input" type="text" 
+                        placeholder="Write a comment..."/>
+                    <div className="comment-icon-container">
+                        <img className="comment-option-icon" src="/images/comment_reaction.png" />
+                        <img className="comment-option-icon" src="/images/comment_photo.png" />
+                        <img className="comment-option-icon" src="/images/comment_gif.png" />
+                        <img className="comment-option-icon" src="/images/comment_sticker.png" />
+                    </div>
+                </div>
             </form>
             </div>
         </li>
