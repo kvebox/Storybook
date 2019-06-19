@@ -9,6 +9,10 @@ export const createPostComment = (post,comment) => $.ajax({
     data: {comment}
 });
 
+export const deletePostComment = (post, comment) => $.ajax({
+    method: 'DELETE',
+    url: `/api/posts/${post.id}/comments/${comment.id}`
+});
 
 
 // post = {post: {body: 'hello world', author_id: 2}}

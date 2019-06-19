@@ -27,3 +27,5 @@ export const fetchPostComments = post => dispatch => CommentApiUtil.fetchPostCom
 export const createPostComment = (post, comment) => dispatch => CommentApiUtil.createPostComment(post, comment)
     .then(comment => dispatch(receivePostComment(comment)));
 
+export const deletePostComment = (post, comment) => dispatch => CommentApiUtil.deletePostComment(post, comment)
+    .then(() => dispatch(removePostComment()));

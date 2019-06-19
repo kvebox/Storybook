@@ -15,7 +15,7 @@ class PostCommentItem extends React.Component {
                 </div>
                 <div className='commentReactionContainer'>
                     <div className='commentContentBodyContainer'>
-                        <div className='commentContentAuthor'>First LastName</div>
+                        <span className='commentContentAuthor'>First LastName</span>
                         <span className='commentContentBody'>{comment.body}</span>
                     </div>
                     <div className='commentReactions'>
@@ -24,6 +24,7 @@ class PostCommentItem extends React.Component {
                         <a>Reply</a>
                         <span>·</span>
                         <span>1hr</span>
+                        {/* <button onClick={this.props.deletePostComment(this.props.post ,this.props.comment)}>Delete</button> */}
                     </div>
                 </div>
             </li>
