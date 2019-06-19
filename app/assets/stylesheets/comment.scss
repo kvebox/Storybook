@@ -55,3 +55,50 @@
     height: 17.5px;
     margin-left: 10px;
 }
+
+.commentContentContainer {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.commentContentBodyContainer {
+    background: #F4F4F4;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 2.5px;
+}
+
+.commentProfileCrop {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.commentProfileCrop img {
+    height: 100%;
+    width: 100%;
+}
+
+.commentContentAuthor {
+    font-size: 14px;
+    color: #3C5A99;
+    font-weight: 600;
+}
+
+.commentContentBody {
+    font-size: 14px;
+}
+
+.post-comments-container {
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.commentReactions {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+

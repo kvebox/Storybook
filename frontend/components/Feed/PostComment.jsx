@@ -14,7 +14,8 @@ class PostComment extends React.Component {
     render() {
         if (this.props.comments.length == 0) return null;
         let comments = this.props.comments.map((comment, id) => {
-            return <PostCommentItem /> });
+            return <PostCommentItem key={id}
+                                    comment={comment} /> });
         return (
             <div>{comments}</div>
         );

@@ -123,7 +123,7 @@ class FeedIndexItem extends React.Component {
             </div>
 
             <ul className='post-comments-container'>
-                    <PostCommentContainer post={this.props.post}/>
+                    <PostCommentContainer post={this.props.post} />
             </ul>
 
             <form className="comment" onSubmit={e => this.handleSubmit(e)}>
