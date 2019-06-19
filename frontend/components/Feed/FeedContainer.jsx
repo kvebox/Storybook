@@ -7,8 +7,7 @@ import { fetchPostComments, createPostComment } from '../../actions/comment_acti
 const mapStateToProps = state => ({
     postsAll: Object.keys(state.entities.posts).map(key => [state.entities.posts[key], key]),
     posts: Object.keys(state.entities.posts).map(key => state.entities.posts[key]),
-    currentUser: state.entities.users[state.session.id],
-    modal: false
+    currentUser: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = dispatch => ({

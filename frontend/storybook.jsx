@@ -7,6 +7,7 @@ import configureStore from "./store/store";
 
 import {signup, login, logout} from './util/session_api_util';
 import {deletePost} from './util/post_api_util';
+import {fetchPostComments} from './util/comment_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.login = login;
     window.logout = logout;
     window.deletePost = deletePost;
+    window.fetchPostComments = fetchPostComments;
 
     ReactDOM.render(<Root store={store}/>, root);
 });
@@ -51,3 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
 // }
 
 // window.signup(user).then(res => console.log(res))
+// window.fetchPostComments(window.getState().entities.posts[1]))

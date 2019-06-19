@@ -5,7 +5,7 @@ import 'moment-timezone';
 import { Link } from 'react-router-dom';
 import FeedDropdownContainer from './FeedDropdownContainer';
 import EditModal from './EditModal';
-import PostComment from './PostComment';
+import PostCommentContainer from './PostCommentContainer';
 
 
 class FeedIndexItem extends React.Component {
@@ -62,7 +62,8 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchPostComments(this.props.post);
+        // this.props.fetchPostComments(this.props.post);
+        // console.log(this.state.comments);
     }
 
     componentDidUpdate(prevProps){
@@ -120,6 +121,10 @@ class FeedIndexItem extends React.Component {
                 <span><img className='post_icon' src='/images/comment.png'></img>Comment</span>
                 {/* <span><img className='post_icon' src='/images/share.png'></img>Share</span> */}
             </div>
+
+            <ul className='post-comments-container'>
+                    <PostCommentContainer post={this.props.post}/>
+            </ul>
 
             <form className="comment" onSubmit={e => this.handleSubmit(e)}>
                 <div className="comment-crop">
