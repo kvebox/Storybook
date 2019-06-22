@@ -5,6 +5,7 @@ class FeedDropdown extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            type: '',
             modal: false,
             dropdown: true
         };
@@ -18,6 +19,7 @@ class FeedDropdown extends React.Component {
     
     componentDidMount() { //add event listener to the entire document, to see where they click
         document.addEventListener("click", this.hideDropdown);
+        this.setState({type: this.props.type});
         
     }
     componentWillUnmount() { //clean up event listener when component is removed
@@ -53,33 +55,42 @@ class FeedDropdown extends React.Component {
 
 
     render() {
+        let dropdown = null;
+        switch (this.state.type){
+            case 'postComment':
+                dropdown = 
+                    (this.state.dropdown) ?
+                        <ul ref={this.node} className='postCommentDropdownContainer'>
+                            <li 
+                            // onClick={}
+                                className='dropdownListItem'>Edit...</li>
+
+                            {/* <div className='dropdownSpacer'></div> */}
+                            <li className='dropdownListItem'
+                                // onClick={}
+                            >Delete...</li>
+                        </ul>
+                        : ''
+                return dropdown;
+            default: 
+                dropdown = 
+                    (this.state.dropdown) ?
+                        <ul ref={this.node} className='dropdownContainer'>
+                            <li onClick={() => this.triggerEditModal()}
+                                className='dropdownListItem'>Edit Post</li>
+
+                            <div className='dropdownSpacer'></div>
+                            <li className='dropdownListItem'
+                                onClick={() => this.deletePost()}
+                            >Delete</li>
+                        </ul>
+                        : ''
+                return dropdown;
+        }
         return (
             <>
-            {/* {(this.state.modal) ? 
-            
-            <EditModal
-                forwardRef={this.modal}
-                editPost={this.props.editPost}
-                currentUser = {this.props.currentUser}
-                post={this.props.post}
-                hideModal={this.hideModal} />
-                
-            : ''} */}
-            {(this.state.dropdown) ?
-            <ul ref={this.node} className='dropdownContainer'>
-                <li onClick={() => this.triggerEditModal()}
-                    className='dropdownListItem'>Edit Post</li>
-                
-                <div className='dropdownSpacer'></div>
-                <li className='dropdownListItem'
-                    onClick={() => this.deletePost()}
-                    >Delete</li>
-            </ul>
-            : ''}
-
-            
-
-        </>
+            {dropdown}
+            </>
     )}
 
 }

@@ -18,7 +18,7 @@
 .posts {
     background: white;
     list-style-type: none;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1px solid lightgray;
@@ -54,7 +54,7 @@
 }
 
 .post-author {
-    padding: 5px;
+    padding-top: 5px;
     display: flex;
     justify-content: flex-start;
     margin: 0;
@@ -75,8 +75,10 @@
     padding: 5px 0;
     // padding: 10px 12px 10px 12px;
     border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     font-weight: bold;
     height: 100%;
+    margin-bottom: 7.5px;
 }
 
 .post-options span {
@@ -134,10 +136,11 @@
 }
 
 .options-dropdown-trigger {
-    vertical-align: super;
     text-decoration: none;
     color: #666;
-    font-size: 22.5px;
+    font-weight: 900;
+    text-align: right;
+    font-size: 20px;
 }
 
 .options a:hover {

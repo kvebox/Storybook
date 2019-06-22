@@ -26,6 +26,7 @@ class FeedIndexItem extends React.Component {
         this.hideModal = this.hideModal.bind(this);
         this.triggerEditModal = this.triggerEditModal.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
+        this.focus = this.focus.bind(this);
     }
 
     handleSubmit(e){
@@ -66,10 +67,21 @@ class FeedIndexItem extends React.Component {
         // console.log(this.state.comments);
     }
 
+    focus(className, e){
+        // console.log(e.target)
+        // let f = document.getElementsByClassName(className);
+        // console.log(f);
+        // f[0].focus();
+    }
+
     componentDidUpdate(prevProps){
         // if (prevProps.comments.length !== this.props.comments.length){
         //     this.setState({comments: this.props.comments});
         // }
+        if (prevProps.post.comments.length != this.props.post.comments.length) {
+            console.log('a change');
+            this.setState({ comments: this.props.post.comments });
+        }
     }
 
     render() {
@@ -77,7 +89,7 @@ class FeedIndexItem extends React.Component {
         //     return <PostComment />
         // });
     return (
-        <>
+        <div className='post-index-item-container'>
             {(this.state.modal) ?
 
                 <EditModal
@@ -91,13 +103,16 @@ class FeedIndexItem extends React.Component {
 
                 : ''}
         <li className="posts">
-            <div className="options"><div onClick={() => this.getDropdown()}className='options-dropdown-trigger'>...</div>
-                {(this.state.dropdown) ? <FeedDropdownContainer 
+                <div className="options">
+                <div onClick={() => this.getDropdown()} className='options-dropdown-trigger'>···</div>
+
+                    {(this.state.dropdown) ? <FeedDropdownContainer 
                         hideDropdown = {this.hideDropdown}
                         triggerEditModal={this.triggerEditModal}
                         currentUser = {this.currentUser}
                         deletePost = {this.props.deletePost}
                         post = {this.props.post} /> : ''}
+
                 </div>
             
             <div className="post-author">
@@ -118,7 +133,7 @@ class FeedIndexItem extends React.Component {
 
             <div className="post-options">
                 <span><img className='post_icon' src='/images/like.png'></img>Like</span>
-                <span><img className='post_icon' src='/images/comment.png'></img>Comment</span>
+                <span onClick={(e) => this.focus('comment-input', e)}><img className='post_icon' src='/images/comment.png'></img>Comment</span>
                 {/* <span><img className='post_icon' src='/images/share.png'></img>Share</span> */}
             </div>
 
@@ -144,7 +159,7 @@ class FeedIndexItem extends React.Component {
             </form>
             </div>
         </li>
-        </>
+        </div>
         );
     }
 };
