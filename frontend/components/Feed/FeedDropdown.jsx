@@ -61,14 +61,13 @@ class FeedDropdown extends React.Component {
                 dropdown = 
                     (this.state.dropdown) ?
                         <ul ref={this.node} className='postCommentDropdownContainer'>
-                            <li 
-                            // onClick={}
-                                className='dropdownListItem'>Edit...</li>
+                            <li className='postCommentDropdownListItem'>
+                                <img className='postCommentIcon'
+                                src='/images/comment_edit.png'/>Edit...</li>
 
-                            {/* <div className='dropdownSpacer'></div> */}
-                            <li className='dropdownListItem'
-                                // onClick={}
-                            >Delete...</li>
+                            <li className='postCommentDropdownListItem'>
+                            <img className='postCommentIcon'
+                                src='/images/comment_delete.png' />Delete...</li>
                         </ul>
                         : ''
                 return dropdown;
@@ -81,8 +80,7 @@ class FeedDropdown extends React.Component {
 
                             <div className='dropdownSpacer'></div>
                             <li className='dropdownListItem'
-                                onClick={() => this.deletePost()}
-                            >Delete</li>
+                                onClick={() => this.deletePost()}>Delete</li>
                         </ul>
                         : ''
                 return dropdown;
