@@ -24,6 +24,7 @@ class FeedIndex extends React.Component {
         if (prevProps.posts.length != this.props.posts.length){
             this.setState({posts: this.props.posts});
         } 
+
         if (prevProps.modal){
             this.returnCreate();
         }
@@ -70,6 +71,7 @@ class FeedIndex extends React.Component {
         let posts = this.props.posts.map((post, id) => {
             return <FeedIndexItem 
                 key={id}
+                comments={this.props.comments}
                 deletePost={this.props.deletePost}
                 editPost={this.props.editPost}
                 user={this.props.currentUser} 

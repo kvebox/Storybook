@@ -32,9 +32,9 @@ class FeedIndexItem extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         let comment = {
-            post: this.props.post.id,
+            post_id: this.props.post.id,
             body: this.state.commentBody,
-            author: this.props.user.id
+            comment_author: this.props.user.id
         };
         this.props.createPostComment(this.props.post, comment);
   
@@ -75,13 +75,7 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        // if (prevProps.comments.length !== this.props.comments.length){
-        //     this.setState({comments: this.props.comments});
-        // }
-        if (prevProps.post.comments.length != this.props.post.comments.length) {
-            console.log('a change');
-            this.setState({ comments: this.props.post.comments });
-        }
+
     }
 
     render() {

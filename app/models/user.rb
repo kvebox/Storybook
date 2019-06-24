@@ -52,6 +52,11 @@ class User < ApplicationRecord
 
     has_many :posts
 
+    has_many :comments,
+    primary_key: :id,
+    foreign_key: :comment_author,
+    class_name: :Comment
+
 
 # a.profilePic.attach(io: File.open("/Users/vjoh/Desktop/vj_propic.jpg"), filename: "vj_propic.jpg")
 end

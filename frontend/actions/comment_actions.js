@@ -16,7 +16,7 @@ const receivePostComment = comment => ({
 });
 
 const removePostComment = () => ({
-    type: REMOVE_POST,
+    type: REMOVE_COMMENT,
 });
 
 

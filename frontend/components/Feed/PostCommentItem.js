@@ -9,6 +9,7 @@ class PostCommentItem extends React.Component {
         };
         this.getDropdown = this.getDropdown.bind(this);
         this.hideDropdown = this.hideDropdown.bind(this);
+        this.showOptions = this.showOptions.bind(this);
     }
 
     hideDropdown(){
@@ -17,6 +18,13 @@ class PostCommentItem extends React.Component {
 
     getDropdown(){
         this.setState({dropdown: !false});
+    }
+
+    showOptions(){
+        let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
+        // (dropdownTrigger[0].style.display === 'none') ? 
+            dropdownTrigger[0].style.display = 'none';
+            // : dropdownTrigger[0].style.display = 'none';
     }
 
 
@@ -32,15 +40,19 @@ class PostCommentItem extends React.Component {
                 </div>
                 <div className='commentReactionContainer'>
                     <div className='commentContentBodyContainer'>
-                        <div className='commentBodyContent'>
-                            <span className='commentContentAuthor'>First LastName</span>
+                        <div className='commentBodyContent'
+                            onMouseOver={() => this.showOptions()}>
+                            <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
                             <span className='commentContentBody'>{comment.body}</span>
                         </div>
                         <div className="options">
                             <div onClick={() => this.getDropdown()} className='post-comment-options-dropdown-trigger'>···</div>
 
                             {(this.state.dropdown) ? <Dropdown
+                                deletePostComment={this.props.deletePostComment}
                                 type={'postComment'}
+                                post={this.props.post}
+                                comment={comment}
                                 hideDropdown={this.hideDropdown}
                             /> : ''}
                         </div>

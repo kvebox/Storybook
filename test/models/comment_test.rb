@@ -2,14 +2,14 @@
 #
 # Table name: comments
 #
-#  id         :bigint           not null, primary key
-#  body       :text             not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  post       :integer
-#  album      :integer
-#  comment    :integer
-#  author     :integer          not null
+#  id             :bigint           not null, primary key
+#  body           :text             not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  comment_author :integer
+#  post_id        :integer
+#  album_id       :integer
+#  comment_id     :integer
 #
 
 require 'test_helper'

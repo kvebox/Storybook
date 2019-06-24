@@ -53,6 +53,10 @@ class FeedDropdown extends React.Component {
 
     }
 
+    deletePostComment(){
+        this.props.deletePostComment(this.props.post, this.props.comment);
+    }
+
 
     render() {
         let dropdown = null;
@@ -65,7 +69,8 @@ class FeedDropdown extends React.Component {
                                 <img className='postCommentIcon'
                                 src='/images/comment_edit.png'/>Edit...</li>
 
-                            <li className='postCommentDropdownListItem'>
+                            <li className='postCommentDropdownListItem'
+                                onClick={() => this.deletePostComment()}>
                             <img className='postCommentIcon'
                                 src='/images/comment_delete.png' />Delete...</li>
                         </ul>

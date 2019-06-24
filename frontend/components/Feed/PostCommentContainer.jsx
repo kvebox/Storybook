@@ -7,6 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+    fetchPostComments: (post) => dispatch(fetchPostComments(post)),
     deletePostComment: (post, comment) => dispatch(deletePostComment(post, comment))
 });
 
