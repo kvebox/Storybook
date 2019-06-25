@@ -26,6 +26,7 @@ class PostComment extends React.Component {
 
     }
 
+
     render() {
         // console.log(this.props.comments)
         if (this.props.post.comments === undefined) return null;
