@@ -1,9 +1,9 @@
 import PostComment from './PostComment';
-import React from 'react';
 import { connect } from 'react-redux';
 import {deletePostComment, fetchPostComments} from '../../actions/comment_actions';
 
 const mapStateToProps = state => ({
+    comments: Object.keys(state.entities.comments).map(key => state.entities.comments[key])
 });
 
 const mapDispatchToProps = dispatch => ({

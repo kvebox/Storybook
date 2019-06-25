@@ -6,6 +6,7 @@ class PostCommentItem extends React.Component {
         super(props);
         this.state = {
             dropdown: false,
+            edit: true
         };
         this.getDropdown = this.getDropdown.bind(this);
         this.hideDropdown = this.hideDropdown.bind(this);
@@ -27,50 +28,50 @@ class PostCommentItem extends React.Component {
             // : dropdownTrigger[0].style.display = 'none';
     }
 
+    triggerPostCommentEditModal(){
+        this.setState({edit: !this.setState.edit});
+        
+    }
+
 
     render() {
-
         let comment = this.props.comment;
         return (
-            <li className='commentContentContainer'>
+        <li className='commentContentContainer'>
 
-
-                <div className='commentProfileCrop'>
-                    <img src='/images/profile_1.png'/>
-                </div>
-                <div className='commentReactionContainer'>
-                    <div className='commentContentBodyContainer'>
-                        <div className='commentBodyContent'
-                            onMouseOver={() => this.showOptions()}>
-                            <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
-                            <span className='commentContentBody'>{comment.body}</span>
-                        </div>
-                        <div className="options">
-                            <div onClick={() => this.getDropdown()} className='post-comment-options-dropdown-trigger'>···</div>
-
-                            {(this.state.dropdown) ? <Dropdown
-                                deletePostComment={this.props.deletePostComment}
-                                type={'postComment'}
-                                post={this.props.post}
-                                comment={comment}
-                                hideDropdown={this.hideDropdown}
-                            /> : ''}
-                        </div>
-                        
+            <div className='commentProfileCrop'>
+                <img src='/images/profile_1.png' />
+            </div>
+            <div className='commentReactionContainer'>
+                <div className='commentContentBodyContainer'>
+                    <div className='commentBodyContent'
+                        onMouseOver={() => this.showOptions()}>
+                        <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
+                        <span className='commentContentBody'>{comment.body}</span>
                     </div>
+                    <div className="options">
+                        <div onClick={() => this.getDropdown()} className='post-comment-options-dropdown-trigger'>···</div>
 
-
-
-                    <div className='commentReactions'>
-                        <a>Like</a>
-                        <span>·</span>
-                        <a>Reply</a>
-                        <span>·</span>
-                        <span>1hr</span>
-                        {/* <button onClick={this.props.deletePostComment(this.props.post ,this.props.comment)}>Delete</button> */}
+                        {(this.state.dropdown) ? <Dropdown
+                            deletePostComment={this.props.deletePostComment}
+                            type={'postComment'}
+                            post={this.props.post}
+                            comment={comment}
+                            hideDropdown={this.hideDropdown}
+                        /> : ''}
                     </div>
                 </div>
-            </li>
+
+
+                <div className='commentReactions'>
+                    <a>Like</a>
+                    <span>·</span>
+                    <a>Reply</a>
+                    <span>·</span>
+                    <span>1hr</span>
+                </div>
+            </div>
+        </li>
         );
     }
 };

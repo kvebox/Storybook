@@ -11,13 +11,14 @@ class PostComment extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchPostComments(this.props.post);
+        // this.props.fetchPostComments(this.props.post);
+        
     }
 
     componentDidUpdate(prevProps){
-        debugger
         if (prevProps.comments.length !== this.props.comments.length) {
             this.setState({ comments: this.props.comments });
+            console.log('set')
         }
     }
 
@@ -26,6 +27,8 @@ class PostComment extends React.Component {
     }
 
     render() {
+        // console.log(this.props.comments)
+        if (this.props.post.comments === undefined) return null;
         let comments = this.props.post.comments.map((comment, id) => {
             return <PostCommentItem key={id}
                                     comment={comment}

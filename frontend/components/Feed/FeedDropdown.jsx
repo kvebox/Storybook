@@ -40,21 +40,20 @@ class FeedDropdown extends React.Component {
     }
 
     triggerEditModal(){
-        // document.removeEventListener("click", this.hideDropdown);
-        // this.setState({dropdown: !this.state.dropdown});
-        // this.setState({modal: !this.state.modal});
         this.props.triggerEditModal();
     }
 
     hideModal(){
-        // if (!this.modal.current.contains(e.target)) {
-        // this.setState({modal: false});
         this.props.hideModal();
 
     }
 
     deletePostComment(){
         this.props.deletePostComment(this.props.post, this.props.comment);
+    }
+
+    triggerPostCommentEditModal(){
+        this.props.triggerPostCommentEditModal();
     }
 
 
@@ -65,7 +64,8 @@ class FeedDropdown extends React.Component {
                 dropdown = 
                     (this.state.dropdown) ?
                         <ul ref={this.node} className='postCommentDropdownContainer'>
-                            <li className='postCommentDropdownListItem'>
+                            <li className='postCommentDropdownListItem'
+                                onClick={() => this.triggerPostCommentEditModal()}>
                                 <img className='postCommentIcon'
                                 src='/images/comment_edit.png'/>Edit...</li>
 

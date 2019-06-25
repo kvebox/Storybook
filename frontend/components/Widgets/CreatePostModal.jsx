@@ -14,7 +14,7 @@ class CreatePostModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createPost(this.props.currentUser, this.state).then(() => window.location.reload());
+        this.props.createPost(this.props.currentUser, this.state).then(()=> location.reload());
         this.setState({ body: '' });
         this.setState({modal: false});
     }
