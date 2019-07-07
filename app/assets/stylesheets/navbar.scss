@@ -44,18 +44,23 @@
     padding-right: 7.5px;
 }
 
+.session-wrapper {
+    background: #3C5A99;
+}
+
 .login-form {
     background: #3C5A99;
     margin: 0px;
-    height: 58px;
+    height: 82px;
     display: flex;
     justify-content: flex-end;
     padding: 5px;
     border-bottom: 1px solid darkblue;
     // position: fixed;
+    margin: 0 auto;
     top: 0;
-    width: 100%;
-    z-index: 1;
+    width: 980px;
+    box-sizing: border-box;
 }
 
 .loggedin-nav {

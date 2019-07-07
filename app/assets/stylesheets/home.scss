@@ -1,12 +1,5 @@
 
 
-.signup-container {
-    // width: 100%;
-    // position: absolute;
-    // height: 540px;
-    // padding: 20px;
-}
-
 .signup-header {
     line-height: 1.5px;
     font-size: 36px;
@@ -22,6 +15,8 @@
 
 .logo h1 {
     margin: 0;
+    font-size: 46px;
+
 }
 
 
@@ -43,17 +38,20 @@
 
 
 .login-input {
-    border-radius: 1px;
-    border:1px solid black; 
-    padding: 2px;
-    margin-left: 5px;
+    border-radius: 0px;
+    border:1px solid #1c1e21; 
+    padding: 3px;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    width: 142px;
+    height: 24px;
+    box-sizing: border-box;
 }
 
 .login-label {
     color: white;
-    font-size: 10px;
-    padding-bottom: 4px;
-    padding-left: 5px;
+    font-size: 12px;
+    margin-bottom: 2px;
 }
 
 .inputContainer {
@@ -89,19 +87,23 @@
 
 .login-forgot {
     color: lightsteelblue;
-    font-size: 10px;
+    font-size: 12px;
     text-decoration: none;
     padding-left: 5px;
     position: absolute;
 }
 
 .login-button {
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     background: #4167B2;
-    border: 1px solid darkblue;
-    border-radius: 3px;
-    margin-left: 10px;
+    border: 1px solid #29487d;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2px 6px;
+    line-height: 18px;
+    white-space: nowrap;
+    font-weight: bold;
 }
 
 // .login-table {
@@ -110,6 +112,7 @@
 
 .login-container {
     width: 980px;
+    height: 82px;
     margin: 0 auto;
     padding-top: 5px;
 }
@@ -167,7 +170,7 @@
 .introHeader {
     font-size: 28px;
     font-weight: 600;
-    padding: 42px 0 24px;
+    padding: 30px 0 24px;
     line-height: 36px;
     font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
     margin: 0;
@@ -187,7 +190,7 @@
 .footerContainer {
     width: 980px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .welcomeList li {

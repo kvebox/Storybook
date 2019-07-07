@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
 
     render () {
         return (
-
+        <div className='session-wrapper'>
             <div className="login-form">
             <div className="login-container">
 
@@ -91,7 +91,7 @@ class SessionForm extends React.Component {
             </form>
             </div>
             </div>
-
+        </div>
         )
     }
         
