@@ -1,7 +1,6 @@
 
 
 .signup-container {
-    background: rgb(245,246,247);
     // width: 100%;
     // position: absolute;
     height: 540px;
@@ -24,7 +23,7 @@
 }
 
 .signup-main {
-    width: 800px;
+    // width: 800px;
     // border: 1px solid red;
     height: 500px;
     margin: 0 auto;
@@ -150,4 +149,36 @@
 
 .demo {
     background-image: linear-gradient(#A141B2, purple)
+}
+
+.home_global {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContentContainer {
+    display: flex;
+    justify-content: center;
+    background: rgb(245,246,247);
+}
+
+.welcomeList li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 25px 0px;
+    font-size: 16px;
+    color: #666;
+}
+
+.welcomeList img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.welcome_bold {
+    font-weight: 650;
+    font-size: 18px;
+    color: #222;
 }
