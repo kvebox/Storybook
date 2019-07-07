@@ -3,6 +3,7 @@ import React from 'react';
 class HomeFooter extends React.Component {
     render () {
         return (
+            <div className='footer-wrapper'>
             <div className="footer">
                 <ul className="language-list">
                     <li className="default"><a href="#">English (US)</a></li>
@@ -18,8 +19,7 @@ class HomeFooter extends React.Component {
                     <li><a href="#">日本語</a></li>
                 </ul>
 
-                {/* <div className="linebreak">
-                </div> */}
+                <div className="footer-linebreak"></div>
 
                 <ul className="footer-links">
                     <li><a href="#">Sign Up</a></li>
@@ -51,8 +51,9 @@ class HomeFooter extends React.Component {
                     <li><a href="#">Account Security</a></li>
                     <li><a href="#">Login Help</a></li>
                     <li><a href="#">Help</a></li>
-                    <li><a href="#">Settings</a></li>
+                    {/* <li><a href="#">Settings</a></li> */}
                 </ul>
+            </div>
             </div>
         )
     }

@@ -8,6 +8,7 @@ class Home extends React.Component {
         return (
         <div className="home_global">
             <LoginContainer /> 
+            <div className='homeWrapper'>
             <div className='footerContainer'>
             <div className='homeContentContainer'>
                 <ul className='welcomeList'>
@@ -21,6 +22,7 @@ class Home extends React.Component {
                         <p><span className='welcome_bold'>Find more </span>of what you're looking for with Facebook Search.</p></li>
                 </ul>
                 <SignupContainer />
+            </div>
             </div>
             <HomeFooter />
             </div>
