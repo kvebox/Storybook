@@ -18,8 +18,8 @@ class HomeFooter extends React.Component {
                     <li><a href="#">日本語</a></li>
                 </ul>
 
-                <div className="linebreak">
-                </div>
+                {/* <div className="linebreak">
+                </div> */}
 
                 <ul className="footer-links">
                     <li><a href="#">Sign Up</a></li>

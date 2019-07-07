@@ -3,12 +3,14 @@
 .signup-container {
     // width: 100%;
     // position: absolute;
-    height: 540px;
-    padding: 20px;
+    // height: 540px;
+    // padding: 20px;
 }
 
 .signup-header {
     line-height: 1.5px;
+    font-size: 36px;
+    color: #333;
 }
 
 .logo {
@@ -22,22 +24,6 @@
     margin: 0;
 }
 
-.signup-main {
-    // width: 800px;
-    // border: 1px solid red;
-    height: 500px;
-    margin: 0 auto;
-}
-
-.signup-form {
-    float: right;
-    // position: relative;
-    // top: 100px;
-    width: 400px;
-    padding-top: 50px;
-    // border: 1px solid black;
-    // margin: 0 auto;
-}
 
 #home_global {
     display: flex;
@@ -48,6 +34,11 @@
 .labels {
     color: white;
     font-size: 12px;
+}
+
+.signup-subheader {
+    font-size: 19px;
+    font-weight: 300;
 }
 
 
@@ -65,29 +56,36 @@
     padding-left: 5px;
 }
 
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formInputContainer {
+    width: 399px;
+}
+
 .input {
+    box-sizing: border-box;
     border-radius: 5px;
-    border:1px solid #cccccc;
-    padding: 5px;
-    // margin: 5px;
-    font-size: 15px;
-    width: 135px;
+    border:1px solid #bdc7d8;
+    padding: 7.5px;
+    font-size: 18px;
     margin-bottom: 10px;
     margin-right: 10px;
-
-    
+    width: 100%;   
 }
 
-
-.input_long {
-    border-radius: 5px;
-    border:1px solid #cccccc;
-    padding: 5px;
-    // margin: 5px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    width: 292px;
+.inputName {
+    padding-right: 0px;
+    margin-right: 0px;
 }
+
+.inputFirstName {
+    margin-right: 10px;
+}
+
 
 .login-forgot {
     color: lightsteelblue;
@@ -154,12 +152,27 @@
 .home_global {
     display: flex;
     flex-direction: column;
+
+}
+
+.introHeader {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 42px 0 24px;
+    line-height: 36px;
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+    margin: 0;
 }
 
 .homeContentContainer {
     display: flex;
     justify-content: center;
-    background: rgb(245,246,247);
+    background: #EDF0F4;
+}
+
+.footerContainer {
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .welcomeList li {
@@ -167,18 +180,23 @@
     display: flex;
     align-items: center;
     margin: 25px 0px;
-    font-size: 16px;
+    font-size: 15px;
     color: #666;
 }
 
 .welcomeList img {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     margin-right: 20px;
 }
 
+.welcomeList {
+    padding: 0;
+    width: 565px;
+}
+
 .welcome_bold {
-    font-weight: 650;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 17px;
     color: #222;
 }
