@@ -6,12 +6,13 @@
 Storybook is a two part project: one half a clone of Facebook, the other an eventual redesign of a social media and networking website created with custom icons, illustration, and motion graphics.
 
 ## Technologies
-* Storybook is written primarily in HTML/CSS/JavaScript with React.js/Redux on the frontend, built on PostgreSQL and Ruby on Rails and hosted on Heroku.
+Storybook is written primarily in HTML/CSS/JavaScript with React.js/Redux on the frontend, built on PostgreSQL and Ruby on Rails and hosted on Heroku. All illustrations and icons are recreated in Illustrator.
 
 ## Features
-* Secure frontend to backend user authentication using BCrypt.
-* Comment creation and deletion (currently a big buggy).
-# Post creation, editing, and deletion
+##### Secure frontend to backend user authentication using BCrypt.
+##### Comment creation and deletion (currently a big buggy).
+##### Post creation, editing, and deletion
+
 ![alt text][postCreation]
 Facebook's liberal combination of dropdowns and modals was a bit tricky to navigate when starting out, but could be circumvented with switch case components and event listeners that would check for their respective reference element:
 ```javascript
