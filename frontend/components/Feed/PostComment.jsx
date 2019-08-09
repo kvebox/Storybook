@@ -16,10 +16,10 @@ class PostComment extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        if (prevProps.comments.length !== this.props.comments.length) {
-            this.setState({ comments: this.props.comments });
-            console.log('set')
-        }
+    //     if (prevProps.comments.length !== this.props.comments.length) {
+    //         this.setState({ comments: this.props.comments });
+    //         console.log('set')
+    //     }
     }
 
     hideDropdown(){
@@ -28,7 +28,6 @@ class PostComment extends React.Component {
 
 
     render() {
-        // console.log(this.props.comments)
         if (this.props.post.comments === undefined) return null;
         let comments = this.props.post.comments.map((comment, id) => {
             return <PostCommentItem key={id}

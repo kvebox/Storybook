@@ -185,6 +185,14 @@
     margin-bottom: 10px;
 }
 
+.navigation-link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
+
 .navigation-title {
     display: flex;
     justify-content: space-between;

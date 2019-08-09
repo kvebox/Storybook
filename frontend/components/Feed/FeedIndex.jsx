@@ -17,7 +17,6 @@ class FeedIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchUserPosts(this.props.currentUser);
-        // this.props.fetchPostComments(this.props.posts[1]);
     }
 
     componentDidUpdate(prevProps){
@@ -52,8 +51,6 @@ class FeedIndex extends React.Component {
     }
 
     returnCreate() {
-
-
         if (this.state.modal){
             return <div className='postModal'>
                 <CreatePostModal currentUser = {this.props.currentUser} 

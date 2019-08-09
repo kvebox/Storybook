@@ -89,12 +89,7 @@ class FeedDropdown extends React.Component {
                         </ul>
                         : ''
                 return dropdown;
-        }
-        return (
-            <>
-            {dropdown}
-            </>
-    )}
+        }}
 
 }
 

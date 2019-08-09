@@ -74,21 +74,9 @@ class SessionForm extends React.Component {
                             <td></td>
                             <td><a className="login-forgot" href="#">Forgot account?</a></td>
                         </tr>
-                </tbody>
-
-            </table>
-
-                {/* <label className="labels"> Email </label>
-                    <input className='login-input' type='text' 
-                           value={this.state.email} 
-                           onChange={this.update('email')}/>
-                <label className="labels"> Password </label>
-                    <input className='login-input' type='password' 
-                           onChange={this.update('password')} 
-                           value={this.state.password} /> */}
-                {/* <button type="submit" value="submit">Login</button> */}
-                {/* <button type="logout" onClick={(e)=> this.logout(e)}>Logout</button> */}
-            </form>
+                    </tbody>
+                </table>
+                </form>
             </div>
             </div>
         </div>

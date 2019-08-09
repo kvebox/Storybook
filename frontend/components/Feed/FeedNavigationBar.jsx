@@ -38,7 +38,53 @@ export default ({currentUser}) => {
                 </li>
             </ul>
 
+
             <ul className='navigation-container'>
+                <div className='navigation-headers'>Contact</div>
+                <li>
+                    <a className='navigation-link' href='https://twitter.com/kvebox'>
+                    <img src='/images/icons_twitter.png' alt='icon twitter' />
+                    <div className="navigation-title">
+                        <div>Twitter</div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a className='navigation-link' href='https://github.com/kvebox'>
+                    <img src='/images/icons_github.png' alt='icon github' />
+                    <div className="navigation-title">
+                        <div>Github</div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a className='navigation-link' href='https://www.linkedin.com/in/vhjoh/'>
+                    <img src='/images/icons_linkedin.png' alt='icon linkedin' />
+                    <div className="navigation-title">
+                        <div>LinkedIn</div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a className='navigation-link' href='https://www.instagram.com/kvebox/'>
+                    <img src='/images/icons_instagram.png' alt='icon instagram' />
+                    <div className="navigation-title">
+                        <div>Instagram</div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a className='navigation-link' href='https://www.tumblr.com/kvebox/'>
+                    <img src='/images/icons_tumblr.png' alt='icon tumblr' />
+                    <div className="navigation-title">
+                        <div>Tumblr</div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+
+
+            {/* <ul className='navigation-container'>
             <div className='navigation-headers'>Explore</div>
                 <li>
                     <img src='/images/icons_events.png' alt='icon events' />
@@ -70,7 +116,7 @@ export default ({currentUser}) => {
                     <div>Fundraisers</div>
                     </div>
                 </li>
-            </ul>
+            </ul> */}
 
         </div>
     );

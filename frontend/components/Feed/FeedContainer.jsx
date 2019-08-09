@@ -11,6 +11,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     fetchUserPosts: user => dispatch(fetchUserPosts(user)),
+    fetchPostComments: post => dispatch(fetchPostComments(post)),
     deletePost: (user, postId) => dispatch(deletePost(user,postId)),
     editPost: (user, post) => dispatch(editPost(user, post)),
     createPost: (user,post) => dispatch(createPost(user, post)),

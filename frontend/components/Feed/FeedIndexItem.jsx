@@ -36,7 +36,8 @@ class FeedIndexItem extends React.Component {
             body: this.state.commentBody,
             comment_author: this.props.user.id
         };
-        this.props.createPostComment(this.props.post, comment);
+        this.props.createPostComment(this.props.post, comment).then(() => console.log(this.props.post.comments));
+        // console.log(this.props.post.comments);
   
         this.setState({commentBody: ''});    
     }
@@ -63,8 +64,10 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidMount(){
+
         // this.props.fetchPostComments(this.props.post);
-        // console.log(this.state.comments);
+        // console.log(this.props);
+        // this.setState({ comments: this.props.comments });
     }
 
     focus(className, e){
@@ -74,8 +77,13 @@ class FeedIndexItem extends React.Component {
         // f[0].focus();
     }
 
-    componentDidUpdate(prevProps){
-
+    componentDidUpdate(prevProps) {
+        // if (prevProps.post.comments.length !== this.props.post.comments.length){
+        //     this.setState({comments: this.props.post.comments});
+        // }
+        // if (prevProps.comments.length !== this.props.comments.length) {
+        //     this.setState({ comments: 'test2' });
+        // }
     }
 
     render() {
