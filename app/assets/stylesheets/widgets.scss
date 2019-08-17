@@ -28,6 +28,48 @@
     padding: 10px;
 }
 
+.bio-info, .bio-follow-text {
+    color: #1D2129;
+    font-size: 12px;
+    text-align: center; 
+}
+
+.add-bio-button {
+    color: #3578E3;
+    font-size: 12px;
+    margin: 4px 24px 12px;
+    text-align: center; 
+}
+
+.add-bio-button:hover {
+    cursor: pointer;
+}
+
+.bio-content-container, .bio-showcase-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bio-header-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.bio-follow-icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+}
+
+.bio-showcase-icon {
+    height: 24px;
+    width: 24px;
+}
+
+.bio-follow-container {
+    display: flex;
+    align-items: center;
+}
 
 
 
