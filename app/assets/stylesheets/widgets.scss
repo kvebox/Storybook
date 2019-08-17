@@ -27,6 +27,7 @@
     border: 1px solid #dddfe2;
     border-radius: 3px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .bio-info, .bio-follow-text {
@@ -91,6 +92,90 @@
     padding: 4px 0;
 }
 
+// Bio Widget Form
+.bioFormContainer {
+    width: 100%;
+    background: #F2F3F5;
+    border: 1px solid #F2F3F5;
+    border-radius: 1px;
+}
+
+.bioForm {
+    width: 100%;
+    background: white;
+    border: none;
+    box-sizing: border-box;
+    height: 50px;
+    text-align: center;
+    color: #1c1e21;
+    resize: none;
+    padding: 8px 15px;
+    border-bottom: 1px solid #dddfe2;
+
+}
+
+.bioForm::placeholder { 
+    color: #1c1e21;;
+}
+
+.bioVisibility {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.bioFormSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px;
+}
+
+.bioVisibilityText {
+    color: #90949C;
+    font-size: 11px;
+}
+
+.bioVisibilityIcon {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+}
+
+.bioFormButtons {
+    display: flex;
+    height: 22px;
+}
+
+.bioFormButtons button {
+    font-weight: 525;
+    font-size: 12px;
+    padding: 0px 8px;
+    cursor: pointer;
+    line-height: 1.5em;
+    border-radius: 2px;
+}
+
+.bioFormCancel {
+    color: #4B4F56;
+    background: #F5F6F7;
+    border: 1px solid #ccd0d5;
+}
+
+.bioFormSave {
+    color: white;
+    background: #4267B2;
+    margin-left: 4px;
+    border: 1px solid #4267b2;
+}
+
+
+.bioCharRemaining {
+    color: #90949C;
+    font-size: 11px;
+    text-align: right;
+    padding: 8px;
+}
 
 
 // Footer ------------------------------------

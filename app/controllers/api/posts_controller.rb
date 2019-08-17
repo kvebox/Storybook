@@ -5,7 +5,9 @@ class Api::PostsController < ApplicationController
     end  
 
     def index 
+        # @posts = User.find(params[])
         @posts = Post.all 
+        # Post.find(params[:id])
     end
 
     def create 

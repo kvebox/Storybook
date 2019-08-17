@@ -1,15 +1,42 @@
 import React from 'react';
 
 class BioWidget extends React.Component{
-    constructor(){
+    constructor(props){
+        super(props);
         this.state = {
-            bioForm: false,
+            bioForm: true,
+            charRemaining: 101
         };
     }
 
-    bioInfo(){
+
+    bioInfoTrigger(){
         return(
-        <p className='bio-info'>Add a short bio to tell people more about yourself.</p>
+        this.state.bioForm ?
+        <form className='bioFormContainer'>
+            <textarea className='bioForm'
+                      placeholder='Describe who you are'>
+            </textarea>
+
+            <div className='bioFormInfo'>
+            <div className='bioCharRemaining'>{this.state.charRemaining}</div>
+
+            <div className='bioFormSubmit'>
+                <div className='bioVisibility'>
+                    <img className='bioVisibilityIcon' src='/images/visibility_world.png'/>
+                    <div className='bioVisibilityText'>Public</div>
+                </div>
+                <div className='bioFormButtons'>
+                    <button className='bioFormCancel'>Cancel</button>
+                    <button className='bioFormSave'>Save</button>
+                </div>
+            </div>
+            </div>
+        </form>
+        :
+        <><img className='bio-header-icon' src='/images/widget_bio.png' />
+        <div className='bio-info'>Add a short bio to tell people more about yourself.</div>
+        <a className='add-bio-button'>Add Bio</a></>
         )
     }
 
@@ -22,9 +49,7 @@ class BioWidget extends React.Component{
                 </div>
 
                 <div className='bio-content-container'>
-                    <img className='bio-header-icon' src='/images/widget_bio.png'/>
-                    <div className='bio-info'>Add a short bio to tell people more about yourself.</div>
-                    <a className='add-bio-button'>Add Bio</a>
+                    {this.bioInfoTrigger()}
                 </div>
 
                 <div className='bio-follow-container'>
