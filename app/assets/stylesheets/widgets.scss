@@ -17,13 +17,14 @@
 .bio-header-container {
     display: flex;
     align-items: center;
+    padding-bottom: 4px;
 }
 
 // Bio ------------------------------------
 
 .bio-widget {
     background: white;
-    border: 1px solid lightgray;
+    border: 1px solid #dddfe2;
     border-radius: 3px;
     padding: 10px;
 }
@@ -48,11 +49,27 @@
 .bio-content-container, .bio-showcase-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.bio-content-container {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ebedf0;
+    line-height: 1.5;
+}
+
+
+.bio-showcase-container {
+    padding-top: 8px;
+    border-top: 1px solid #ebedf0;
+    color: #1C1E21;
+    text-justify: auto;
 }
 
 .bio-header-icon {
     height: 20px;
     width: 20px;
+    margin-bottom: 5px;
 }
 
 .bio-follow-icon {
@@ -64,11 +81,14 @@
 .bio-showcase-icon {
     height: 24px;
     width: 24px;
+    margin-bottom: 5px;
 }
 
 .bio-follow-container {
     display: flex;
     align-items: center;
+    margin: 8px 0;
+    padding: 4px 0;
 }
 
 
@@ -77,7 +97,7 @@
 .widget-footer li {
     list-style-type: none;
     color: gray;
-    font-size: 10px;
+    font-size: 12px;
     padding-right: 5px;
 }
 
@@ -96,7 +116,7 @@
 }
 
 .widget-language ul {
-    border: 1px solid lightgray;
+    border: 1px solid #dddfe2;
     display: flex;
     flex-wrap: wrap;
     margin: 0px;
@@ -106,7 +126,7 @@
 .widget-language li {
     list-style-type: none;
     color: gray;
-    font-size: 10px;
+    font-size: 12px;
     padding-right: 5px;
 }
 

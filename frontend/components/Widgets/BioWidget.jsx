@@ -1,6 +1,11 @@
 import React from 'react';
 
 class BioWidget extends React.Component{
+    constructor(){
+        this.state = {
+            bioForm: false,
+        };
+    }
 
     bioInfo(){
         return(
