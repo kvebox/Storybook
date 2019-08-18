@@ -31,7 +31,6 @@ class FriendBar extends React.Component {
     render() {
         return (
             <div className="friend-bar">
-                <h4> Friends </h4>
                 { this.friendbar()}
             </div>
 
