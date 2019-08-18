@@ -27,8 +27,8 @@ export const fetchUserPosts = (user) => dispatch => PostApiUtil.fetchPosts(user)
 export const fetchPost = (user, post) => dispatch => PostApiUtil.fetchPost(user,post)
     .then(post => dispatch(receivePost(post)));
 
-export const editPost = (user, post) => dispatch => PostApiUtil.editPost(user,post)
-    .then(post => dispatch(receivePost(post)));
+export const editPost = (user, post) => dispatch => {return PostApiUtil.editPost(user,post)
+    .then(post => dispatch(receivePost(post)));};
 
 export const createPost = (user, post) => dispatch => PostApiUtil.createPost(user,post)
     .then(post => dispatch(receivePost(post)));

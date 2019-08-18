@@ -64,6 +64,8 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidMount(){
+        // console.log(this.props.comments);
+        // console.log(this.props.props);
 
         // this.props.fetchPostComments(this.props.post);
         // console.log(this.props);

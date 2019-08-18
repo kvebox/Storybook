@@ -2,6 +2,7 @@ import React from 'react';
 import PostCreateWidgetContainer from '../PostCreateWidgetContainer';
 import { withRouter } from 'react-router';
 import FeedIndexItem from './FeedIndexItem';
+import FeedIndexItemContainer from './FeedIndexItemContainer';
 import CreatePostModal from '../Widgets/CreatePostModal';
 
 class FeedIndex extends React.Component {
@@ -9,7 +10,7 @@ class FeedIndex extends React.Component {
         super(props);
         this.state = {
             posts: null,
-            edited: false
+            edited: props.edited
         };
         this.hideModal = this.hideModal.bind(this);
         this.triggerEdit = this.triggerEdit.bind(this);
@@ -17,10 +18,11 @@ class FeedIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchUserPosts(this.props.currentUser);
+
     }
 
     componentDidUpdate(prevProps){
-        if (prevProps.posts.length != this.props.posts.length){
+        if (prevProps.posts != this.props.posts){
             this.setState({posts: this.props.posts});
         } 
 
@@ -66,16 +68,13 @@ class FeedIndex extends React.Component {
 
     render() {
         let posts = this.props.posts.map((post, id) => {
-            return <FeedIndexItem 
+            return <FeedIndexItemContainer
                 key={id}
                 comments={this.props.comments}
-                deletePost={this.props.deletePost}
-                editPost={this.props.editPost}
                 user={this.props.currentUser} 
                 triggerEdit ={this.triggerEdit}
                 post={post}
-                fetchPostComments={this.props.fetchPostComments}
-                createPostComment={this.props.createPostComment}/>
+                />
         });
         return (<>
             <div className="feed-main-body">

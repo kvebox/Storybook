@@ -4,6 +4,8 @@ import FeedContainer from './FeedContainer';
 import FeedNavigationBarContainer from './FeedNavigationBarContainer';
 import FeedWidgetBarContainer from './FeedWidgetBarContainer';
 import CreatePostModalContainer from '../Widgets/CreatePostModalContainer';
+import FriendBarContainer from '../Friends/FriendBarContainer';
+
 
 class Feed extends React.Component {
     render() {
@@ -18,6 +20,7 @@ class Feed extends React.Component {
                     <FeedContainer />
                     <FeedWidgetBarContainer />
                 </div>
+                <FriendBarContainer />
             </div>
         )
     };

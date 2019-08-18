@@ -1,10 +1,32 @@
 .friend-bar {
-    border: 1px solid red;
+    // border: 1px solid red;
     position: fixed;
-    top: 33px;
+    bottom: 0;
     right: 0px;
-    width: 200px;
-    color: red;
-    z-index: 1;
-    height: 100vh;
+    // width: 200px;
+    // color: red;
+    // z-index: 1;
+    // height: 100vh;
+}
+
+.collapsedFriendBar {
+    background: white;
+    // padding-bottom: 25px;
+    // padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 37px;
+    width: 208px;
+}
+
+.collapseChatIcon {
+    height: 18px;
+    width: 18px;
+    padding-left: 8px;
+}
+
+.collapsedChatNumber {
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
 }

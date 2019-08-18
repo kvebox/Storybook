@@ -4,18 +4,47 @@ class BioWidget extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bioForm: true,
-            charRemaining: 101
+            bioForm: false,
+            charRemaining: 101,
+            body: '',
         };
+
     }
 
+
+    componentDidUpdate(prevProps){
+        if (prevProps.bioForm){
+            this.bioInfoTrigger();
+        }
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.setState({bioForm: false});
+        this.setState({ body: '' });
+        let user = {
+            email: "",
+            first_name: "",
+            last_name: "",
+            password: ""
+        };
+        // this.props.createPost(this.props.currentUser, this.state).then(() => location.reload());
+    }
+
+    update(e) {
+        this.setState({ body: e.target.value });
+    }
+
+    componentDidMount(){
+    }
 
     bioInfoTrigger(){
         return(
         this.state.bioForm ?
         <form className='bioFormContainer'>
             <textarea className='bioForm'
-                      placeholder='Describe who you are'>
+                      placeholder='Describe who you are'
+                      onClick={() => this.setState({bioForm: true})}>
             </textarea>
 
             <div className='bioFormInfo'>
@@ -36,7 +65,8 @@ class BioWidget extends React.Component{
         :
         <><img className='bio-header-icon' src='/images/widget_bio.png' />
         <div className='bio-info'>Add a short bio to tell people more about yourself.</div>
-        <a className='add-bio-button'>Add Bio</a></>
+        {/* <a className='add-bio-button'>Add Bio</a> */}
+        </>
         )
     }
 
@@ -60,7 +90,7 @@ class BioWidget extends React.Component{
                 <div className='bio-showcase-container'>
                     <img className='bio-showcase-icon' src='/images/widget_showcase.png' />
                     <div className='bio-info'>Showcase what's important to you by adding photos, pages, groups and more to your featured section on your public profile.</div>
-                    <a className='add-bio-button'>Add to Featured</a>
+                    {/* <a className='add-bio-button'>Add to Featured</a> */}
                 </div>
             </div>
         );

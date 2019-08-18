@@ -13,8 +13,12 @@ const receiveUsers = () => ({
     users
 });
 
+
 export const fetchUser = userId => dispatch => UserApiUtil.fetchUser(userId)
     .then(user => dispatch(receiveUser(user)));
 
 export const fetchUsers = () => dispatch => UserApiUtil.fetchUsers()
     .then(users => dispatch(receiveUsers(users)));
+
+export const editUser = userId => dispatch => UserApiUtil.editUser(userId)
+    .then(user => dispatch(receiveUser(user)));
