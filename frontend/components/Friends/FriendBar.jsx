@@ -11,10 +11,10 @@ class FriendBar extends React.Component {
     }
 
     friendbar(){
-        console.log(window.innerWidth);
         if (window.innerWidth < 1250){
             return (
                 // console.log('hello')
+                <div className="friend-bar">
                 <div className='collapsedFriendBar'>
                     <div className='collapsedChatNumber'>Chat (0)</div>
                     <div className='collapseChatContainer'>
@@ -23,6 +23,7 @@ class FriendBar extends React.Component {
                         <img className='collapseChatIcon' src='/images/chat_options.png'></img>
                     </div>
                 </div>
+                </div>
             )
         }
     }
@@ -30,10 +31,22 @@ class FriendBar extends React.Component {
 
     render() {
         return (
-            <div className="friend-bar">
-                { this.friendbar()}
+            <div className='friendBarContainer'>
+                <div className='friendBarSpacer'></div>
+            <div className="friendBar">
+                <div className='friendBarHeader'>CONTACTS</div>
+                <div className='friendBarSettingsContainer'>
+                    <input className='friendBarSearch'></input>
+                        {/* <label>Search</label> */}
+                        <img className='friendBarSearchIcon' src='/images/friend_search.png'/>
+                    <div className='friendBarIcons'>
+                        <img className='friendBarIcon' src='/images/friend_options.png'></img>
+                        <img className='friendBarIcon' src='/images/friend_compose.png'></img>
+                        <img className='friendBarIcon' src='/images/friend_group.png'></img>
+                    </div>
+                </div>
             </div>
-
+            </div>
         )
     }
 

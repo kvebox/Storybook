@@ -1,26 +1,25 @@
 .friend-bar {
-    // border: 1px solid red;
     position: fixed;
     bottom: 0;
     right: 0px;
-    // width: 200px;
-    // color: red;
-    // z-index: 1;
-    // height: 100vh;
 }
 
 .collapsedFriendBar {
+    // position: fixed;
+    // bottom: 0;
+    // right: 0px;
     background: white;
     margin-right: 25px;
     display: flex;
     justify-content: space-between;
     height: 37px;
-    width: 208px;
+    width: 200px;
     align-items: center;
     align-content: center;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    // box-sizing: border-box;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -40,4 +39,59 @@
     color: #333;
     font-size: 13px;
     font-weight: 600;
+}
+
+// -----------------------------------------------
+.friendBarSpacer {
+    height: 41px;
+}
+
+.friendBar {
+    width: 205;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    background: #e9ebee;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 200px;
+    border-left: 1px solid rgba(0, 0, 0, .4);
+}
+
+.friendBarContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.friendBarSettingsContainer {
+    display: flex;
+    align-items: center;
+    background: #F5F6F7;
+    // position: fixed;
+    // bottom: 0;
+}
+
+.friendBarIcon {
+    height: 18px;
+    width: 18px;
+    padding-left: 8px;
+}
+
+.friendBarSearchIcon {
+    height: 18px;
+    width: 18px;
+}
+
+.friendBarSearch {
+    display: flex;
+    align-items: center;
+}
+
+.friendBarHeader {
+    font-weight: 600;
+    color: #4A4A4A;
+    font-size: 11px;
 }
