@@ -67,8 +67,8 @@ class PostCommentItem extends React.Component {
                     <a>Like</a>
                     <span>·</span>
                     <a>Reply</a>
-                    <span>·</span>
-                    <span>1hr</span>
+                    {/* <span>·</span> */}
+                    {/* <span>1hr</span> */}
                 </div>
             </div>
         </li>

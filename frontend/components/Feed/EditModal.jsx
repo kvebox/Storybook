@@ -41,7 +41,7 @@ class EditModal extends React.Component {
     }
 
     triggerEdit(){
-        this.props.triggerEdit();
+        this.props.triggerEdit().then(() => location.reload());
     }
 
 
