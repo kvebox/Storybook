@@ -7,11 +7,21 @@ class FriendBar extends React.Component {
         super(props);
         this.state = {
             collapsed: true,
+            windowsize: 0
         };
     }
 
+    componentDidUpdate(){
+        window.addEventListener('resize', this.friendbar);
+        // <body onresize="myFunction()"></body>
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.friendbar);
+    }
+
     friendbar(){
-        if (window.innerWidth < 1250){
+        // if (window.innerWidth < 1200){
             return (
                 // console.log('hello')
                 <div className="friend-bar">
@@ -25,28 +35,37 @@ class FriendBar extends React.Component {
                 </div>
                 </div>
             )
-        }
+        // } else {
+        // return (
+        // <div className='friendBarContainer'>
+        //     <div className="friendBar">
+        //         <div className='friendBarSpacer'></div>
+        //         <div className='friendBarHeader'>CONTACTS</div>
+        //         <div className='friendBarSettingsContainer'>
+        //             <label><img className='friendBarSearchIcon' src='/images/friend_search.png' /></label>
+        //             <input className='friendBarSearch'
+        //                 placeholder='Search'>
+        //             </input>
+
+
+        //             <div className='friendBarIcons'>
+        //                 <img className='friendBarIcon' src='/images/friend_options.png'></img>
+        //                 <img className='friendBarIcon' src='/images/friend_compose.png'></img>
+        //                 <img className='friendBarIcon' src='/images/friend_group.png'></img>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+        // )
+    // }
     }
 
 
     render() {
         return (
-            <div className='friendBarContainer'>
-                <div className='friendBarSpacer'></div>
-            <div className="friendBar">
-                <div className='friendBarHeader'>CONTACTS</div>
-                <div className='friendBarSettingsContainer'>
-                    <input className='friendBarSearch'></input>
-                        {/* <label>Search</label> */}
-                        <img className='friendBarSearchIcon' src='/images/friend_search.png'/>
-                    <div className='friendBarIcons'>
-                        <img className='friendBarIcon' src='/images/friend_options.png'></img>
-                        <img className='friendBarIcon' src='/images/friend_compose.png'></img>
-                        <img className='friendBarIcon' src='/images/friend_group.png'></img>
-                    </div>
-                </div>
-            </div>
-            </div>
+            <>
+            {this.friendbar()}
+            </>
         )
     }
 

@@ -8,19 +8,22 @@ import FriendBarContainer from '../Friends/FriendBarContainer';
 
 
 class Feed extends React.Component {
+
+
     render() {
         return (
             <div className="feed-body">
                 {/* <CreatePostModalContainer /> */}
 
                 <NavContainer />
-                <div className="spacer"></div>
+                {/* <div className="spacer"></div> */}
                 <div className="main-container">
                     <FeedNavigationBarContainer  />
                     <FeedContainer />
                     <FeedWidgetBarContainer />
+                    {/* <div className='spacer'></div> */}
+                    <FriendBarContainer />
                 </div>
-                <FriendBarContainer />
             </div>
         )
     };
