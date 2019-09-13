@@ -36,7 +36,7 @@ class FeedIndexItem extends React.Component {
             body: this.state.commentBody,
             comment_author: this.props.user.id
         };
-        this.props.createPostComment(this.props.post, comment).then(() => location.reload());
+        this.props.createPostComment(this.props.post, comment);
   
         this.setState({commentBody: ''});    
     }

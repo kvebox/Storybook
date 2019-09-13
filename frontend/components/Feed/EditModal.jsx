@@ -30,7 +30,7 @@ class EditModal extends React.Component {
     }
     handleSubmit(e) {
         // e.preventDefault();
-        this.props.editPost(this.props.currentUser, this.state).then(() => location.reload());
+        this.props.editPost(this.props.currentUser, this.state);
         this.props.hideModal();
         this.triggerEdit();
         // this.setState({ modal: false });
@@ -41,7 +41,7 @@ class EditModal extends React.Component {
     }
 
     triggerEdit(){
-        this.props.triggerEdit();
+        // this.props.triggerEdit();
     }
 
 
