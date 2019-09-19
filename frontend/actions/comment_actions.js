@@ -30,4 +30,7 @@ export const createPostComment = (post, comment) => dispatch => CommentApiUtil.c
     .then(comment => dispatch(receivePostComment(comment)));
 
 export const deletePostComment = (post, comment) => dispatch => CommentApiUtil.deletePostComment(post, comment)
-    .then((comment) => dispatch(removePostComment(comment)));
+    .then((comment) => {
+        debugger
+        dispatch(removePostComment(comment));
+    });

@@ -18,19 +18,19 @@ export default ({currentUser}) => {
                         <div className="nav-expand">...</div>
                     </div>
                 </li>
-                <li>
+                <li className='navigationtemp'>
                     <img src='/images/icons_messenger.png' alt='icon messenger' />
                     <div className="navigation-title">
                     <div>Messenger</div>
                     </div>
                 </li>
-                <li>
+                <li className='navigationtemp'>
                     <img src='/images/icons_watch.png' alt='icon watch' />
                     <div className="navigation-title">
                     <div>Watch</div>
                     </div>
                 </li>
-                <li>
+                <li className='navigationtemp'>
                     <img src='/images/icons_marketplace.png' alt='icon marketplace' />
                     <div className="navigation-title">
                     <div>Marketplace</div>

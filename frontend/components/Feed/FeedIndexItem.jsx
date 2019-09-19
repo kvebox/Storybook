@@ -63,12 +63,6 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidMount(){
-        // console.log(this.props.comments);
-        // console.log(this.props.props);
-
-        // this.props.fetchPostComments(this.props.post);
-        // console.log(this.props);
-        // this.setState({ comments: this.props.comments });
     }
 
     focus(className, e){
@@ -79,18 +73,10 @@ class FeedIndexItem extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // if (prevProps.post.comments.length !== this.props.post.comments.length){
-        //     this.setState({comments: this.props.post.comments});
-        // }
-        // if (prevProps.comments.length !== this.props.comments.length) {
-        //     this.setState({ comments: 'test2' });
-        // }
+
     }
 
     render() {
-        // let comments = this.props.comments.map((comment, id) => {
-        //     return <PostComment />
-        // });
     return (
         <div className='post-index-item-container'>
             {(this.state.modal) ?

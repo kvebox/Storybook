@@ -162,6 +162,10 @@
     cursor: pointer;
 }
 
+.navigationtemp:hover {
+    cursor: not-allowed !important;
+}
+
 .navigation-profile a{
     text-decoration: none;
     color: black;
