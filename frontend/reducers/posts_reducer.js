@@ -19,9 +19,14 @@ const postsReducer = (state = {}, action) => {
             newState[action.comment.post.id].comments.push(action.comment);
             return newState;
         case REMOVE_COMMENT:
-            // debugger 
             newState = JSON.parse(JSON.stringify(state));
-            // debugger
+            let comments = newState[action.comment.post.id].comments;
+            for (let i = 0; i < comments.length; i++){
+                if (comments[i].id === action.comment.id){
+                    delete newState[action.comment.post.id].comments[i];
+                    break;
+                }
+            }
             return newState;
         default:
             return state;

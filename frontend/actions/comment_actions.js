@@ -15,7 +15,7 @@ const receivePostComment = comment => ({
     comment
 });
 
-const removePostComment = () => ({
+const removePostComment = comment => ({
     type: REMOVE_COMMENT,
     comment
 
@@ -31,6 +31,5 @@ export const createPostComment = (post, comment) => dispatch => CommentApiUtil.c
 
 export const deletePostComment = (post, comment) => dispatch => CommentApiUtil.deletePostComment(post, comment)
     .then((comment) => {
-        debugger
         dispatch(removePostComment(comment));
     });
