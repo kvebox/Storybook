@@ -36,9 +36,8 @@ class FeedIndexItem extends React.Component {
             body: this.state.commentBody,
             comment_author: this.props.user.id
         };
-        console.log(this.state.commentBody)
-        this.props.createPostComment(this.props.post, comment).then(()=> this.setState({commentBody: ''}));
-        console.log(this.state.commentBody)
+        this.props.createPostComment(this.props.post, comment)
+        .then(() => this.setState({commentBody: ''}));
     }
 
     handleUpdate(e){

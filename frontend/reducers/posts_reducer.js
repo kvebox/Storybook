@@ -23,7 +23,8 @@ const postsReducer = (state = {}, action) => {
             let comments = newState[action.comment.post.id].comments;
             for (let i = 0; i < comments.length; i++){
                 if (comments[i].id === action.comment.id){
-                    delete newState[action.comment.post.id].comments[i];
+                    debugger
+                    newState[action.comment.post.id].comments.splice(i,1);
                     break;
                 }
             }
