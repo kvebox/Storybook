@@ -65,7 +65,7 @@ class FeedDropdown extends React.Component {
                     (this.state.dropdown) ?
                         <ul ref={this.node} className='postCommentDropdownContainer'>
                             <li className='postCommentDropdownListItem'
-                                onClick={() => this.triggerPostCommentEditModal()}>
+                                onClick={() => this.props.triggerPostCommentEditInline()}>
                                 <img className='postCommentIcon'
                                 src='/images/comment_edit.png'/>Edit...</li>
 

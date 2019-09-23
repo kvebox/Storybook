@@ -6,11 +6,12 @@ class PostCommentItem extends React.Component {
         super(props);
         this.state = {
             dropdown: false,
-            edit: true
+            edit: false
         };
         this.getDropdown = this.getDropdown.bind(this);
         this.hideDropdown = this.hideDropdown.bind(this);
         this.showOptions = this.showOptions.bind(this);
+        this.triggerPostCommentEditInline = this.triggerPostCommentEditInline.bind(this);
     }
 
     hideDropdown(){
@@ -28,8 +29,9 @@ class PostCommentItem extends React.Component {
             // : dropdownTrigger[0].style.display = 'none';
     }
 
-    triggerPostCommentEditModal(){
-        this.setState({edit: !this.setState.edit});
+    triggerPostCommentEditInline(){
+        this.setState({dropdown: false});
+        this.setState({edit: !false});
         
     }
 
@@ -54,6 +56,7 @@ class PostCommentItem extends React.Component {
 
                         {(this.state.dropdown) ? <Dropdown
                             deletePostComment={this.props.deletePostComment}
+                            triggerPostCommentEditInline={this.triggerPostCommentEditInline}
                             type={'postComment'}
                             post={this.props.post}
                             comment={comment}
