@@ -12,7 +12,7 @@ const postsReducer = (state = {}, action) => {
             newState[action.post.id] = action.post;
             return newState;
         case REMOVE_POST:
-            delete newState[action.post];
+            delete newState[action.post.id];
             return newState;
         case RECEIVE_COMMENT:
             newState = JSON.parse(JSON.stringify(state));

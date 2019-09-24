@@ -22,7 +22,8 @@ export const editPost = (user, post) => $.ajax({
 
 export const deletePost = (user, postId) => $.ajax({
     method: 'DELETE',
-    url: `/api/users/${user.id}/posts/${postId}`
+    url: `/api/users/${user.id}/posts/${postId}`,
+    data: { postId }
 });
 
 

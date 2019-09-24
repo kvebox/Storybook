@@ -34,9 +34,7 @@ class FeedDropdown extends React.Component {
     }
 
     deletePost(){
-        // console.log(this.props.post)
-        this.props.deletePost(this.props.post.author, this.props.post.id)
-            .then(() => window.location.reload());
+        this.props.deletePost(this.props.post.author, this.props.post.id);
     }
 
     triggerEditModal(){
