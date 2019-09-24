@@ -15,7 +15,6 @@ class Api::PostsController < ApplicationController
         @post = Post.new(post_params)
         @post.author_id = current_user.id
         if @post.save
-            # render :index
             render :show
         else  
             render json: @post.errors.full_messages, status: 422
@@ -30,7 +29,7 @@ class Api::PostsController < ApplicationController
     def update
         @post = Post.find(params[:id])
         if @post.update(post_params)
-            render :show
+            render :edit
         else  
             render json: @post.errors.full_messages, status: 422
         end
