@@ -9,14 +9,17 @@ class CreatePostModal extends React.Component {
             author_id: this.props.currentUser.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.focus = this.focus.bind(this);
         
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createPost(this.props.currentUser, this.state).then(()=> location.reload());
-        this.setState({ body: '' });
-        this.setState({modal: false});
+        this.props.createPost(this.props.currentUser, this.state).then(()=> {
+            this.setState({ body: '' });
+            this.setState({ modal: false });
+            location.reload();
+        });
     }
 
     update(e) {
@@ -25,6 +28,16 @@ class CreatePostModal extends React.Component {
 
     hideModal() {
         this.props.hideModal();
+    }
+
+    focus(className, e) {
+        let f = document.getElementsByClassName(className);
+        console.log(f);
+        f[0].focus();
+    }
+
+    componentDidMount(){
+        this.focus('modalTextInput');
     }
 
     render() {
@@ -38,7 +51,7 @@ class CreatePostModal extends React.Component {
 
                 <div className='modalFormContainer'>
                     <div className='modalCover'><img className='modalImage' src='/images/profile_2.png' /></div>
-                    <form>
+                    <form >
                         <textarea
                             onChange={e=>this.update(e)}
                             className='modalTextInput'
@@ -82,7 +95,6 @@ class CreatePostModal extends React.Component {
                     </div>
                 </div>
             </div>
-
 
             </div>
         )

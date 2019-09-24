@@ -50,9 +50,14 @@ class User < ApplicationRecord
 
     has_one_attached :profilePic
 
-    has_many :posts
+    has_many :posts,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Post
 
     has_many :comments,
+    dependent: :destroy,
     primary_key: :id,
     foreign_key: :comment_author,
     class_name: :Comment
