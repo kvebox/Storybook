@@ -26,7 +26,7 @@ class Like < ApplicationRecord
 
     belongs_to :comment,
     primary_key: :id,
-    foreign_key: :comment_id;
+    foreign_key: :comment_id,
     class_name: :Comment 
 
     # belongs_to :photo,
