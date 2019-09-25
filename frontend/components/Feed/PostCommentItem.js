@@ -23,11 +23,19 @@ class PostCommentItem extends React.Component {
         this.setState({dropdown: !false});
     }
 
-    showOptions(){
-        // let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
-        // (dropdownTrigger[0].style.display === 'none') ? 
-            // dropdownTrigger[0].style.display = 'none';
-            // : dropdownTrigger[0].style.display = 'none';
+    showOptions(e){
+        let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
+        let dropdownContainer = document.getElementsByClassName('commentBodyContent');
+        let author = document.getElementsByClassName('commentContentAuthor');
+        let content = document.getElementsByClassName('commentContentBody');
+
+        for (let i = 0; i < dropdownContainer.length; i++){
+            if (e.target == dropdownContainer[i] || e.target == author[i] || e.target == content[i]){
+                dropdownTrigger[i].style.display = 'block';
+            } else {
+                dropdownTrigger[i].style.display = 'none';
+            }
+        }
     }
 
     triggerPostCommentEditInline(){
@@ -51,7 +59,7 @@ class PostCommentItem extends React.Component {
             <div className='commentReactionContainer'>
                 <div className='commentContentBodyContainer'>
                     <div className='commentBodyContent'
-                        onMouseOver={() => this.showOptions()}>
+                        onMouseOver={(e) => this.showOptions(e)}>
                         <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
                         <span className='commentContentBody'>{comment.body}</span>
                     </div>
