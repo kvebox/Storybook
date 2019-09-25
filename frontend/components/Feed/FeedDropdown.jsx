@@ -48,6 +48,7 @@ class FeedDropdown extends React.Component {
 
     deletePostComment(){
         this.props.deletePostComment(this.props.post, this.props.comment);
+        this.props.closeDropdown();
     }
 
     triggerPostCommentEditModal(){

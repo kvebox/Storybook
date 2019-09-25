@@ -12,6 +12,7 @@ class PostCommentItem extends React.Component {
         this.hideDropdown = this.hideDropdown.bind(this);
         this.showOptions = this.showOptions.bind(this);
         this.triggerPostCommentEditInline = this.triggerPostCommentEditInline.bind(this);
+        this.closeDropdown = this.closeDropdown.bind(this);
     }
 
     hideDropdown(){
@@ -23,16 +24,19 @@ class PostCommentItem extends React.Component {
     }
 
     showOptions(){
-        let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
+        // let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
         // (dropdownTrigger[0].style.display === 'none') ? 
-            dropdownTrigger[0].style.display = 'none';
+            // dropdownTrigger[0].style.display = 'none';
             // : dropdownTrigger[0].style.display = 'none';
     }
 
     triggerPostCommentEditInline(){
         this.setState({dropdown: false});
-        this.setState({edit: !false});
-        
+        this.setState({edit: !false});   
+    }
+
+    closeDropdown(){
+        this.setState({dropdown: false});
     }
 
 
@@ -55,6 +59,7 @@ class PostCommentItem extends React.Component {
                         <div onClick={() => this.getDropdown()} className='post-comment-options-dropdown-trigger'>···</div>
 
                         {(this.state.dropdown) ? <Dropdown
+                            closeDropdown = {this.closeDropdown}
                             deletePostComment={this.props.deletePostComment}
                             triggerPostCommentEditInline={this.triggerPostCommentEditInline}
                             type={'postComment'}
