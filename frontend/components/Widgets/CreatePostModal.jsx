@@ -51,7 +51,7 @@ class CreatePostModal extends React.Component {
 
                 <div className='modalFormContainer'>
                     <div className='modalCover'><img className='modalImage' src='/images/profile_2.png' /></div>
-                    <form >
+                    <form className='modalForm'>
                         <textarea
                             onChange={e=>this.update(e)}
                             className='modalTextInput'

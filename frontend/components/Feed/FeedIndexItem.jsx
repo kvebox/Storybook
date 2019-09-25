@@ -136,7 +136,8 @@ class FeedIndexItem extends React.Component {
                 <div className="comment-input-container">
                     <input className="comment-input" type="text" 
                            placeholder="Write a comment..."
-                           onChange={e => this.handleUpdate(e)}/>
+                           value = {this.state.commentBody}
+                           onChange={e => this.handleUpdate(e)}></input>
                     <div className="comment-icon-container">
                         <img className="comment-option-icon" src="/images/comment_reaction.png" />
                         <img className="comment-option-icon" src="/images/comment_photo.png" />

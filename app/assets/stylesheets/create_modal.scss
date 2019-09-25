@@ -7,15 +7,15 @@
 
 .modalFormContainer {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     width: 100%;
-    overflow: contain;
     align-content: center;
 }
 
 .modalFormContainer form {
-    width: 75%;
+    width: 80%;
 }
+
 
 .modalHeader {
     padding:7.5px;
@@ -37,6 +37,7 @@
     border-bottom: 1px solid lightgray;
     padding: 3px;
 }
+
 
 .modalTextInput {
     font-size: 20px;
