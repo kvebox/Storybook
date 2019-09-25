@@ -38,6 +38,14 @@ class PostCommentItem extends React.Component {
         }
     }
 
+    hideOptions(e){
+        let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
+        for (let [k,v] of Object.entries(dropdownTrigger)) {
+            v.style.display = 'none';
+        }
+    }
+
+
     triggerPostCommentEditInline(){
         this.setState({dropdown: false});
         this.setState({edit: !false});   
@@ -59,7 +67,8 @@ class PostCommentItem extends React.Component {
             <div className='commentReactionContainer'>
                 <div className='commentContentBodyContainer'>
                     <div className='commentBodyContent'
-                        onMouseOver={(e) => this.showOptions(e)}>
+                        onMouseOver={(e) => this.showOptions(e)}
+                        onMouseOut={e => this.hideOptions(e)}>
                         <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
                         <span className='commentContentBody'>{comment.body}</span>
                     </div>
