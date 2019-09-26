@@ -59,7 +59,7 @@ class PostCommentItem extends React.Component {
     render() {
         let comment = this.props.comment;
         return (
-        <li className='commentContentContainer'>
+            <li className='commentContentContainer' >
 
             <div className='commentProfileCrop'>
                 <img src='/images/profile_1.png' />
@@ -67,8 +67,7 @@ class PostCommentItem extends React.Component {
             <div className='commentReactionContainer'>
                 <div className='commentContentBodyContainer'>
                     <div className='commentBodyContent'
-                        onMouseOver={(e) => this.showOptions(e)}
-                        onMouseOut={e => this.hideOptions(e)}>
+                        onMouseOver={(e) => this.showOptions(e)}>
                         <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
                         <span className='commentContentBody'>{comment.body}</span>
                     </div>
