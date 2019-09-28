@@ -22,10 +22,6 @@ class FeedIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-        if (prevProps.posts != this.props.posts){
-            this.setState({posts: this.props.posts});
-        } 
-
         if (prevProps.modal){
             this.returnCreate();
         }

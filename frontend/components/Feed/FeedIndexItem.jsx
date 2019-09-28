@@ -17,16 +17,22 @@ class FeedIndexItem extends React.Component {
             created_at: "",
             dropdown: false,
             modal: false,
-            commentBody: ""
+            commentBody: "",
+            commentDropdown: false
         };
 
-        
+        this.commentDropdown = this.state.commentDropdown;
         this.modal = React.createRef();
         this.hideDropdown = this.hideDropdown.bind(this);
         this.hideModal = this.hideModal.bind(this);
         this.triggerEditModal = this.triggerEditModal.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
-        this.focus = this.focus.bind(this);
+        this.changeCommentDropdown = this.changeCommentDropdown.bind(this);
+    }
+
+    changeCommentDropdown(){
+        this.setState({commentDropdown: !false});
+        this.commentDropdown = true;
     }
 
     handleSubmit(e){
@@ -55,25 +61,14 @@ class FeedIndexItem extends React.Component {
 
     hideDropdown(){
         this.setState({dropdown: false});
+        this.setState({ commentDropdown: false });
+        this.commentDropdown = false;
     }
 
     getDropdown(){
         this.setState({dropdown: !this.state.dropdown});
     }
 
-    componentDidMount(){
-    }
-
-    focus(className, e){
-        // console.log(e.target)
-        // let f = document.getElementsByClassName(className);
-        // console.log(f);
-        // f[0].focus();
-    }
-
-    componentDidUpdate(prevProps) {
-
-    }
 
     render() {
     return (
@@ -126,7 +121,11 @@ class FeedIndexItem extends React.Component {
             </div>
 
             <ul className='post-comments-container'>
-                    <PostCommentContainer post={this.props.post} />
+                    <PostCommentContainer 
+                    hideDropdown = {this.hideDropdown}
+                    commentDropdown = {this.commentDropdown}
+                    changeCommentDropdown = {this.changeCommentDropdown}
+                    post={this.props.post} />
             </ul>
 
             <form className="comment" onSubmit={e => this.handleSubmit(e)}>

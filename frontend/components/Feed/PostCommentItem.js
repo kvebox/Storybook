@@ -24,13 +24,16 @@ class PostCommentItem extends React.Component {
     }
 
     showOptions(e){
+        let container = document.getElementsByClassName('commentContentBodyContainer');
+        let reactions = document.getElementsByClassName('commentReactions');
         let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
         let dropdownContainer = document.getElementsByClassName('commentBodyContent');
+        let post = document.getElementsByClassName('commentContentContainer');
         let author = document.getElementsByClassName('commentContentAuthor');
         let content = document.getElementsByClassName('commentContentBody');
-
+        if (this.props.commentDropdown){return 0;}
         for (let i = 0; i < dropdownContainer.length; i++){
-            if (e.target == dropdownContainer[i] || e.target == author[i] || e.target == content[i]){
+            if (e.target == container[i] || e.target == reactions[i] || e.target == dropdownTrigger[i] || e.target == dropdownContainer[i] || e.target == author[i] || e.target == content[i] || e.target == post[i]){
                 dropdownTrigger[i].style.display = 'block';
             } else {
                 dropdownTrigger[i].style.display = 'none';
@@ -39,12 +42,13 @@ class PostCommentItem extends React.Component {
     }
 
     hideOptions(e){
+        console.log(this.props.commentDropdown)
+        if (this.props.commentDropdown){return 0;}
         let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
         for (let [k,v] of Object.entries(dropdownTrigger)) {
             v.style.display = 'none';
         }
     }
-
 
     triggerPostCommentEditInline(){
         this.setState({dropdown: false});
@@ -55,26 +59,31 @@ class PostCommentItem extends React.Component {
         this.setState({dropdown: false});
     }
 
-
     render() {
         let comment = this.props.comment;
         return (
-            <li className='commentContentContainer' >
+            <li className='commentContentContainer' 
+            onMouseOver={(e) => this.showOptions(e)}
+            onMouseOut={() => this.hideOptions()}>
 
             <div className='commentProfileCrop'>
                 <img src='/images/profile_1.png' />
             </div>
             <div className='commentReactionContainer'>
                 <div className='commentContentBodyContainer'>
-                    <div className='commentBodyContent'
-                        onMouseOver={(e) => this.showOptions(e)}>
+                    <div className='commentBodyContent'>
                         <span className='commentContentAuthor'>{comment.author.first_name} {comment.author.last_name}</span>
                         <span className='commentContentBody'>{comment.body}</span>
                     </div>
                     <div className="options">
-                        <div onClick={() => this.getDropdown()} className='post-comment-options-dropdown-trigger'>···</div>
+                        <div onClick={() => {
+                            this.getDropdown() 
+                            this.props.changeCommentDropdown()}} 
+                            className='post-comment-options-dropdown-trigger'>···</div>
 
                         {(this.state.dropdown) ? <Dropdown
+                            hideDropdown = {this.props.hideDropdown}
+                            changeCommentDropdown = {this.props.changeCommentDropdown}
                             closeDropdown = {this.closeDropdown}
                             deletePostComment={this.props.deletePostComment}
                             triggerPostCommentEditInline={this.triggerPostCommentEditInline}
