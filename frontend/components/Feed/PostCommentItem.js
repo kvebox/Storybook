@@ -42,12 +42,12 @@ class PostCommentItem extends React.Component {
     }
 
     hideOptions(e){
-        console.log(this.props.commentDropdown)
-        if (this.props.commentDropdown){return 0;}
-        let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
-        for (let [k,v] of Object.entries(dropdownTrigger)) {
-            v.style.display = 'none';
-        }
+        // console.log(this.props.commentDropdown)
+        // if (this.props.commentDropdown){return 0;}
+        // let dropdownTrigger = document.getElementsByClassName('post-comment-options-dropdown-trigger');
+        // for (let [k,v] of Object.entries(dropdownTrigger)) {
+        //     v.style.display = 'none';
+        // }
     }
 
     triggerPostCommentEditInline(){

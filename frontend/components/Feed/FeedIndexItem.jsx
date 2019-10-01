@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import FeedDropdownContainer from './FeedDropdownContainer';
 import EditModal from './EditModal';
 import PostCommentContainer from './PostCommentContainer';
+import ReactionModule from './ReactionModule';
 
 
 class FeedIndexItem extends React.Component {
@@ -118,6 +119,8 @@ class FeedIndexItem extends React.Component {
 
             <div className="post-footer">
 
+            
+            <ReactionModule />
 
             <div className="post-options">
                 <span><img className='post_icon' src='/images/like.png'></img>Like</span>
