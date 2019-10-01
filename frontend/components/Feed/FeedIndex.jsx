@@ -66,7 +66,7 @@ class FeedIndex extends React.Component {
         let posts = this.props.posts.map((post, id) => {
             return <FeedIndexItemContainer
                 key={id}
-                comments={this.props.comments}
+                indexKey={id}
                 user={this.props.currentUser} 
                 triggerEdit ={this.triggerEdit}
                 post={post}

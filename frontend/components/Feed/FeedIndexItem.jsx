@@ -28,6 +28,7 @@ class FeedIndexItem extends React.Component {
         this.triggerEditModal = this.triggerEditModal.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
         this.changeCommentDropdown = this.changeCommentDropdown.bind(this);
+        this.focus = this.focus.bind(this);
     }
 
     changeCommentDropdown(){
@@ -61,7 +62,7 @@ class FeedIndexItem extends React.Component {
 
     hideDropdown(){
         this.setState({dropdown: false});
-        this.setState({ commentDropdown: false });
+        this.setState({commentDropdown: false });
         this.commentDropdown = false;
     }
 
@@ -69,6 +70,10 @@ class FeedIndexItem extends React.Component {
         this.setState({dropdown: !this.state.dropdown});
     }
 
+    focus(className, indexKey) {
+        let f = document.getElementsByClassName(className);
+        f[indexKey].focus();
+    }
 
     render() {
     return (
@@ -116,7 +121,7 @@ class FeedIndexItem extends React.Component {
 
             <div className="post-options">
                 <span><img className='post_icon' src='/images/like.png'></img>Like</span>
-                <span onClick={(e) => this.focus('comment-input', e)}><img className='post_icon' src='/images/comment.png'></img>Comment</span>
+                <span onClick={() => this.focus('comment-input', this.props.indexKey)}><img className='post_icon' src='/images/comment.png'></img>Comment</span>
                 {/* <span><img className='post_icon' src='/images/share.png'></img>Share</span> */}
             </div>
 
