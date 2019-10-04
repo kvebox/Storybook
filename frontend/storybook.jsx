@@ -8,6 +8,7 @@ import configureStore from "./store/store";
 import {signup, login, logout} from './util/session_api_util';
 import {deletePost} from './util/post_api_util';
 import {fetchPostComments} from './util/comment_api_util';
+import {fetchPostLikes} from './util/like_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.logout = logout;
     window.deletePost = deletePost;
     window.fetchPostComments = fetchPostComments;
+    window.fetchPostLikes = fetchPostLikes;
 
     ReactDOM.render(<Root store={store}/>, root);
 });

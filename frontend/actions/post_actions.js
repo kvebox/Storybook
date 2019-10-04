@@ -36,6 +36,5 @@ export const createPost = (user, post) => dispatch => PostApiUtil.createPost(use
 
 export const deletePost = (user, postId) => dispatch => PostApiUtil.deletePost(user,postId)
     .then(post => {
-        // debugger
         dispatch(removePost(post))
     });

@@ -6,7 +6,7 @@ const ReactionModule = (props) => {
         return(
         <div className='reactionContainer'>
             <img className='reactionImg' src='/images/react_like.png' />
-            <span className='reactionCount'>1</span>
+            <span className='reactionCount'>{props.numLikes}</span>
         </div>
         )
     }

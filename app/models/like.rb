@@ -24,10 +24,10 @@ class Like < ApplicationRecord
     foreign_key: :post_id,
     class_name: :Post 
 
-    belongs_to :comment,
-    primary_key: :id,
-    foreign_key: :comment_id,
-    class_name: :Comment 
+    # belongs_to :comment,
+    # primary_key: :id,
+    # foreign_key: :comment_id,
+    # class_name: :Comment 
 
     # belongs_to :photo,
     # primary_key: :id,

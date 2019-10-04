@@ -22,4 +22,10 @@ class Post < ApplicationRecord
     primary_key: :id,
     foreign_key: :post_id,
     class_name: :Comment
+
+    has_many :likes,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :post_id,
+    class_name: :Like
 end

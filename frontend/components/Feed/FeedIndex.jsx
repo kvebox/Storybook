@@ -65,6 +65,8 @@ class FeedIndex extends React.Component {
     render() {
         let posts = this.props.posts.map((post, id) => {
             return <FeedIndexItemContainer
+                createPostLike = {this.props.createPostLike}
+                fetchPostLikes = {this.props.fetchPostLikes}
                 key={id}
                 indexKey={id}
                 user={this.props.currentUser} 
