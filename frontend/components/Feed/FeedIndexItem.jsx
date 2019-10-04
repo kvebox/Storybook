@@ -76,6 +76,10 @@ class FeedIndexItem extends React.Component {
         f[indexKey].focus();
     }
 
+    like(){
+        
+    }
+
     render() {
     return (
         <div className='post-index-item-container'>
@@ -123,7 +127,7 @@ class FeedIndexItem extends React.Component {
             <ReactionModule />
 
             <div className="post-options">
-                <span><img className='post_icon' src='/images/like.png'></img>Like</span>
+                <span onClick={() => this.like()}><img className='post_icon' src='/images/like.png'></img>Like</span>
                 <span onClick={() => this.focus('comment-input', this.props.indexKey)}><img className='post_icon' src='/images/comment.png'></img>Comment</span>
                 {/* <span><img className='post_icon' src='/images/share.png'></img>Share</span> */}
             </div>

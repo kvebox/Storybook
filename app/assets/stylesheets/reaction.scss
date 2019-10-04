@@ -1,14 +1,17 @@
-.reaction {
-    height: 18px;
-    width: 18px;
-}
-
 .reactionContainer {
     display: flex;
     align-items: center;
+    // border-top: 1px solid lightgray;
+    padding: 10px 0px;
 }
 
 .reactionCount {
     color: #606770;
     font-size: 13px;
+}
+
+.reactionImg {
+    margin-right: 5px;
+    height: 18px;
+    width: 18px;
 }

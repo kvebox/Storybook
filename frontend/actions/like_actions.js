@@ -18,3 +18,11 @@ const removeLike = () => ({
     type: REMOVE_LIKE
 });
 
+export const fetchPostLikes = post => dispatch => LikeApiUtil.fetchPostLikes(post)
+    .then(likes => dispatch(receiveAllLikes(likes)));
+
+export const createPostLike = (post, like) => dispatch => LikeApiUtil.createPostLike(post, like)
+    .then(like => dispatch(receiveLike(like)));
+
+export const deletePostLike = (post, like) => dispatch => LikeApiUtil.deletePostLike()
+    .then(() => dispatch(removeLike()));

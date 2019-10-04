@@ -5,7 +5,7 @@ const ReactionModule = (props) => {
     const findReactions = () => {
         return(
         <div className='reactionContainer'>
-            <img className='reaction' src='/images/react_like.png' />
+            <img className='reactionImg' src='/images/react_like.png' />
             <span className='reactionCount'>1</span>
         </div>
         )
