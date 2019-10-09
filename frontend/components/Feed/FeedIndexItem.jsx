@@ -13,8 +13,6 @@ class FeedIndexItem extends React.Component {
     constructor({props}) {
         super(props);
         this.state = {
-            likes: {},
-            numLikes: 1,
             comments: null,
             author_id: 0,
             created_at: "",
@@ -69,11 +67,6 @@ class FeedIndexItem extends React.Component {
         this.commentDropdown = false;
     }
     
-    componentDidMount(){
-        let likes = this.props.fetchPostLikes(this.props.post);
-        this.setState({likes: likes});
-        this.setState({numLikes: Object.keys(likes).length});
-    }
 
     getDropdown(){
         this.setState({dropdown: !this.state.dropdown});
@@ -85,12 +78,21 @@ class FeedIndexItem extends React.Component {
     }
 
     like(){
-        // debugger
         let like = {
             post_id: this.props.post.id,
             liker_id: this.props.currentUser.id
         };
         this.props.createPostLike(this.props.post, like);
+    }
+
+    getReactions(){
+        if (this.props.post.likes.length >= 1){
+            return (
+                <ReactionModule
+                    currentUser={this.props.currentUser}
+                    likes={this.props.post.likes} />
+            )
+        } 
     }
 
     render() {
@@ -137,10 +139,7 @@ class FeedIndexItem extends React.Component {
             <div className="post-footer">
 
             
-            <ReactionModule 
-                currentUser = {this.props.currentUser}
-                likes = {this.state.likes}
-                numLikes = {this.state.numLikes}/>
+            {this.getReactions()}
 
             <div className="post-options">
                 <span onClick={() => this.like()}><img className='post_icon' src='/images/like.png'></img>Like</span>

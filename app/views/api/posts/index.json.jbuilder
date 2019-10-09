@@ -8,5 +8,11 @@
                 json.author comment.author
             end 
         end
+        json.likes do 
+            json.array! post.likes do |like|
+                json.extract! like, :id 
+                json.author like.author 
+            end 
+        end 
     end
 end
