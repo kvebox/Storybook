@@ -86,13 +86,14 @@ class FeedIndexItem extends React.Component {
     }
 
     getReactions(){
-        if (this.props.post.likes.length >= 1){
-            return (
-                <ReactionModule
-                    currentUser={this.props.currentUser}
-                    likes={this.props.post.likes} />
-            )
+        if (this.props.post.likes === undefined || this.props.post.likes.length === 0){
+            return '';
         } 
+        return (
+            <ReactionModule
+                currentUser={this.props.currentUser}
+                likes={this.props.post.likes} />
+        )
     }
 
     render() {
